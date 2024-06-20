@@ -8,6 +8,7 @@
 class Search : public QObject
 {
     Q_OBJECT
+
     QML_ELEMENT
 
 public:

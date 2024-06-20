@@ -14,9 +14,12 @@ ApplicationWindow {
     Search{
         id:se
         Component.onCompleted: {
+
            searchonline()
+
         }
     }
+
 
 
     function searchonline() {
@@ -33,8 +36,8 @@ ApplicationWindow {
         //    } else {
         //        console.log("Signal is not connected.");
         //    }
+}
 
-    }
 
 
     //布局
