@@ -7,9 +7,9 @@
 #include <QtQml/qqmlregistration.h>
 class Search : public QObject
 {
-    Q_OBJECT;
+    Q_OBJECT
     // Q_INVOKABLE;
-    QML_ELEMENT;
+    QML_ELEMENT
 
 public:
     explicit Search(QObject *parent = nullptr);

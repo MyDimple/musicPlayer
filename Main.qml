@@ -13,12 +13,13 @@ ApplicationWindow {
 
     Search{
         id:se
+        Component.onCompleted: {
+            console.log("completed")
+        }
     }
 
 
-    Component.onCompleted: {
 
-    }
 
     function searchonline()
     {
