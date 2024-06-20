@@ -14,8 +14,8 @@ qt_add_executable(appfreems main.cpp)
 qt_add_qml_module(
   appfreems
   URI
-  # freems
   "se.qt.music"
+  # freems
   VERSION
   1.0
   QML_FILES
@@ -30,13 +30,11 @@ qt_add_qml_module(
   MusicIconButton.qml
   MusicToolButton.qml
   PageHomeView.qml
-  SOURCES
-  images.qrc
   RESOURCES
   images.qrc
   SOURCES
-  searchutils.h
-  searchutils.cpp)
+  search.h
+  search.cpp)
 
 target_compile_features(appfreems PRIVATE cxx_std_20)
 
