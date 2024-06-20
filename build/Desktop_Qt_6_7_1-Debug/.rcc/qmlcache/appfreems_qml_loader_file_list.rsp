@@ -1,0 +1,15 @@
+--resource
+/root/qml/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_freems.qrc
+--resource
+/root/qml/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc
+/freems/Main.qml
+/freems/DetailFavoratePageView.qml
+/freems/DetailHistoryPageView.qml
+/freems/DetailLocalPageView.qml
+/freems/DetailRecommendPageView.qml
+/freems/DetailSearchPageView.qml
+/freems/LayoutBottomView.qml
+/freems/LayoutHeaderView.qml
+/freems/MusicIconButton.qml
+/freems/MusicToolButton.qml
+/freems/PageHomeView.qml

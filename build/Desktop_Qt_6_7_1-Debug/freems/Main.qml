@@ -2,30 +2,12 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
-import se.qt.music
-
 ApplicationWindow {
     id:window
     width: 1200
     height: 800
     visible: true
     color:"white"
-
-    Search {
-        id:se
-    }
-
-
-    Component.onCompleted: {
-        se.onReply
-        se.concatenate("banner")
-    }
-
-    function searchonline()
-    {
-
-    }
-
     //布局
     ColumnLayout{
         anchors.fill: parent
@@ -35,7 +17,6 @@ ApplicationWindow {
     LayoutHeaderView{
         id:_layoutHeaderView
         }
-
 
     //中部模块
     PageHomeView{

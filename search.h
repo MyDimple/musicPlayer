@@ -7,9 +7,8 @@
 #include <QtQml/qqmlregistration.h>
 class Search : public QObject
 {
-    Q_OBJECT;
-    // Q_INVOKABLE;
-    QML_ELEMENT;
+    Q_OBJECT
+    QML_ELEMENT
 
 public:
     explicit Search(QObject *parent = nullptr);
@@ -21,5 +20,5 @@ signals:
 
 private:
     QNetworkAccessManager *manager;
-    QString BASE_URL = "http://localhost:3000/api/"; //默认域名
+    QString BASE_URL = "http://localhost:3000/"; //默认域名
 };

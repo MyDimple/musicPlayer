@@ -1,22 +1,20 @@
 //PageHomeView.qml
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.3
-import QtQml 2.12
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQml
 
-//中间窗口
-Frame{
-
+RowLayout{
     property var qmlList: [
         {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView"},
         {icon:"cloud-white",value:"搜索音乐",qml:"DetailSearchPageView"},
         {icon:"local-white",value:"本地音乐",qml:"DetailLocalPageView"},
         {icon:"history-white",value:"播放历史",qml:"DetailHistoryPageView"},
         {icon:"favorite-big-white",value:"我喜欢的",qml:"DetailFavoritePageView"},
-        {icon:"favorite-big-white",value:"专辑歌单",qml:"DetailPlayListPageView"}
     ]
-
+//左边菜单
+Frame{
     Layout.preferredWidth: 200
     Layout.fillHeight: true
     background: Rectangle{
@@ -98,5 +96,20 @@ Frame{
 
     Component.onCompleted: {
         menuViewModel.append(qmlList)
+        var loader = repeater.itemAt(0) //获取第一个loader
+        loader.visible = true //让其可视
+        loader.source = qmlList[0].qml + ".qml"
+    }
+    }
+
+    Repeater{//重复构造子组件
+        id:repeater
+        model: qmlList.length
+        Loader{//加载页面
+            visible:false //默认都不显示
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+        }
     }
 }
