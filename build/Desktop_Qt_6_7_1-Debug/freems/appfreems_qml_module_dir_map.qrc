@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/freems">/root/qml/freems/build/Desktop_Qt_6_7_1-Debug/freems</file>
+
+  </qresource>
+</RCC>
