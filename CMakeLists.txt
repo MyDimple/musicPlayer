@@ -29,6 +29,7 @@ qt_add_qml_module(
   LayoutHeaderView.qml
   MusicIconButton.qml
   MusicToolButton.qml
+  MusicListView.qml
   PageHomeView.qml
   RESOURCES
   images.qrc
