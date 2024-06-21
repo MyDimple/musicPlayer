@@ -1,0 +1,9 @@
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/untitled7.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/edit_cache.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/rebuild_cache.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/list_install_components.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/install.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/install/local.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/install/strip.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/untitled7_autogen_timestamp_deps.dir
+/root/untitled7/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/untitled7_autogen.dir
