@@ -3,44 +3,33 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 ApplicationWindow {
-    width: 640
-    height: 480
+    width: 1100
+    height: 700
     visible: true
-    title: qsTr("hello, world")
-    menuBar: MenuBar {
-        Menu {
-            title: qsTr("File")
-            MenuItem { action:open }
-            MenuItem { action:quit }
+    // flags:Qt.FramelessWindowHint
+
+    title:"music player"
+
+    ColumnLayout{
+        anchors.fill:parent;
+        spacing: 0
+
+        // 头部视图组件
+        LayoutHead{
+            id: _head
         }
-    }
 
-    header: ToolBar {
-        RowLayout{
-            ToolButton{ action: open }
-            ToolButton{ action: quit }
+        // 中部视图组件
+        PageHome{
+            id: _home
         }
+
+        // 底部视图组件
+        LayoutBottom{
+            id: _bottom
+        }
+
+
     }
 
-    Action {
-        id: open
-        text: qsTr("&Open...")
-        icon.name: "document-open"
-        shortcut: "StandardKey.Open"
-        onTriggered: console.log("Open action triggered");
-    }
-
-    Action {
-        id: quit
-        text: qsTr("&Quit")
-        icon.name: "application-exit"
-        onTriggered: Qt.quit();
-    }
-
-    //Content Area
-    TextArea {
-        text: qsTr("hello, world")
-        anchors.horizontalCenter: parent.horizontalCenter
-        anchors.verticalCenter: parent.verticalCenter
-    }
 }

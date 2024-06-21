@@ -19,7 +19,15 @@ qt_add_qml_module(
   1.0
   QML_FILES
   Main.qml
-  SOURCES)
+  SOURCES
+  QML_FILES LayoutHead.qml
+  QML_FILES LayoutBottom.qml
+  QML_FILES PageHome.qml
+  QML_FILES Logo.qml
+  QML_FILES SearchView.qml
+  QML_FILES Setting.qml
+  QML_FILES Actions.qml
+  QML_FILES Dialogs.qml)
 
 target_compile_features(appfreemsp PRIVATE cxx_std_20)
 
