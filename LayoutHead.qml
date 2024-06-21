@@ -2,26 +2,30 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 
-RowLayout{
+Rectangle{
+    id:_head
     Layout.fillWidth: true;
-    property real u_height: 60
-    spacing: 0
-    Logo{
-        height:parent.u_height;
-        width:200;
-        border.color: "black";
-        border.width: 1
-    }
-    Rectangle{
-        height:parent.u_height;
-        Layout.fillWidth: true
-        border.color: "black";
-        border.width: 1
-    }
-    Rectangle{
-        height:parent.u_height;
-        width:200;
-        border.color: "black";
-        border.width: 1
+    height:60
+    RowLayout{
+        anchors.fill: parent
+        spacing: 0
+        Logo{
+            id: logo
+            height:_head.height
+            width:200
+        }
+        SearchView{
+            id:_search
+            height:_head.height
+            Layout.fillWidth: true
+        }
+        Setting{
+            id:_setting
+            height:_head.height
+            width:220
+
+        }
     }
 }
+
+

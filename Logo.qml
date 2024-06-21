@@ -3,12 +3,16 @@ import QtQuick
 Rectangle {
     id: logo
 
-    color: "transparent" // 设置背景色为透明
+    // color: "#f5f8f5"
 
+    radius: 5
+    border.color: "black"
+    border.width: 1
     Text {
-        text: "My Logo"
+        text: "FreeMsp"
         font.bold: true
         font.pixelSize: 24
+        font.family: "宋体"
         color: "black"
         anchors.centerIn: parent // 将文本居中
     }

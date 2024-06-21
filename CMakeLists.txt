@@ -27,7 +27,9 @@ qt_add_qml_module(
   QML_FILES SearchView.qml
   QML_FILES Setting.qml
   QML_FILES Actions.qml
-  QML_FILES Dialogs.qml)
+  QML_FILES Dialogs.qml
+  QML_FILES LeftNavigation.qml
+  QML_FILES Content.qml)
 
 target_compile_features(appfreemsp PRIVATE cxx_std_20)
 

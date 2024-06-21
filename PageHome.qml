@@ -6,16 +6,15 @@ RowLayout{
     Layout.fillHeight: true;
     spacing: 0
 
-    Rectangle{
+    LeftNavigation{
         Layout.fillHeight: true;
         width:200;
-        border.color: "black";
-        border.width: 1
     }
-    Rectangle{
+    Content{
         Layout.fillHeight: true;
         Layout.fillWidth: true;
         border.color: "black";
+        radius: 10
         border.width: 1
     }
 }
