@@ -1,62 +1,204 @@
-cmake_minimum_required(VERSION 3.27)
+cmake_minimum_required(VERSION 3.29)
 
-project(
-  freemusic
-  VERSION 0.1
-  LANGUAGES CXX)
+project(freemusic VERSION 0.1 LANGUAGES CXX)
 
-set(CMAKE_AUTOUIC ON)
-set(CMAKE_AUTOMOC ON)
-set(CMAKE_AUTORCC ON)
+find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
 
-set(CMAKE_CXX_STANDARD 20)
-set(CMAKE_CXX_STANDARD_REQUIRED ON)
+qt_standard_project_setup()
 
-find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Quick)
-find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Quick)
+qt_add_executable(appfreemusic
+    main.cpp
+)
 
-set(PROJECT_SOURCES App.cpp qml.qrc images.qrc)
+qt_add_qml_module(appfreemusic
+    URI freemusic
+    VERSION 1.0
+    QML_FILES
+        Main.qml
+    SOURCES
+    QML_FILES LayoutBottomView.qml
+    QML_FILES LayoutHeaderView.qml
+    QML_FILES MusicIconButton.qml
+    QML_FILES MusicToolButton.qml
+    QML_FILES PageHomeView.qml
+    QML_FILES DetailRecommendPageView.qml
+    RESOURCES images.qrc
+    QML_FILES DetailSearchPageView.qml
+    QML_FILES DetailLocalPageView.qml
+    QML_FILES DetailHistoryPageView.qml
+    QML_FILES DetailFavoritePageView.qml
+)
 
-if(${QT_VERSION_MAJOR} GREATER_EQUAL 6)
-  qt_add_executable(freemusic MANUAL_FINALIZATION ${PROJECT_SOURCES})
-  # Define target properties for Android with Qt 6 as: set_property(TARGET
-  # freemusic APPEND PROPERTY QT_ANDROID_PACKAGE_SOURCE_DIR
-  # ${CMAKE_CURRENT_SOURCE_DIR}/android) For more information, see
-  # https://doc.qt.io/qt-6/qt-add-executable.html#target-creation
-else()
-  if(ANDROID)
-    add_library(freemusic SHARED ${PROJECT_SOURCES})
-    # Define properties for Android with Qt 5 after find_package() calls as:
-    # set(ANDROID_PACKAGE_SOURCE_DIR "${CMAKE_CURRENT_SOURCE_DIR}/android")
-  else()
-    add_executable(freemusic ${PROJECT_SOURCES})
-  endif()
-endif()
+target_compile_features(appfreemusic PRIVATE cxx_std_20)
 
-target_link_libraries(freemusic PRIVATE Qt${QT_VERSION_MAJOR}::Core
-                                        Qt${QT_VERSION_MAJOR}::Quick)
+set_target_properties(appfreemusic PROPERTIES
+    AUTORCC TRUE
+    MACOSX_BUNDLE_GUI_IDENTIFIER my.example.com
+    MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+    MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+    MACOSX_BUNDLE TRUE
+    WIN32_EXECUTABLE TRUE
+)
 
-# Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1. If
-# you are developing for iOS or macOS you should consider setting an explicit,
-# fixed bundle identifier manually though.
-if(${QT_VERSION} VERSION_LESS 6.1.0)
-  set(BUNDLE_ID_OPTION MACOSX_BUNDLE_GUI_IDENTIFIER com.example.freemusic)
-endif()
-set_target_properties(
-  freemusic
-  PROPERTIES ${BUNDLE_ID_OPTION} MACOSX_BUNDLE_BUNDLE_VERSION
-             ${PROJECT_VERSION} MACOSX_BUNDLE_SHORT_VERSION_STRING
-             ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR} MACOSX_BUNDLE
-             TRUE WIN32_EXECUTABLE
-             TRUE)
+target_link_libraries(appfreemusic
+    PRIVATE 
+        Qt6::Quick
+)
 
 include(GNUInstallDirs)
-install(
-  TARGETS freemusic
-  BUNDLE DESTINATION .
-  LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR})
+install(TARGETS appfreemusic
+    BUNDLE DESTINATION .
+    LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+    RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+)
 
-if(QT_VERSION_MAJOR EQUAL 6)
-  qt_import_qml_plugins(freemusic)
-  qt_finalize_executable(freemusic)
-endif()
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+#qt_add_executable(freemusic)  //Creates and finalizes an application target of a platform-specific type.
+#This command performs the following tasks:
+#    1. Create a CMake target of the appropriate type for the target platform.
+#    2. Link the target to the Qt::Core library.
+#    3. Handle finalization of the CMake target.
+
+
+
+# qt_standard_project_setup()     #set(CMAKE_AUTOUIC ON)  set(CMAKE_AUTOMOC ON)
+
+# @if %{HasTranslation}
+# find_package(Qt6 REQUIRED COMPONENTS Core Quick LinguistTools)
+# @else
+# find_package(Qt6 REQUIRED COMPONENTS Core Quick)
+# @endif
+
+# target_sources(appfreemusic
+#     PRIVATE
+#         main.cpp
+#         qml.qrc
+#     @if %{HasTranslation}
+#         %{TsFileName}
+#     @endif
+#         
+#     PUBLIC
+#         
+# )
+
+# qt_import_qml_plugins(freemusic)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+# cmake_minimum_required(VERSION 3.16)
+# 
+# project(freemusic VERSION 0.1 LANGUAGES CXX)
+# 
+# @if !true
+# set(CMAKE_AUTOMOC ON)
+# @endif
+# set(CMAKE_CXX_STANDARD_REQUIRED ON)
+# 
+# find_package(Qt6 6.4 REQUIRED COMPONENTS Quick)
+# 
+# @if true
+# @if false
+# qt_standard_project_setup(REQUIRES 6.5)
+# @else
+# qt_standard_project_setup()
+# @endif
+# @endif
+# 
+# qt_add_executable(appfreemusic
+#     main.cpp
+# )
+# 
+# qt_add_qml_module(appfreemusic
+#     URI freemusic
+#     VERSION 1.0
+#     QML_FILES Main.qml
+# )
+# 
+# # Qt for iOS sets MACOSX_BUNDLE_GUI_IDENTIFIER automatically since Qt 6.1.
+# # If you are developing for iOS or macOS you should consider setting an
+# # explicit, fixed bundle identifier manually though.
+# set_target_properties(appfreemusic PROPERTIES
+# #    MACOSX_BUNDLE_GUI_IDENTIFIER com.example.appfreemusic
+#     MACOSX_BUNDLE_BUNDLE_VERSION ${PROJECT_VERSION}
+#     MACOSX_BUNDLE_SHORT_VERSION_STRING ${PROJECT_VERSION_MAJOR}.${PROJECT_VERSION_MINOR}
+#     MACOSX_BUNDLE TRUE
+#     WIN32_EXECUTABLE TRUE
+# )
+# 
+# target_link_libraries(appfreemusic
+#     PRIVATE Qt6::Quick
+# )
+# 
+# include(GNUInstallDirs)
+# install(TARGETS appfreemusic
+#     BUNDLE DESTINATION .
+#     LIBRARY DESTINATION ${CMAKE_INSTALL_LIBDIR}
+#     RUNTIME DESTINATION ${CMAKE_INSTALL_BINDIR}
+# )

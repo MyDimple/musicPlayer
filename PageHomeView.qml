@@ -1,24 +1,26 @@
 //PageHomeView.qml
 
-import QtQuick 2.12
-import QtQuick.Controls 2.5
-import QtQuick.Layouts 1.3
-import QtQml 2.12
+import QtQuick
+import QtQuick.Controls
+import QtQuick.Layouts
+import QtQml
 
-//中间窗口
-Frame{
-
+RowLayout{
     property var qmlList: [
         {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView"},
         {icon:"cloud-white",value:"搜索音乐",qml:"DetailSearchPageView"},
         {icon:"local-white",value:"本地音乐",qml:"DetailLocalPageView"},
         {icon:"history-white",value:"播放历史",qml:"DetailHistoryPageView"},
         {icon:"favorite-big-white",value:"我喜欢的",qml:"DetailFavoritePageView"},
-        {icon:"favorite-big-white",value:"专辑歌单",qml:"DetailPlayListPageView"}
     ]
-
+//左边菜单
+Frame{
     Layout.preferredWidth: 200
     Layout.fillHeight: true
+    background: Rectangle{//菜单栏背景
+        color: "#AA00AAAA"
+    }
+
     padding: 0
 
     ColumnLayout{
@@ -45,6 +47,11 @@ Frame{
                 id:menuViewModel
             }
             delegate:menuViewDelegate
+            highlight: Rectangle{//点击后的高亮效果
+                color: "#aa73a7ab"
+            }
+            highlightMoveDuration: 0
+
         }
     }
 
@@ -54,7 +61,7 @@ Frame{
             id:menuViewDelegateItem
             height: 50
             width: 200
-            color: "#00AAAA"
+            color: "#AA00AAAA" //左边菜单默认颜色
             RowLayout{
                 anchors.fill: parent
                 anchors.centerIn: parent
@@ -82,11 +89,19 @@ Frame{
             MouseArea{
                 anchors.fill: parent
                 hoverEnabled: true
-                onEntered: {
+                onEntered: {//鼠标进入的颜色
                     color="#aa73a7ab"
                 }
-                onExited: {
-                    color="#00AAAA"
+                onExited: {//鼠标离开后的颜色
+                    color="#AA00AAAA"
+                }
+                onClicked:{//切换功能
+                    repeater.itemAt(menuViewDelegateItem.ListView.view.currentIndex).visible = false //将原本索引的内容不可视
+                    menuViewDelegateItem.ListView.view.currentIndex = index //设置当前索引
+                    var loader = repeater.itemAt(index) //获取当前索引的loader
+                    loader.visible = true //让其可视
+                    loader.source = qmlList[index].qml + ".qml"
+
                 }
             }
         }
@@ -94,5 +109,22 @@ Frame{
 
     Component.onCompleted: {
         menuViewModel.append(qmlList)
+
+        //加载完成后的默认页面
+        var loader = repeater.itemAt(0) //获取第一个索引的loader
+        loader.visible = true //让其可视
+        loader.source = qmlList[0].qml + ".qml"
+    }
+    }
+
+    Repeater{//重复构造子组件
+        id:repeater
+        model: qmlList.length
+        Loader{//加载页面
+            visible:false //默认都不显示
+            Layout.fillHeight: true
+            Layout.fillWidth: true
+
+        }
     }
 }
