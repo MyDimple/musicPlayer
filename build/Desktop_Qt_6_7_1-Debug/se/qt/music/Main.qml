@@ -11,8 +11,6 @@ ApplicationWindow {
     color:"white"
 
 
-
-
 //     Search{
 //         id:se
 //         Component.onCompleted: {
@@ -39,7 +37,6 @@ ApplicationWindow {
 //         //        console.log("Signal is not connected.");
 //         //    }
 // }
-
 
 
     //布局

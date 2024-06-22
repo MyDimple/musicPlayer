@@ -2,16 +2,6 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import se.qt.music
-
-Item {
-    Rectangle{
-        color:"grey"
-    }
-
-    Text{
-        text:qsTr("搜索歌曲")
-        font.family: "微软雅黑"
-        font.pointSize: 18
 //搜索页面
 
 ColumnLayout{

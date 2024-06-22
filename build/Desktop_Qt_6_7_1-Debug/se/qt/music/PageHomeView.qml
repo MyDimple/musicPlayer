@@ -8,7 +8,7 @@ import QtQml
 RowLayout{
     spacing: 0
 
-    property int defaultIndex: 1
+    property int defaultIndex: 0
 
     property var qmlList: [
         {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView"},
@@ -113,13 +113,9 @@ Frame{
 
     Component.onCompleted: {
         menuViewModel.append(qmlList)
-<<<<<<< HEAD
 
         //加载完成后的默认页面
-        var loader = repeater.itemAt(0) //获取第一个索引的loader
-=======
         var loader = repeater.itemAt(defaultIndex) //获取第一个loader
->>>>>>> 5196ce2f59d69e735ef5a9fd73dd40148f34f25c
         loader.visible = true //让其可视
         loader.source = qmlList[defaultIndex].qml + ".qml"
 
