@@ -29,13 +29,18 @@ qt_add_qml_module(
   LayoutHeaderView.qml
   MusicIconButton.qml
   MusicToolButton.qml
+  MusicBannerView.qml
+  MusicRoundImage.qml
   MusicListView.qml
   PageHomeView.qml
   RESOURCES
   images.qrc
   SOURCES
   search.h
-  search.cpp)
+  search.cpp
+  RESOURCES
+  QML_FILES
+  HotMusic.qml)
 
 target_compile_features(appfreems PRIVATE cxx_std_20)
 
