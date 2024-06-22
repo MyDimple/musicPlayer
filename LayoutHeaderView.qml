@@ -10,20 +10,6 @@ ToolBar{//顶部工具栏
     Layout.fillWidth: true
     RowLayout{
         anchors.fill:parent
-        MusicToolButton{
-            iconSource: "qrc:/images/music"
-            toolTip: "关于"
-        }
-        MusicToolButton{
-            iconSource: "qrc:/images/about"
-            toolTip: "官网"
-        }
-
-        MusicToolButton{
-            iconSource: "qrc:/images/small-window"
-            toolTip: "小窗"
-        }
-
         Item{
             Layout.fillWidth: true
             height: 32
@@ -35,6 +21,19 @@ ToolBar{//顶部工具栏
                 color:"#ffffff"
                     }
         }
+        MusicToolButton{
+            iconSource: "qrc:/images/music"
+            toolTip: "关于"
+        }
+        MusicToolButton{
+            iconSource: "qrc:/images/about"
+            toolTip: "官网"
+        }
+        MusicToolButton{
+            iconSource: "qrc:/images/small-window"
+            toolTip: "小窗"
+        }
+
 
         MusicToolButton{
             iconSource: "qrc:/images/minimize-screen"

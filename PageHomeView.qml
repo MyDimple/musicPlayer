@@ -30,12 +30,12 @@ Frame{
             Layout.fillWidth: true
             Layout.preferredHeight: 150
             //中间左上方自定义图片
-            // MusicRoundImage{
-            //     anchors.centerIn:parent
-            //     height: 100
-            //     width:100
-            //     borderRadius: 100
-            // }
+            MusicRoundImage{
+                anchors.centerIn:parent
+                height: 100
+                width:100
+                borderRadius: 100
+            }
         }
 
         ListView{
@@ -50,7 +50,7 @@ Frame{
             highlight: Rectangle{//点击后的高亮效果
                 color: "#aa73a7ab"
             }
-            highlightMoveDuration: 0
+            highlightMoveDuration: 100
 
         }
     }
