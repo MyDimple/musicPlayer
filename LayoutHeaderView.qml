@@ -10,6 +10,17 @@ ToolBar{//顶部工具栏
     Layout.fillWidth: true
     RowLayout{
         anchors.fill:parent
+        Item{
+            Layout.fillWidth: true
+            height: 32
+            Text{
+                anchors.centerIn: parent
+                text:qsTr("welcome to freemusic")
+                font.family: "微软雅黑"
+                font.pointSize: 15
+                color:"#ffffff"
+                    }
+        }
         MusicToolButton{
             iconSource: "qrc:/images/music"
             toolTip: "关于"
@@ -23,17 +34,6 @@ ToolBar{//顶部工具栏
             toolTip: "小窗"
         }
 
-        Item{
-            Layout.fillWidth: true
-            height: 32
-            Text{
-                anchors.centerIn: parent
-                text:qsTr("welcome to freemusic")
-                font.family: "微软雅黑"
-                font.pointSize: 15
-                color:"#ffffff"
-                    }
-        }
 
         MusicToolButton{
             iconSource: "qrc:/images/minimize-screen"
