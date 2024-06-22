@@ -36,9 +36,11 @@ ColumnLayout{
             placeholderTextColor:"grey"//不同的主题颜色可能会导致提示字的默认颜色不同，根据需要修改
             color:"#000000"
             background: Rectangle{
-                // color:"#00000000"
-                border.width: 1
-                border.color: "black"
+                color:"#00000000"
+
+                //边框
+                // border.width: 1
+                // border.color: "black"
                 opacity: 0.5
                 implicitHeight: 40
                 implicitWidth: 400
@@ -55,21 +57,26 @@ ColumnLayout{
             iconSource: "qrc:/images/search"
             toolTip:"搜索"
             onClicked:doSearch()
+
         }
     }
 
     MusicListView{
         id:musiclistView
+        onLoadMore:doSearch(offset,current)
 
     }
+
 
     Search{
         id:se
+
     }
 
 
-    function doSearch(offest=0)
+    function doSearch(offset=0,current=0)
     {
+        // console.log(offset)
         var keywords=searchInput.text
         if(keywords.length<1){
             return
@@ -78,9 +85,10 @@ ColumnLayout{
         function onReply(reply) {
 
             se.onReplySignal.disconnect(onReply)
-            console.log(reply);
+            // console.log(reply);
             var result = JSON.parse(reply).result//获取并解析数据
             var songs = result.songs
+            musiclistView.current=current
             musiclistView.all=result.songCount
             musiclistView.musiclist=songs.map(item=>{
                                                   return{
@@ -93,7 +101,7 @@ ColumnLayout{
                                               })
         }
         se.onReplySignal.connect(onReply)
-        se.concatenate("search?keywords="+keywords+"&offest="+0+"&limit=60"); // 触发网络请求
+        se.concatenate("search?keywords="+keywords+"&offset="+offset+"&limit=60"); // 触发网络请求
     }
 }
 
