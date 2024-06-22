@@ -1,0 +1,6 @@
+<RCC>
+  <qresource prefix="/">
+    <file alias="/se/qt/music">/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music</file>
+
+  </qresource>
+</RCC>

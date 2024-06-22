@@ -11,9 +11,32 @@ ApplicationWindow {
     color:"white"
 
 
+//     Search{
+//         id:se
+//         Component.onCompleted: {
+
+//            searchonline()
+
+//         }
+//     }
 
 
 
+//     function searchonline() {
+//         function onReply(reply) {
+//             // console.log("hello")
+//             console.log(reply);
+//             // 处理接收到的回复
+//         }
+//         se.onReplySignal.connect(onReply)
+//         se.concatenate("banner"); // 触发网络请求
+
+//         // if (se.onReplySignal.connections > 0) {
+//         //        console.log("Signal is connected.");
+//         //    } else {
+//         //        console.log("Signal is not connected.");
+//         //    }
+// }
 
 
     //布局

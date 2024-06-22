@@ -1,0 +1,21 @@
+<RCC>
+  <qresource prefix="/se/qt/music/">
+    <file alias="Main.qml">/run/media/root/study/freems/Main.qml</file>
+    <file alias="DetailFavoratePageView.qml">/run/media/root/study/freems/DetailFavoratePageView.qml</file>
+    <file alias="DetailHistoryPageView.qml">/run/media/root/study/freems/DetailHistoryPageView.qml</file>
+    <file alias="DetailLocalPageView.qml">/run/media/root/study/freems/DetailLocalPageView.qml</file>
+    <file alias="DetailRecommendPageView.qml">/run/media/root/study/freems/DetailRecommendPageView.qml</file>
+    <file alias="DetailSearchPageView.qml">/run/media/root/study/freems/DetailSearchPageView.qml</file>
+    <file alias="LayoutBottomView.qml">/run/media/root/study/freems/LayoutBottomView.qml</file>
+    <file alias="LayoutHeaderView.qml">/run/media/root/study/freems/LayoutHeaderView.qml</file>
+    <file alias="MusicIconButton.qml">/run/media/root/study/freems/MusicIconButton.qml</file>
+    <file alias="MusicToolButton.qml">/run/media/root/study/freems/MusicToolButton.qml</file>
+    <file alias="MusicBannerView.qml">/run/media/root/study/freems/MusicBannerView.qml</file>
+    <file alias="MusicRoundImage.qml">/run/media/root/study/freems/MusicRoundImage.qml</file>
+    <file alias="MusicListView.qml">/run/media/root/study/freems/MusicListView.qml</file>
+    <file alias="PageHomeView.qml">/run/media/root/study/freems/PageHomeView.qml</file>
+    <file alias="HotMusic.qml">/run/media/root/study/freems/HotMusic.qml</file>
+    <file alias="images.qrc">/run/media/root/study/freems/images.qrc</file>
+  </qresource>
+</RCC>
+

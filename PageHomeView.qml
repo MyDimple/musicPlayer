@@ -6,6 +6,10 @@ import QtQuick.Layouts
 import QtQml
 
 RowLayout{
+    spacing: 0
+
+    property int defaultIndex: 1
+
     property var qmlList: [
         {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView"},
         {icon:"cloud-white",value:"搜索音乐",qml:"DetailSearchPageView"},
@@ -111,11 +115,13 @@ Frame{
         menuViewModel.append(qmlList)
 
         //加载完成后的默认页面
-        var loader = repeater.itemAt(0) //获取第一个索引的loader
+        var loader = repeater.itemAt(defaultIndex) //获取第一个loader
         loader.visible = true //让其可视
-        loader.source = qmlList[0].qml + ".qml"
+        loader.source = qmlList[defaultIndex].qml + ".qml"
+
+        menuView.currentIndex=defaultIndex
     }
-    }
+}
 
     Repeater{//重复构造子组件
         id:repeater
