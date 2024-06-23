@@ -47,23 +47,11 @@ Frame{
                 height: delegateItem.height
             }
 
-            // MouseArea{
-            //     anchors.fill: parent
-            //     cursorShape: Qt.PointingHandCursor
-            //     onClicked: {
-            //         if(bannerView.currentIndex === index){
-
-            //         }else{
-            //             bannerView.currentIndex = index
-            //         }
-            //     }
-            // }
-
             MouseArea{
                 anchors.fill: parent
                 cursorShape: Qt.PointingHandCursor
                 onClicked: {
-                    onClicked: {
+                 onClicked: {
                         if(bannerView.currentIndex === index){
                             var item  =bannerView.model[index]
                             var targetId = item.targetId+""
@@ -96,6 +84,7 @@ Frame{
         preferredHighlightBegin: 0.5
         preferredHighlightEnd: 0.5
     }
+
 
     Path{
         id:bannerPath

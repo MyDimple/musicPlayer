@@ -20,6 +20,7 @@ qt_add_qml_module(
   1.0
   QML_FILES
   Main.qml
+  DetailFavoratePageView.qml
   DetailHistoryPageView.qml
   DetailLocalPageView.qml
   DetailRecommendPageView.qml
@@ -38,8 +39,6 @@ qt_add_qml_module(
   search.h
   search.cpp
   RESOURCES
-  QML_FILES
-  QML_FILES
   QML_FILES
   DetailPlayListPageView.qml
   HotMusic.qml)

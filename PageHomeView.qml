@@ -116,7 +116,6 @@ Frame{
         }
     }
 
-    //
     Component.onCompleted: {
         menuViewModel.append(qmlList.filter(item=>item.menu)) //增加过滤器，隐藏歌单不在左边菜单栏显示
 
@@ -156,6 +155,5 @@ Frame{
         var loader = repeater.itemAt(5)
         loader.visible = false
     }
-
 
 }
