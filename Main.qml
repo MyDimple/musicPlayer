@@ -2,7 +2,8 @@ import QtQuick 2.15
 import QtQuick.Window 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
-
+import QtMultimedia
+import se.qt.music
 ApplicationWindow {
     id:window
     width: 1200
@@ -11,14 +12,14 @@ ApplicationWindow {
     color:"white"
 
 
-//     Search{
-//         id:se
-//         Component.onCompleted: {
+    Search{
+        id:se
+        // Component.onCompleted: {
 
-//            searchonline()
+        //    searchonline()
 
-//         }
-//     }
+        // }
+    }
 
 
 
@@ -59,6 +60,24 @@ ApplicationWindow {
     LayoutBottomView{
         id:_layoutBottomView
         }
+
+    }
+
+    //音乐播放,后面再改
+    MediaPlayer {
+        id: mediaplayer
+        // source: ""
+        audioOutput: AudioOutput {}
+        videoOutput: videoOutput
+        onPositionChanged: {
+            _layoutBottomView.setSlider(0,duration,position)
+
+        }
+    }
+
+    VideoOutput {
+        id: videoOutput
+        anchors.fill: parent
     }
 }
 

@@ -129,7 +129,8 @@ Frame{
                             iconWidth: 16
                             toolTip: "播放"
                             onClicked: {
-
+                                _layoutBottomView.playList=musiclist
+                                _layoutBottomView.playMusic(index)
                             }
                         }
                         MusicIconButton{
@@ -262,4 +263,9 @@ Frame{
             }
         }
     }
+
+
+
+
+
 }

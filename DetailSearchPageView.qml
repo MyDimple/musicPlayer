@@ -64,7 +64,7 @@ ColumnLayout{
     MusicListView{
         id:musiclistView
         onLoadMore:doSearch(offset,current)
-
+        Layout.topMargin: 10
     }
 
 
@@ -95,7 +95,8 @@ ColumnLayout{
                                                       id:item.id,
                                                       name:item.name,
                                                       artist:item.artists[0].name,
-                                                      album:item.album.name
+                                                      album:item.album.name,
+                                                      cover:""
                                                   }
 
                                               })
