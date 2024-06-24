@@ -1,6 +1,0 @@
-<RCC>
-  <qresource prefix="/se/qt/music">
-    <file alias="qmldir">/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir</file>
-  </qresource>
-</RCC>
-

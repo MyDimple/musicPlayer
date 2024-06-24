@@ -40,6 +40,7 @@ qt_add_qml_module(
   search.cpp
   RESOURCES
   QML_FILES
+  DetailPlayListPageView.qml
   HotMusic.qml)
 
 target_compile_features(appfreems PRIVATE cxx_std_20)

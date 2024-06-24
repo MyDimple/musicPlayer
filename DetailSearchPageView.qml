@@ -57,7 +57,6 @@ ColumnLayout{
             iconSource: "qrc:/images/search"
             toolTip:"搜索"
             onClicked:doSearch()
-
         }
     }
 

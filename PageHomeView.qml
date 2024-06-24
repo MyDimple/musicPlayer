@@ -11,12 +11,15 @@ RowLayout{
     property int defaultIndex: 0
 
     property var qmlList: [
-        {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView"},
-        {icon:"cloud-white",value:"搜索音乐",qml:"DetailSearchPageView"},
-        {icon:"local-white",value:"本地音乐",qml:"DetailLocalPageView"},
-        {icon:"history-white",value:"播放历史",qml:"DetailHistoryPageView"},
-        {icon:"favorite-big-white",value:"我喜欢的",qml:"DetailFavoritePageView"},
+        {icon:"recommend-white",value:"推荐内容",qml:"DetailRecommendPageView",menu:true},
+        {icon:"cloud-white",value:"搜索音乐",qml:"DetailSearchPageView",menu:true},
+        {icon:"local-white",value:"本地音乐",qml:"DetailLocalPageView",menu:true},
+        {icon:"history-white",value:"播放历史",qml:"DetailHistoryPageView",menu:true},
+        {icon:"favorite-big-white",value:"我喜欢的",qml:"DetailFavoritePageView",menu:true},
+        {icon:"",value:"",qml:"DetailPlayListPageView",menu:false},
+
     ]
+
 //左边菜单
 Frame{
     Layout.preferredWidth: 200
@@ -42,6 +45,7 @@ Frame{
             }
         }
 
+        //菜单栏
         ListView{
             id:menuView
             height: parent.height
@@ -100,6 +104,7 @@ Frame{
                     color="#AA00AAAA"
                 }
                 onClicked:{//切换功能
+                    hidePlayList()
                     repeater.itemAt(menuViewDelegateItem.ListView.view.currentIndex).visible = false //将原本索引的内容不可视
                     menuViewDelegateItem.ListView.view.currentIndex = index //设置当前索引
                     var loader = repeater.itemAt(index) //获取当前索引的loader
@@ -112,7 +117,7 @@ Frame{
     }
 
     Component.onCompleted: {
-        menuViewModel.append(qmlList)
+        menuViewModel.append(qmlList.filter(item=>item.menu)) //增加过滤器，隐藏歌单不在左边菜单栏显示
 
         //加载完成后的默认页面
         var loader = repeater.itemAt(defaultIndex) //获取第一个loader
@@ -133,4 +138,22 @@ Frame{
 
         }
     }
+
+    //显示歌单
+    function showPlayList(targetId="",targetType="10"){
+        repeater.itemAt(menuView.currentIndex).visible = false
+        var loader = repeater.itemAt(5)
+        loader.visible = true
+        loader.source = qmlList[5].qml+".qml"
+        loader.item.targetType=targetType
+        loader.item.targetId=targetId
+    }
+
+    //隐藏歌单
+    function hidePlayList(){
+        repeater.itemAt(menuView.currentIndex).visible = true
+        var loader = repeater.itemAt(5)
+        loader.visible = false
+    }
+
 }

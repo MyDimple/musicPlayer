@@ -56,18 +56,18 @@ ApplicationWindow {
 
     //上部模块
     LayoutHeaderView{
-        id:_layoutHeaderView
+        id:layoutHeaderView
         }
 
 
     //中部模块
     PageHomeView{
-        id:_pageHomeView
+        id:pageHomeView
         }
 
     //底部模块
     LayoutBottomView{
-        id:_layoutBottomView
+        id:layoutBottomView
         }
 
     }

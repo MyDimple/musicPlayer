@@ -8,7 +8,6 @@ Frame{
     property int pageSize: 60
     property int current: 0
     signal loadMore(int offset,int current) //加载其他页的信号
-
     Layout.fillHeight: true
     Layout.fillWidth: true
     clip:true

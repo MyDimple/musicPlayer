@@ -51,13 +51,30 @@ Frame{
                 anchors.fill: parent
                 cursorShape: Qt.PointingHandCursor
                 onClicked: {
-                    if(bannerView.currentIndex === index){
-
-                    }else{
-                        bannerView.currentIndex = index
+                 onClicked: {
+                        if(bannerView.currentIndex === index){
+                            var item  =bannerView.model[index]
+                            var targetId = item.targetId+""
+                            var targetType = item.targetType+"" //1:单曲,10:专辑,1000:歌单
+                            switch(targetType){
+                            case "1":
+                                //播放歌曲
+                                break
+                            case "10":
+                                //打开专辑
+                            case "1000":
+                                //打开播放列表
+                                pageHomeView.showPlayList(targetId,targetType)
+                                break
+                            }
+                            console.log(targetId,targetType)
+                        }else{
+                            bannerView.currentIndex = index
+                        }
                     }
                 }
             }
+
         }
 
         pathItemCount: 3 //当前展示有几个item
@@ -67,6 +84,7 @@ Frame{
         preferredHighlightBegin: 0.5
         preferredHighlightEnd: 0.5
     }
+
 
     Path{
         id:bannerPath

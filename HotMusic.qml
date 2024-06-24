@@ -55,6 +55,11 @@ Item{
                     onExited: {
                         background.color = "#00000000"
                     }
+                    onClicked: {
+                        var item  =gridRepeater.model[index]
+                        pageHomeView.showPlayList(item.id,"1000")
+                    }
+
                 }
             }
         }
