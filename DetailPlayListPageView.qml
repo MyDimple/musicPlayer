@@ -3,7 +3,7 @@ import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 import se.qt.music
 
-//专辑歌单页面布局
+//专辑歌单页面布局,隐藏的，点击歌单，歌单的内容就是这个
 ColumnLayout{
     property string targetId: ""
     property string targetType:"10"//album,playlist/detail

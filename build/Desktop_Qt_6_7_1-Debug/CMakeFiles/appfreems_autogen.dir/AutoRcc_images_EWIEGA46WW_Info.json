@@ -10,6 +10,7 @@
 	"INPUTS" : 
 	[
 		"/run/media/root/study/freems/MusicListView.qml",
+		"/run/media/root/study/freems/MusicTextButton.qml",
 		"/run/media/root/study/freems/images/favorite-big.png",
 		"/run/media/root/study/freems/images/history.png",
 		"/run/media/root/study/freems/images/minimize-screen.png",

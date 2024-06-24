@@ -82,6 +82,7 @@ CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/MusicIconButton.qml
 CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/MusicToolButton.qml
 CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/MusicBannerView.qml
 CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/MusicRoundImage.qml
+CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/MusicTextButton.qml
 CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/MusicListView.qml
 CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/PageHomeView.qml
 CMakeFiles/appfreems_qmllint: /run/media/root/study/freems/DetailPlayListPageView.qml

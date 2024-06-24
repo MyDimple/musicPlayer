@@ -230,13 +230,23 @@ se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache
 	/opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen --bare --resource-path /se/qt/music/MusicRoundImage.qml -I /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug -I /opt/Qt/6.7.1/gcc_64/./qml -i /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp /run/media/root/study/freems/MusicRoundImage.qml
 
+.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp: /opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen
+.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp: /run/media/root/study/freems/MusicTextButton.qml
+.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp: .qt/rcc/qmake_se_qt_music.qrc
+.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp: .qt/rcc/appfreems_raw_qml_0.qrc
+.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp: se/qt/music/appfreems.qmltypes
+.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp: se/qt/music/qmldir
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating .rcc/qmlcache/appfreems_MusicTextButton_qml.cpp"
+	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache
+	/opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen --bare --resource-path /se/qt/music/MusicTextButton.qml -I /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug -I /opt/Qt/6.7.1/gcc_64/./qml -i /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp /run/media/root/study/freems/MusicTextButton.qml
+
 .rcc/qmlcache/appfreems_MusicListView_qml.cpp: /opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen
 .rcc/qmlcache/appfreems_MusicListView_qml.cpp: /run/media/root/study/freems/MusicListView.qml
 .rcc/qmlcache/appfreems_MusicListView_qml.cpp: .qt/rcc/qmake_se_qt_music.qrc
 .rcc/qmlcache/appfreems_MusicListView_qml.cpp: .qt/rcc/appfreems_raw_qml_0.qrc
 .rcc/qmlcache/appfreems_MusicListView_qml.cpp: se/qt/music/appfreems.qmltypes
 .rcc/qmlcache/appfreems_MusicListView_qml.cpp: se/qt/music/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Generating .rcc/qmlcache/appfreems_MusicListView_qml.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating .rcc/qmlcache/appfreems_MusicListView_qml.cpp"
 	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache
 	/opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen --bare --resource-path /se/qt/music/MusicListView.qml -I /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug -I /opt/Qt/6.7.1/gcc_64/./qml -i /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp /run/media/root/study/freems/MusicListView.qml
 
@@ -246,7 +256,7 @@ se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 .rcc/qmlcache/appfreems_PageHomeView_qml.cpp: .qt/rcc/appfreems_raw_qml_0.qrc
 .rcc/qmlcache/appfreems_PageHomeView_qml.cpp: se/qt/music/appfreems.qmltypes
 .rcc/qmlcache/appfreems_PageHomeView_qml.cpp: se/qt/music/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Generating .rcc/qmlcache/appfreems_PageHomeView_qml.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating .rcc/qmlcache/appfreems_PageHomeView_qml.cpp"
 	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache
 	/opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen --bare --resource-path /se/qt/music/PageHomeView.qml -I /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug -I /opt/Qt/6.7.1/gcc_64/./qml -i /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp /run/media/root/study/freems/PageHomeView.qml
 
@@ -256,7 +266,7 @@ se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 .rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp: .qt/rcc/appfreems_raw_qml_0.qrc
 .rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp: se/qt/music/appfreems.qmltypes
 .rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp: se/qt/music/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Generating .rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating .rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp"
 	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache
 	/opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen --bare --resource-path /se/qt/music/DetailPlayListPageView.qml -I /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug -I /opt/Qt/6.7.1/gcc_64/./qml -i /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp /run/media/root/study/freems/DetailPlayListPageView.qml
 
@@ -266,7 +276,7 @@ se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 .rcc/qmlcache/appfreems_HotMusic_qml.cpp: .qt/rcc/appfreems_raw_qml_0.qrc
 .rcc/qmlcache/appfreems_HotMusic_qml.cpp: se/qt/music/appfreems.qmltypes
 .rcc/qmlcache/appfreems_HotMusic_qml.cpp: se/qt/music/qmldir
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Generating .rcc/qmlcache/appfreems_HotMusic_qml.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Generating .rcc/qmlcache/appfreems_HotMusic_qml.cpp"
 	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache
 	/opt/Qt/6.7.1/gcc_64/libexec/qmlcachegen --bare --resource-path /se/qt/music/HotMusic.qml -I /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug -I /opt/Qt/6.7.1/gcc_64/./qml -i /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/qmldir --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc --resource /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp /run/media/root/study/freems/HotMusic.qml
 
@@ -282,6 +292,7 @@ se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/MusicToolButton.qml
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/MusicBannerView.qml
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/MusicRoundImage.qml
+.qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/MusicTextButton.qml
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/MusicListView.qml
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/PageHomeView.qml
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/DetailPlayListPageView.qml
@@ -289,12 +300,13 @@ se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /run/media/root/study/freems/images.qrc
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: .qt/rcc/appfreems_raw_qml_0.qrc
 .qt/rcc/qrc_appfreems_raw_qml_0.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Running rcc for resource appfreems_raw_qml_0"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Running rcc for resource appfreems_raw_qml_0"
 	/opt/Qt/6.7.1/gcc_64/libexec/rcc --output /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp --name appfreems_raw_qml_0 /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc --no-zstd
 
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/images.qrc
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: CMakeFiles/appfreems_autogen.dir/AutoRcc_images_EWIEGA46WW_Info.json
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/MusicListView.qml
+appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/MusicTextButton.qml
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/images/favorite-big.png
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/images/history.png
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/images/minimize-screen.png
@@ -336,22 +348,22 @@ appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/images
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /run/media/root/study/freems/images/history-white.png
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp: /opt/Qt/6.7.1/gcc_64/./libexec/rcc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Automatic RCC for images.qrc"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Automatic RCC for images.qrc"
 	/usr/bin/cmake -E cmake_autorcc /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/AutoRcc_images_EWIEGA46WW_Info.json Debug
 
 meta_types/appfreems_json_file_list.txt: /opt/Qt/6.7.1/gcc_64/./libexec/cmake_automoc_parser
 meta_types/appfreems_json_file_list.txt: appfreems_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_23) "Running AUTOMOC file extraction for target appfreems"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Running AUTOMOC file extraction for target appfreems"
 	/opt/Qt/6.7.1/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/ParseCache.txt --cmake-autogen-info-file /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/AutogenInfo.json --output-file-path /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt --timestamp-file-path /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/include
 
 meta_types/qt6appfreems_debug_metatypes.json: meta_types/qt6appfreems_debug_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_24) "Generating meta_types/qt6appfreems_debug_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Generating meta_types/qt6appfreems_debug_metatypes.json"
 	/usr/bin/cmake -E true
 
 CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o: appfreems_autogen/mocs_compilation.cpp
 CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_25) "Building CXX object CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o -MF CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o.d -o CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/mocs_compilation.cpp
 
 CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.i: cmake_force
@@ -365,7 +377,7 @@ CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.s: cmake_force
 CMakeFiles/appfreems.dir/main.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/main.cpp.o: /run/media/root/study/freems/main.cpp
 CMakeFiles/appfreems.dir/main.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_26) "Building CXX object CMakeFiles/appfreems.dir/main.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/appfreems.dir/main.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/main.cpp.o -MF CMakeFiles/appfreems.dir/main.cpp.o.d -o CMakeFiles/appfreems.dir/main.cpp.o -c /run/media/root/study/freems/main.cpp
 
 CMakeFiles/appfreems.dir/main.cpp.i: cmake_force
@@ -379,7 +391,7 @@ CMakeFiles/appfreems.dir/main.cpp.s: cmake_force
 CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o: appfreems_qmltyperegistrations.cpp
 CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_27) "Building CXX object CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o -MF CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o.d -o CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_qmltyperegistrations.cpp
 
 CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.i: cmake_force
@@ -393,7 +405,7 @@ CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.s: cmake_force
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o: .qt/rcc/qrc_qmake_se_qt_music.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_28) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_music.cpp.i: cmake_force
@@ -407,7 +419,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_qmake_se_qt_mu
 CMakeFiles/appfreems.dir/search.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp
 CMakeFiles/appfreems.dir/search.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_29) "Building CXX object CMakeFiles/appfreems.dir/search.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/appfreems.dir/search.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/search.cpp.o -MF CMakeFiles/appfreems.dir/search.cpp.o.d -o CMakeFiles/appfreems.dir/search.cpp.o -c /run/media/root/study/freems/search.cpp
 
 CMakeFiles/appfreems.dir/search.cpp.i: cmake_force
@@ -421,7 +433,7 @@ CMakeFiles/appfreems.dir/search.cpp.s: cmake_force
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o: .rcc/qmlcache/appfreems_qmlcache_loader.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_30) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qmlcache_loader.cpp.i: cmake_force
@@ -435,7 +447,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qm
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o: .rcc/qmlcache/appfreems_Main_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_31) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Main_qml.cpp.i: cmake_force
@@ -449,7 +461,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Ma
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o: .rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_32) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailFavoratePageView_qml.cpp.i: cmake_force
@@ -463,7 +475,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_De
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o: .rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_33) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailHistoryPageView_qml.cpp.i: cmake_force
@@ -477,7 +489,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_De
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o: .rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_34) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailLocalPageView_qml.cpp.i: cmake_force
@@ -491,7 +503,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_De
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o: .rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_35) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailRecommendPageView_qml.cpp.i: cmake_force
@@ -505,7 +517,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_De
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o: .rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_36) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailSearchPageView_qml.cpp.i: cmake_force
@@ -519,7 +531,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_De
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o: .rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_37) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutBottomView_qml.cpp.i: cmake_force
@@ -533,7 +545,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_La
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o: .rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_38) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_LayoutHeaderView_qml.cpp.i: cmake_force
@@ -547,7 +559,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_La
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o: .rcc/qmlcache/appfreems_MusicIconButton_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_39) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicIconButton_qml.cpp.i: cmake_force
@@ -561,7 +573,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Mu
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o: .rcc/qmlcache/appfreems_MusicToolButton_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_40) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.i: cmake_force
@@ -575,7 +587,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Mu
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o: .rcc/qmlcache/appfreems_MusicBannerView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_41) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.i: cmake_force
@@ -589,7 +601,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Mu
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o: .rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_42) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.i: cmake_force
@@ -600,10 +612,24 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Mu
 	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.s"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.s
 
+CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
+CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o: .rcc/qmlcache/appfreems_MusicTextButton_qml.cpp
+CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp
+
+CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Preprocessing CXX source to CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp > CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i
+
+CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green "Compiling CXX source to assembly CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s"
+	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s
+
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o: .rcc/qmlcache/appfreems_MusicListView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_43) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.i: cmake_force
@@ -617,7 +643,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Mu
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o: .rcc/qmlcache/appfreems_PageHomeView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_44) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.i: cmake_force
@@ -631,7 +657,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Pa
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o: .rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_45) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.i: cmake_force
@@ -645,7 +671,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_De
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o: .rcc/qmlcache/appfreems_HotMusic_qml.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_46) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_HotMusic_qml.cpp.i: cmake_force
@@ -659,7 +685,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_Ho
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o: .qt/rcc/qrc_appfreems_raw_qml_0.cpp
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_47) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Building CXX object CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o -MF CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o.d -o CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp
 
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_qml_0.cpp.i: cmake_force
@@ -673,7 +699,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qrc_appfreems_raw_
 CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o: CMakeFiles/appfreems.dir/flags.make
 CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o: appfreems_autogen/EWIEGA46WW/qrc_images.cpp
 CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o: CMakeFiles/appfreems.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_48) "Building CXX object CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_50) "Building CXX object CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o"
 	/usr/bin/clang++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o -MF CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o.d -o CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.o -c /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/EWIEGA46WW/qrc_images.cpp
 
 CMakeFiles/appfreems.dir/appfreems_autogen/EWIEGA46WW/qrc_images.cpp.i: cmake_force
@@ -704,6 +730,7 @@ appfreems_OBJECTS = \
 "CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o" \
 "CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o" \
 "CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o" \
+"CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o" \
 "CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o" \
 "CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o" \
 "CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o" \
@@ -732,6 +759,7 @@ appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/a
 appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o
 appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicBannerView_qml.cpp.o
 appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.o
+appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o
 appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicListView_qml.cpp.o
 appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_PageHomeView_qml.cpp.o
 appfreems: CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o
@@ -750,7 +778,7 @@ appfreems: /opt/Qt/6.7.1/gcc_64/lib/libQt6Core.so.6.7.1
 appfreems: /usr/lib/libGLX.so
 appfreems: /usr/lib/libOpenGL.so
 appfreems: CMakeFiles/appfreems.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_49) "Linking CXX executable appfreems"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --green --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_51) "Linking CXX executable appfreems"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/appfreems.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -777,6 +805,7 @@ CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_MusicBannerView_qml.cpp
 CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_MusicIconButton_qml.cpp
 CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_MusicListView_qml.cpp
 CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp
+CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_MusicTextButton_qml.cpp
 CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_MusicToolButton_qml.cpp
 CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_PageHomeView_qml.cpp
 CMakeFiles/appfreems.dir/depend: .rcc/qmlcache/appfreems_qmlcache_loader.cpp

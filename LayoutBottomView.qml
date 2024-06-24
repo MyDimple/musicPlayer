@@ -131,18 +131,40 @@ Rectangle{
                 }
 
     }
-    function playMusic(index=0){
+    // function playMusic(index=0){
 
-        getUrl(index)
 
-    }
+
+    // }
+
+    function playMusic(){
+           if(current<0)return
+           if(playList.length<current+1) return
+           //获取播放链接
+           if(playList[current].type==="1"){
+               //播放本地音乐
+               playLocalMusic()
+           } else {
+               //播放网络音乐
+               playWebMusic()
+           }
+
+       }
+
+       function playLocalMusic(){
+           var currentItem = playList[current]
+           mediaplayer.source =currentItem.url
+           mediaplayer.play()
+           _nameText.text=playList[current].name+"/"+playList[current].artist
+       }
+
+
     //获取播放链接
-    function getUrl(index){
-        if(playList.length<1)return
-        var id=playList[index].id
+    function playWebMusic(){
+        var id=playList[current].id
         if(!id)return
         //设置详情
-        _nameText.text=playList[index].name+"/"+playList[index].artist
+        _nameText.text=playList[current].name+"/"+playList[current].artist
 
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
@@ -154,7 +176,7 @@ Rectangle{
 
             if(!url)return
             //获取封面
-            var cover = playList[index].cover
+            var cover = playList[current].cover
             if(cover.length<1){
                 getCover(id)
             }else{

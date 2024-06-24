@@ -13,6 +13,7 @@ MusicIconButton 1.0 MusicIconButton.qml
 MusicToolButton 1.0 MusicToolButton.qml
 MusicBannerView 1.0 MusicBannerView.qml
 MusicRoundImage 1.0 MusicRoundImage.qml
+MusicTextButton 1.0 MusicTextButton.qml
 MusicListView 1.0 MusicListView.qml
 PageHomeView 1.0 PageHomeView.qml
 DetailPlayListPageView 1.0 DetailPlayListPageView.qml

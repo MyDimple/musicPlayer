@@ -13,6 +13,7 @@ file(REMOVE_RECURSE
   "se/qt/music/MusicIconButton.qml"
   "se/qt/music/MusicListView.qml"
   "se/qt/music/MusicRoundImage.qml"
+  "se/qt/music/MusicTextButton.qml"
   "se/qt/music/MusicToolButton.qml"
   "se/qt/music/PageHomeView.qml"
   "se/qt/music/images.qrc"

@@ -12,6 +12,7 @@
     <file alias="MusicToolButton.qml">/run/media/root/study/freems/MusicToolButton.qml</file>
     <file alias="MusicBannerView.qml">/run/media/root/study/freems/MusicBannerView.qml</file>
     <file alias="MusicRoundImage.qml">/run/media/root/study/freems/MusicRoundImage.qml</file>
+    <file alias="MusicTextButton.qml">/run/media/root/study/freems/MusicTextButton.qml</file>
     <file alias="MusicListView.qml">/run/media/root/study/freems/MusicListView.qml</file>
     <file alias="PageHomeView.qml">/run/media/root/study/freems/PageHomeView.qml</file>
     <file alias="DetailPlayListPageView.qml">/run/media/root/study/freems/DetailPlayListPageView.qml</file>

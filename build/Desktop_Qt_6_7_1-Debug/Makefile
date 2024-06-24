@@ -789,6 +789,30 @@ build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems.dir/build.make CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.s
 .PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp.s
 
+build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.o: build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o
+.PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.o
+
+# target to build an object file
+build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems.dir/build.make CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o
+.PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.o
+
+build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.i: build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.i
+
+# target to preprocess a source file
+build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems.dir/build.make CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i
+.PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.i
+
+build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.s: build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.s
+
+# target to generate assembly for a file
+build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems.dir/build.make CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s
+.PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.cpp.s
+
 build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.o: build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.cpp.o
 .PHONY : build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.o
 
@@ -991,6 +1015,9 @@ help:
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.o"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.i"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicRoundImage_qml.s"
+	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.o"
+	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.i"
+	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicTextButton_qml.s"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.o"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.i"
 	@echo "... build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_MusicToolButton_qml.s"

@@ -16,6 +16,7 @@ b61624978997fb95321c9113a795daf0 .rcc/qmlcache/appfreems_Main_qml.cpp
 befc6fb85d845ccc78246c5b5d2f5ef7 .rcc/qmlcache/appfreems_MusicIconButton_qml.cpp
 96ea4fb9d17afc5feab8ca7b197bcd0d .rcc/qmlcache/appfreems_MusicListView_qml.cpp
 625c8611fb24e54922b5de3169736d8a .rcc/qmlcache/appfreems_MusicRoundImage_qml.cpp
+443be65de781d4ae0c8589e436842312 .rcc/qmlcache/appfreems_MusicTextButton_qml.cpp
 a630a5fd94968b535847d5c6d492aa4c .rcc/qmlcache/appfreems_MusicToolButton_qml.cpp
 9d7b62bc9f484e25a583fa36870bb6fc .rcc/qmlcache/appfreems_PageHomeView_qml.cpp
 046dd1f706fbd6bc711e0130bfc6e5e5 .rcc/qmlcache/appfreems_qmlcache_loader.cpp
@@ -45,6 +46,7 @@ bc2575d7dd25c40c6b5d5c85d08d75a1 se/qt/music/Main.qml
 f6d6bd3f710db66bb9461099d0f34858 se/qt/music/MusicIconButton.qml
 8701759506399866055f61e2448a9ebf se/qt/music/MusicListView.qml
 91bb04b5291f571b64f8e98552ebeb91 se/qt/music/MusicRoundImage.qml
+43e8248635d6f05c9329055f0ce839d2 se/qt/music/MusicTextButton.qml
 6fc492c989df99e6b1b6460686f9a46f se/qt/music/MusicToolButton.qml
 b7449ce187bcc6a9b85d958b7b593519 se/qt/music/PageHomeView.qml
 5ffd9fcbedf6b973d5ff654576036672 se/qt/music/images.qrc

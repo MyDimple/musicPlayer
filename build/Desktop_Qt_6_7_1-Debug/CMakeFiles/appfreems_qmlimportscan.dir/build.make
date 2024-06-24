@@ -86,6 +86,7 @@ CMakeFiles/appfreems_qmlimportscan: .qt/qml_imports/appfreems_build.cmake
 .qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicToolButton.qml
 .qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicBannerView.qml
 .qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicRoundImage.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicTextButton.qml
 .qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicListView.qml
 .qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/PageHomeView.qml
 .qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailPlayListPageView.qml

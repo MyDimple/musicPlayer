@@ -89,6 +89,13 @@ namespace _se_qt_music_MusicRoundImage_qml {
         reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
     };
 }
+namespace _se_qt_music_MusicTextButton_qml { 
+    extern const unsigned char qmlData[];
+    extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
+    const QQmlPrivate::CachedQmlUnit unit = {
+        reinterpret_cast<const QV4::CompiledData::Unit*>(&qmlData), &aotBuiltFunctions[0], nullptr
+    };
+}
 namespace _se_qt_music_MusicListView_qml { 
     extern const unsigned char qmlData[];
     extern const QQmlPrivate::AOTCompiledFunction aotBuiltFunctions[];
@@ -143,6 +150,7 @@ Registry::Registry() {
     resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/MusicToolButton.qml"), &QmlCacheGeneratedCode::_se_qt_music_MusicToolButton_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/MusicBannerView.qml"), &QmlCacheGeneratedCode::_se_qt_music_MusicBannerView_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/MusicRoundImage.qml"), &QmlCacheGeneratedCode::_se_qt_music_MusicRoundImage_qml::unit);
+    resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/MusicTextButton.qml"), &QmlCacheGeneratedCode::_se_qt_music_MusicTextButton_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/MusicListView.qml"), &QmlCacheGeneratedCode::_se_qt_music_MusicListView_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/PageHomeView.qml"), &QmlCacheGeneratedCode::_se_qt_music_PageHomeView_qml::unit);
     resourcePathToCachedUnit.insert(QStringLiteral("/se/qt/music/DetailPlayListPageView.qml"), &QmlCacheGeneratedCode::_se_qt_music_DetailPlayListPageView_qml::unit);

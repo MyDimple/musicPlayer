@@ -64,7 +64,7 @@ Frame{
                                 //打开专辑
                             case "1000":
                                 //打开播放列表
-                                pageHomeView.showPlayList(targetId,targetType)
+                                _pageHomeView.showPlayList(targetId,targetType)
                                 break
                             }
                             console.log(targetId,targetType)

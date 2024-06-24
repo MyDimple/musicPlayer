@@ -100,12 +100,12 @@ CMakeFiles/appfreems.dir/all: CMakeFiles/appfreems_autogen_timestamp_deps.dir/al
 CMakeFiles/appfreems.dir/all: CMakeFiles/appfreems_autogen.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems.dir/build.make CMakeFiles/appfreems.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems.dir/build.make CMakeFiles/appfreems.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49 "Built target appfreems"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20,21,22,23,24,25,26,27,28,29,30,31,32,33,34,35,36,37,38,39,40,41,42,43,44,45,46,47,48,49,50,51 "Built target appfreems"
 .PHONY : CMakeFiles/appfreems.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 68
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 71
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems.dir/rule
@@ -126,12 +126,12 @@ CMakeFiles/appfreems.dir/clean:
 CMakeFiles/appfreems_qmltyperegistration.dir/all: CMakeFiles/appfreems_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_qmltyperegistration.dir/build.make CMakeFiles/appfreems_qmltyperegistration.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_qmltyperegistration.dir/build.make CMakeFiles/appfreems_qmltyperegistration.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=52,53,54,55,56 "Built target appfreems_qmltyperegistration"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=54,55,56,57,58 "Built target appfreems_qmltyperegistration"
 .PHONY : CMakeFiles/appfreems_qmltyperegistration.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_qmltyperegistration.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_qmltyperegistration.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_qmltyperegistration.dir/rule
@@ -157,7 +157,7 @@ CMakeFiles/all_qmltyperegistrations.dir/all: CMakeFiles/appfreems_qmltyperegistr
 
 # Build rule for subdir invocation for target.
 CMakeFiles/all_qmltyperegistrations.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/all_qmltyperegistrations.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/all_qmltyperegistrations.dir/rule
@@ -183,7 +183,7 @@ CMakeFiles/appfreems_qmllint.dir/all: CMakeFiles/all_qmltyperegistrations.dir/al
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_qmllint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_qmllint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_qmllint.dir/rule
@@ -209,7 +209,7 @@ CMakeFiles/appfreems_qmllint_json.dir/all: CMakeFiles/all_qmltyperegistrations.d
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_qmllint_json.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_qmllint_json.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_qmllint_json.dir/rule
@@ -235,7 +235,7 @@ CMakeFiles/appfreems_qmllint_module.dir/all: CMakeFiles/all_qmltyperegistrations
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_qmllint_module.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_qmllint_module.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_qmllint_module.dir/rule
@@ -261,7 +261,7 @@ CMakeFiles/all_qmllint.dir/all: CMakeFiles/appfreems_qmllint.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/all_qmllint.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/all_qmllint.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/all_qmllint.dir/rule
@@ -287,7 +287,7 @@ CMakeFiles/all_qmllint_json.dir/all: CMakeFiles/appfreems_qmllint_json.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/all_qmllint_json.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/all_qmllint_json.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/all_qmllint_json.dir/rule
@@ -313,7 +313,7 @@ CMakeFiles/all_qmllint_module.dir/all: CMakeFiles/appfreems_qmllint_module.dir/a
 
 # Build rule for subdir invocation for target.
 CMakeFiles/all_qmllint_module.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 23
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 24
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/all_qmllint_module.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/all_qmllint_module.dir/rule
@@ -334,12 +334,12 @@ CMakeFiles/all_qmllint_module.dir/clean:
 CMakeFiles/appfreems_tooling.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_tooling.dir/build.make CMakeFiles/appfreems_tooling.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_tooling.dir/build.make CMakeFiles/appfreems_tooling.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=57,58,59,60,61,62,63,64,65,66,67,68,69,70,71,72,73 "Built target appfreems_tooling"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=59,60,61,62,63,64,65,66,67,68,69,70,71,72,73,74,75,76 "Built target appfreems_tooling"
 .PHONY : CMakeFiles/appfreems_tooling.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_tooling.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 17
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 18
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_tooling.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_tooling.dir/rule
@@ -360,7 +360,7 @@ CMakeFiles/appfreems_tooling.dir/clean:
 CMakeFiles/appfreems_qmlimportscan.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_qmlimportscan.dir/build.make CMakeFiles/appfreems_qmlimportscan.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_qmlimportscan.dir/build.make CMakeFiles/appfreems_qmlimportscan.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=51 "Built target appfreems_qmlimportscan"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=53 "Built target appfreems_qmlimportscan"
 .PHONY : CMakeFiles/appfreems_qmlimportscan.dir/all
 
 # Build rule for subdir invocation for target.
@@ -392,7 +392,7 @@ CMakeFiles/appfreems_autogen_timestamp_deps.dir/all: CMakeFiles/appfreems_qmlimp
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_autogen_timestamp_deps.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 18
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 19
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_autogen_timestamp_deps.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_autogen_timestamp_deps.dir/rule
@@ -413,12 +413,12 @@ CMakeFiles/appfreems_autogen_timestamp_deps.dir/clean:
 CMakeFiles/appfreems_autogen.dir/all: CMakeFiles/appfreems_autogen_timestamp_deps.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_autogen.dir/build.make CMakeFiles/appfreems_autogen.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/appfreems_autogen.dir/build.make CMakeFiles/appfreems_autogen.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=50 "Built target appfreems_autogen"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=52 "Built target appfreems_autogen"
 .PHONY : CMakeFiles/appfreems_autogen.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/appfreems_autogen.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 19
+	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 20
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/appfreems_autogen.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles 0
 .PHONY : CMakeFiles/appfreems_autogen.dir/rule

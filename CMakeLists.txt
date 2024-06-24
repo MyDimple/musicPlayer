@@ -31,6 +31,7 @@ qt_add_qml_module(
   MusicToolButton.qml
   MusicBannerView.qml
   MusicRoundImage.qml
+  MusicTextButton.qml
   MusicListView.qml
   PageHomeView.qml
   RESOURCES
