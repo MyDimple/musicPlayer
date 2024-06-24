@@ -1,0 +1,14 @@
+-rootPath
+/run/media/root/study/freems
+-cmake-output
+-output-file
+/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qml_imports/appfreems_build.cmake
+-importPath
+/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music
+-importPath
+/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+-importPath
+/opt/Qt/6.7.1/gcc_64/./qml
+-qrcFiles
+/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/qmake_se_qt_music.qrc
+/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/rcc/appfreems_raw_qml_0.qrc
