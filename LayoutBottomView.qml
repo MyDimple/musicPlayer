@@ -5,10 +5,13 @@ import QtMultimedia
 //底部工具栏
 Rectangle{
     property var playList: []
-    property int current:0
+    property int current:-1
     property int sliderValue: 0
     property int sliderFrom: 0
     property int sliderTo: 100
+    property int currentPlayMode: 0
+    property var playModeList: [{icon:"single-repeat",name:"单曲循环"},{icon:"repeat",name:"循环播放"},{icon:"random",name:"随机播放"}]
+    property bool isModelChange: false
     Layout.fillWidth: true
     height: 60
     color: "#00AAAA"
@@ -25,6 +28,7 @@ Rectangle{
                 Layout.preferredWidth: 50
                 iconSource:"qrc:/images/previous"
                 toolTip: "上一曲"
+                onClicked: playPrevious()
             }
 
             MusicIconButton{
@@ -37,6 +41,7 @@ Rectangle{
                 Layout.preferredWidth: 50
                 iconSource:"qrc:/images/next"
                 toolTip: "下一曲"
+                onClicked: playNext("")
             }
 
             Item{
@@ -59,7 +64,7 @@ Rectangle{
                     anchors.right: _slider.right
                     anchors.bottom: _slider.top
                     anchors.rightMargin: 2
-                    text:"00:00/05:30"
+                    text:"00:00/00:00"
                     color: "#ffffff"
                 }
 
@@ -121,8 +126,9 @@ Rectangle{
             }
             MusicIconButton{
                 Layout.preferredWidth: 50
-                iconSource:"qrc:/images/repeat"
-                toolTip: "重复播放"
+                iconSource:"qrc:/images/"+playModeList[currentPlayMode].icon
+                toolTip: playModeList[currentPlayMode].name
+                onClicked: changePlayMode()
             }
 
             Item{
@@ -131,18 +137,96 @@ Rectangle{
                 }
 
     }
-    function playMusic(index=0){
 
-        getUrl(index)
+    Component.onCompleted: {
+        //从配置文件中拿到currentPlayMode
+         currentPlayMode=settings.value("currentPlayMode",0)
+    }
+
+    onCurrentChanged: {
+        //只要改变了数据项就禁止掉防止自己循环
+        isModelChange=false
+        playMusic(current)
+    }
+
+    //播放上一首
+    function playPrevious(){
+        if(playList.length<1){
+            return
+        }
+
+
+        switch(currentPlayMode)
+        {
+            //单曲播放
+        case 0:
+
+            //循环播放
+        case 1:
+            //&playList.length该操作是避免它为负数
+            current=(current+playList.length-1)%playList.length
+            break
+            //随机播放
+        case 2:{
+            var random=parseInt(Math.random()*playList.length)//parseInt是取整
+            current=current===random?random+1:random
+            break
+        }
+        }
+    }
+
+    //播放下一首
+    function playNext(type='natural'){
+        if(playList.length<1){
+            return
+        }
+
+        switch(currentPlayMode)
+        {
+            //单曲播放
+        case 0:
+            if(type==='natural'){
+                mediaplayer.play()
+                break
+            }
+
+            //循环播放
+        case 1:
+            //&playList.length该操作是避免它为负数
+            current=(current+1)%playList.length
+            break
+            //随机播放
+        case 2:{
+            var random=parseInt(Math.random()*playList.length)//parseInt是取整
+            current=current===random?random+1:random
+            break
+        }
+        }
+
+
+    }
+
+    //切换播放模式
+    function changePlayMode(){
+        // console.log("look",currentPlayMode)
+        currentPlayMode=(currentPlayMode+1)%playModeList.length
+        settings.setValue("currentPlatMode",currentPlayMode)
+    }
+
+
+
+    function playMusic(){
+        if(current<0)return
+        getUrl()
 
     }
     //获取播放链接
-    function getUrl(index){
-        if(playList.length<1)return
-        var id=playList[index].id
+    function getUrl(){
+        if(playList.length<current+1)return
+        var id=playList[current].id
         if(!id)return
         //设置详情
-        _nameText.text=playList[index].name+"/"+playList[index].artist
+        _nameText.text=playList[current].name+"/"+playList[current].artist
 
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
@@ -154,7 +238,7 @@ Rectangle{
 
             if(!url)return
             //获取封面
-            var cover = playList[index].cover
+            var cover = playList[current].cover
             if(cover.length<1){
                 getCover(id)
             }else{
@@ -163,7 +247,7 @@ Rectangle{
 
             mediaplayer.source=url
             mediaplayer.play()
-            console.log(url)
+            isModelChange=true
         }
         se.onReplySignal.connect(onReply)
         se.concatenate("song/url?id="+id); // 触发网络请求
@@ -187,7 +271,7 @@ Rectangle{
         _timeText.text=from_mm+":"+from_ss+"/"+to_mm+":"+to_ss
     }
 
-    function getCover(id,index){
+    function getCover(id){
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
             var cover=JSON.parse(reply).songs[0].al.picUrl

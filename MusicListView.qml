@@ -50,6 +50,10 @@ Frame{
             width: listView.width
 
             Shape{
+                Component.onCompleted: {
+                        // 在这里可以安全地访问parent.width，因为此时组件已经完成初始化
+                        pathline2.x = parent.width
+                    }
                 anchors.fill: parent
                 ShapePath{
                     strokeWidth: 0
@@ -62,7 +66,8 @@ Frame{
                         y:45
                     }
                     PathLine{
-                        x:parent.width
+                        id:pathline2
+                        x:0
                         y:45
                     }
                 }
@@ -129,8 +134,9 @@ Frame{
                             iconWidth: 16
                             toolTip: "播放"
                             onClicked: {
+                                _layoutBottomView.current=-1
                                 _layoutBottomView.playList=musiclist
-                                _layoutBottomView.playMusic(index)
+                                _layoutBottomView.current=index
                             }
                         }
                         MusicIconButton{

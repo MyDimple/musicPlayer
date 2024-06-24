@@ -4,7 +4,11 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtMultimedia
 import se.qt.music
+import QtCore
 ApplicationWindow {
+    property string organizationName: "MyOrganization"
+    property string organizationDomain: "myorganization.com"
+
     id:window
     width: 1200
     height: 800
@@ -19,6 +23,11 @@ ApplicationWindow {
         //    searchonline()
 
         // }
+    }
+
+    Settings{
+        id:settings
+        location: "conf/settings.ini"
     }
 
 
@@ -72,6 +81,13 @@ ApplicationWindow {
         onPositionChanged: {
             _layoutBottomView.setSlider(0,duration,position)
 
+        }
+        onPlaybackStateChanged: {
+            //添加isModelChange控制播放
+            if(playbackState===MediaPlayer.StoppedState&&_layoutBottomView.isModelChange)
+            {
+                _layoutBottomView.playNext()
+            }
         }
     }
 
