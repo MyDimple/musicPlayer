@@ -8,7 +8,7 @@ ApplicationWindow {
     visible: true
     // flags:Qt.FramelessWindowHint
 
-    title:"music player"
+    title:qsTr("music player")
 
     ColumnLayout{
         anchors.fill:parent;

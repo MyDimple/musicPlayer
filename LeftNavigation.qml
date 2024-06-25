@@ -7,7 +7,6 @@ Rectangle {
 
         property var qmlList: [
             {value:"推荐内容"},
-            {value:"搜索音乐"},
             {value:"本地音乐"},
             {value:"播放历史"},
             {value:"我喜欢的"},
@@ -29,6 +28,9 @@ Rectangle {
             }
             delegate: _delegateItem
             spacing: 5
+            currentIndex: -1
+            // 禁止滑动
+            interactive: false
         }
         Component{
             id:_delegateItem
@@ -38,6 +40,7 @@ Rectangle {
                 radius: 10
                 border.color: "black"
                 border.width: 1
+                color: _list.currentIndex === index ? "grey":"#ffffff"
                 RowLayout{
                     anchors.fill: parent
                     anchors.centerIn: parent
@@ -53,22 +56,29 @@ Rectangle {
                     }
 
                     Text{
+                        id: _text
                         text:value
                         Layout.fillWidth: true
                         height:50
                         font.family:"微软雅黑"
                         font.pointSize: 12
+                        color: {
+                            if(_list.currentIndex === index)
+                                return "black"
+                            _mouse.hovered ? "black":"grey"
+                        }
+
                     }
                 }
-                MouseArea{
-                    anchors.fill: parent
-                    hoverEnabled: true
-                    onEntered: {
-                        color="grey"
+                TapHandler{
+                    onTapped: {
+                        _list.currentIndex = index
                     }
-                    onExited: {
-                        color="#ffffff"
-                    }
+                }
+                HoverHandler {
+                    id: _mouse
+                    acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
+                    cursorShape: Qt.PointingHandCursor
                 }
             }
         }
@@ -76,7 +86,4 @@ Rectangle {
             _navigation.append(qmlList)
         }
     }
-
-
-
 }

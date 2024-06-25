@@ -18,12 +18,16 @@ Rectangle{
             id:_search
             height:_head.height
             Layout.fillWidth: true
+
         }
         Setting{
             id:_setting
-            height:_head.height
+            height:_head.height/2
+            Layout.alignment: Qt.AlignVCenter
             width:220
-
+            Layout.margins: 5
+            radius: 10
+            border.color: "black"
         }
     }
 }

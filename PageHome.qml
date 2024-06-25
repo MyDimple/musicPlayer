@@ -10,6 +10,7 @@ RowLayout{
         Layout.fillHeight: true;
         width:200;
     }
+
     Content{
         Layout.fillHeight: true;
         Layout.fillWidth: true;

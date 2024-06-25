@@ -6,7 +6,7 @@ Rectangle {
     RowLayout {
         anchors.centerIn: parent
         spacing: 0
-        width: _search.width*3/5
+        width: _search.width*2/3
         height: 34
         TextField {
             Layout.fillWidth: true
