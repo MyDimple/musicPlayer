@@ -37,7 +37,7 @@ Frame{
             Layout.fillWidth: true
             Layout.preferredHeight: 150
             //中间左上方自定义图片
-            MusicRoundImage{
+            MusicBorderImage{
                 anchors.centerIn:parent
                 height: 100
                 width:100

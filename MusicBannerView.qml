@@ -51,7 +51,6 @@ Frame{
                 anchors.fill: parent
                 cursorShape: Qt.PointingHandCursor
                 onClicked: {
-                 onClicked: {
                         if(bannerView.currentIndex === index){
                             var item  =bannerView.model[index]
                             var targetId = item.targetId+""
@@ -59,6 +58,10 @@ Frame{
                             switch(targetType){
                             case "1":
                                 //播放歌曲
+                                layoutBottomView.current=-1
+                                layoutBottomView.playList=[{id:targetId,name:"",artist:"",cover:"",album:""
+                                                           }]
+                                layoutBottomView.current=0
                                 break
                             case "10":
                                 //打开专辑
@@ -67,11 +70,11 @@ Frame{
                                 pageHomeView.showPlayList(targetId,targetType)
                                 break
                             }
-                            console.log(targetId,targetType)
+
                         }else{
                             bannerView.currentIndex = index
                         }
-                    }
+
                 }
             }
 

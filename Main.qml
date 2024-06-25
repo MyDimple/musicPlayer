@@ -63,7 +63,13 @@ ApplicationWindow {
     //中部模块
     PageHomeView{
         id:pageHomeView
+        visible: false
         }
+    //歌曲详情
+    PageDetailView{
+        id:pageDetailView
+        // visible: false
+    }
 
     //底部模块
     LayoutBottomView{
@@ -79,14 +85,15 @@ ApplicationWindow {
         audioOutput: AudioOutput {}
         videoOutput: videoOutput
         onPositionChanged: {
-            _layoutBottomView.setSlider(0,duration,position)
+            layoutBottomView.setSlider(0,duration,position)
 
         }
         onPlaybackStateChanged: {
+            layoutBottomView.playingState=playbackState===MediaPlayer.PlayingState?1:0
             //添加isModelChange控制播放
-            if(playbackState===MediaPlayer.StoppedState&&_layoutBottomView.isModelChange)
+            if(playbackState===MediaPlayer.StoppedState&&layoutBottomView.isModelChange)
             {
-                _layoutBottomView.playNext()
+                layoutBottomView.playNext()
             }
         }
     }

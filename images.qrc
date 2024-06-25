@@ -40,5 +40,7 @@
         <file>images/video-white.png</file>
         <file>images/video.png</file>
         <file>MusicListView.qml</file>
+        <file>MusicBorderImage.qml</file>
+        <file>MusicLyricView.qml</file>
     </qresource>
 </RCC>

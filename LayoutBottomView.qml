@@ -12,6 +12,11 @@ Rectangle{
     property int currentPlayMode: 0
     property var playModeList: [{icon:"single-repeat",name:"单曲循环"},{icon:"repeat",name:"循环播放"},{icon:"random",name:"随机播放"}]
     property bool isModelChange: false
+    property bool isPressed: false
+    property string musicName: "music"
+    property string artistName: "music"
+    property string musicCover: "qrc:/images/player"
+    property int playingState: 0
     Layout.fillWidth: true
     height: 60
     color: "#00AAAA"
@@ -33,8 +38,20 @@ Rectangle{
 
             MusicIconButton{
                 Layout.preferredWidth: 50
-                iconSource:"qrc:/images/stop"
+                iconSource:playingState?"qrc:/images/stop":"qrc:/images/pause"
                 toolTip: "暂停"
+                onClicked: {
+                    if(!mediaplayer.source)return
+                    if(mediaplayer.playbackState===MediaPlayer.PlayingState){
+                        mediaplayer.pause()
+                        playingState=0
+                        // iconSource="qrc:/images/pause"
+                    }else if(mediaplayer.playbackState===MediaPlayer.PausedState){
+                        mediaplayer.play()
+                        playingState=1
+                        // iconSource="qrc:/image/stop"
+                    }
+                }
             }
 
             MusicIconButton{
@@ -55,7 +72,7 @@ Rectangle{
                     anchors.left: _slider.left
                     anchors.bottom: _slider.top
                     anchors.leftMargin: 2
-                    text:"歌名-歌手"
+                    text:musicName+"-"+artistName
                     color: "#ffffff"
                 }
 
@@ -113,9 +130,32 @@ Rectangle{
             }
 
             MusicRoundImage{
-                id:musicCover
+                // id:musicCover
                 width: 50
-                height: 50
+                height: 45
+                imgSrc: musicCover
+                //点击事件进入歌曲详情页面
+                TapHandler{
+                    // anchors.fill: parent
+
+                    onTapped: {
+                        pageHomeView.visible=!pageHomeView.visible
+                        pageDetailView.visible=!pageDetailView.visible
+
+                        if (isPressed) {
+                            musicCover.scale = 0.9
+                            isPressed = false
+                        } else {
+                            musicCover.scale = 1.0
+                            isPressed = true
+                        }
+                        // musicCover.scale=1.0
+                    }
+
+                }
+                HoverHandler{
+                    cursorShape: Qt.PointingHandCursor
+                }
 
             }
 
@@ -226,7 +266,9 @@ Rectangle{
         var id=playList[current].id
         if(!id)return
         //设置详情
-        _nameText.text=playList[current].name+"/"+playList[current].artist
+        musicName=playList[current].name
+        artistName=playList[current].artist
+        // _nameText.text=playList[current].name+"/"+playList[current].artist
 
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
@@ -242,7 +284,7 @@ Rectangle{
             if(cover.length<1){
                 getCover(id)
             }else{
-                musicCover.imgSrc=cover
+                musicCover=cover
             }
 
             mediaplayer.source=url
@@ -274,13 +316,54 @@ Rectangle{
     function getCover(id){
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
-            var cover=JSON.parse(reply).songs[0].al.picUrl
-            if(cover){
-                musicCover.imgSrc=url
+            getLyric(id)
+            var song=JSON.parse(reply).songs[0]
+            var cover=song.al.picUrl
+            musicCover=cover
+
+            if(musicName.length<1)
+            {
+                musicName=song.name
             }
+            if(artistName.length<1)
+            {
+                artistName=song.ar[0].name
+            }
+
+            pageHomeView.visible=!pageHomeView.visible
+            pageDetailView.visible=!pageDetailView.visible
         }
+        // console.log("hello")
         se.onReplySignal.connect(onReply)
         se.concatenate("song/datail?ids="+id); // 触发网络请求
 
     }
+    function getLyric(id){
+            function onReply(reply){
+                http.onReplySignal.disconnect(onReply)
+                var lyric = JSON.parse(reply).lrc.lyric
+                console.log(lyric)
+                if(lyric.length<1) return
+                var lyrics = (lyric.replace(/\[.*\]/gi,"")).split("\n")
+
+                if(lyrics.length>0) pageDetailView.lyricsList = lyrics
+
+                var times = []
+                lyric.replace(/\[.*\]/gi,function(match,index){
+                    //match : [00:00.00]
+                    if(match.length>2){
+                        var time  = match.substr(1,match.length-2)
+                        var arr = time.split(":")
+                        var timeValue = arr.length>0? parseInt(arr[0])*60*1000:0
+                        arr = arr.length>1?arr[1].split("."):[0,0]
+                        timeValue += arr.length>0?parseInt(arr[0])*1000:0
+                        timeValue += arr.length>1?parseInt(arr[1])*10:0
+
+                        times.push(timeValue)
+                    }
+                })
+            }
+            http.onReplySignal.connect(onReply)
+            http.connet("lyric?id="+id)
+        }
 }

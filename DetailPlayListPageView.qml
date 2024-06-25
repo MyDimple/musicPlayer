@@ -84,7 +84,8 @@ ColumnLayout{
                                                           id:item.id,
                                                           name:item.name,
                                                           artist:item.ar[0].name,
-                                                          album:item.al.name
+                                                          album:item.al.name,
+                                                          cover:item.al.picUrl
                                                       }
                                                   })
         }
@@ -101,14 +102,15 @@ ColumnLayout{
 
         function onSongDetailReply(reply){
             se.onReplySignal.disconnect(onSongDetailReply)
-            console.log(reply)
             var songs = JSON.parse(reply).songs
             playListListView.musiclist= songs.map(item=>{
                                                       return {
                                                           id:item.id,
                                                           name:item.name,
                                                           artist:item.ar[0].name,
-                                                          album:item.al.name
+                                                          album:item.al.name,
+                                                          cover:item.al.picUrl
+
                                                       }
                                                   })
         }
@@ -120,7 +122,7 @@ ColumnLayout{
             playListDesc.text = playlist.description
             name = "-"+playlist.name
             var ids = playlist.trackIds.map(item=>item.id).join(",")
-            console.log(ids)
+
             se.onReplySignal.connect(onSongDetailReply)
             // se.connet("song/detail?ids="+ids)
             se.concatenate("song/detail?ids="+ids); // 触发网络请求
