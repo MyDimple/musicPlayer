@@ -25,7 +25,7 @@ Frame{
     Layout.preferredWidth: 200
     Layout.fillHeight: true
     background: Rectangle{//菜单栏背景
-        color: "#AA00AAAA"
+        color: "#1000AAAA"
     }
 
     padding: 0
@@ -56,7 +56,7 @@ Frame{
             }
             delegate:menuViewDelegate
             highlight: Rectangle{//点击后的高亮效果
-                color: "#aa73a7ab"
+                color: "#5073a7ab"
             }
             highlightMoveDuration: 100
 
@@ -69,7 +69,7 @@ Frame{
             id:menuViewDelegateItem
             height: 50
             width: 200
-            color: "#AA00AAAA" //左边菜单默认颜色
+            color: "#1000AAAA" //左边菜单默认颜色
             RowLayout{
                 anchors.fill: parent
                 anchors.centerIn: parent
@@ -98,10 +98,10 @@ Frame{
                 anchors.fill: parent
                 hoverEnabled: true
                 onEntered: {//鼠标进入的颜色
-                    color="#aa73a7ab"
+                    color="#5073a7ab"
                 }
                 onExited: {//鼠标离开后的颜色
-                    color="#AA00AAAA"
+                    color="#1000AAAA"
                 }
                 onClicked:{//切换功能
                     hidePlayList()

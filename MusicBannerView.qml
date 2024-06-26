@@ -51,7 +51,7 @@ Frame{
                 anchors.fill: parent
                 cursorShape: Qt.PointingHandCursor
                 onClicked: {
-                 onClicked: {
+
                         if(bannerView.currentIndex === index){
                             var item  =bannerView.model[index]
                             var targetId = item.targetId+""
@@ -67,11 +67,10 @@ Frame{
                                 _pageHomeView.showPlayList(targetId,targetType)
                                 break
                             }
-                            console.log(targetId,targetType)
                         }else{
                             bannerView.currentIndex = index
                         }
-                    }
+
                 }
             }
 
@@ -127,7 +126,7 @@ Frame{
             width: 20
             height: 5
             radius: 5
-            color: index===bannerView.currentIndex?"balck":"gray"
+            color: index===bannerView.currentIndex?"white":"gray"
             Behavior on color{
                 ColorAnimation {
                     duration: 200

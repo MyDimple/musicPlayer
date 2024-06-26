@@ -19,6 +19,7 @@ ColumnLayout{
             text:qsTr("搜索音乐")
             font.family: "微软雅黑"
             font.pointSize: 25
+            color: "white"
         }
     }
 
@@ -34,7 +35,7 @@ ColumnLayout{
             selectionColor: "#999999"
             placeholderText: qsTr("输入搜索内容")
             placeholderTextColor:"grey"//不同的主题颜色可能会导致提示字的默认颜色不同，根据需要修改
-            color:"#000000"
+            color: "white"
             background: Rectangle{
                 color:"#00000000"
 
@@ -64,6 +65,7 @@ ColumnLayout{
         id:musiclistView
         onLoadMore:doSearch(offset,current)
         Layout.topMargin: 10
+
     }
 
 

@@ -3,7 +3,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQml
 
-//精品歌单布局
+//轮播图下方精品歌单网格布局
 Item{
 
     property alias list: gridRepeater.model //暴露出model,在DetailRecommendPageView.qml中的getHotMusic()方法中获取model
@@ -41,6 +41,7 @@ Item{
                     font.family: "微软雅黑"
                     height:30
                     elide: Qt.ElideMiddle //居中
+                    color:"white"
                 }
 
 

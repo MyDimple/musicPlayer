@@ -5,13 +5,16 @@ import QtMultimedia
 //底部工具栏
 Rectangle{
     property var playList: []
-    property int current:0
+    property int current:-1
     property int sliderValue: 0
     property int sliderFrom: 0
     property int sliderTo: 100
+    property int currentPlayMode: 0
+    property var playModeList: [{icon:"single-repeat",name:"单曲循环"},{icon:"repeat",name:"循环播放"},{icon:"random",name:"随机播放"}]
+    property bool isModelChange: false
     Layout.fillWidth: true
     height: 60
-    color: "#00AAAA"
+    color: "#1500AAAA"
 
     RowLayout{
             anchors.fill: parent
@@ -25,6 +28,7 @@ Rectangle{
                 Layout.preferredWidth: 50
                 iconSource:"qrc:/images/previous"
                 toolTip: "上一曲"
+                onClicked: playPrevious()
             }
 
             MusicIconButton{
@@ -37,6 +41,7 @@ Rectangle{
                 Layout.preferredWidth: 50
                 iconSource:"qrc:/images/next"
                 toolTip: "下一曲"
+                onClicked: playNext("")
             }
 
             Item{
@@ -59,7 +64,7 @@ Rectangle{
                     anchors.right: _slider.right
                     anchors.bottom: _slider.top
                     anchors.rightMargin: 2
-                    text:"00:00/05:30"
+                    text:"00:00/00:00"
                     color: "#ffffff"
                 }
 
@@ -115,14 +120,18 @@ Rectangle{
             }
 
             MusicIconButton{
-                Layout.preferredWidth: 50
-                iconSource:"qrc:/images/favorite"
-                toolTip: "喜欢"
-            }
+                        Layout.preferredWidth: 50
+                        icon.source: "qrc:/images/favorite"
+                        iconWidth: 32
+                        iconHeight: 32
+                        toolTip: "我喜欢"
+                        onClicked: saveFavorite( playList[current])
+                    }
             MusicIconButton{
                 Layout.preferredWidth: 50
-                iconSource:"qrc:/images/repeat"
-                toolTip: "重复播放"
+                iconSource:"qrc:/images/"+playModeList[currentPlayMode].icon
+                toolTip: playModeList[currentPlayMode].name
+                onClicked: changePlayMode()
             }
 
             Item{
@@ -131,12 +140,58 @@ Rectangle{
                 }
 
     }
-    // function playMusic(index=0){
 
 
 
-    // }
+    // 保存历史记录
+    function saveHistory(index = 0){
+        if(playList.length < index + 1) return
+        var item = playList[index]
+        if(!item||!item.id)return
+        var history = historySettings.value("history",[])
+        if(i>=0) history.splice(i,1)
+        var i = history.findIndex(value=>value.id===item.id)
+        if(i >= 0){
+            history.slice(i,1)
+        }
+        history.unshift({
+                            id:item.id + "",
+                            name:item.name,
+                            artist:item.artist,
+                            url:item.url?item.url:"",
+                            type:item.type?item.type:"",
+                            album:item.album?item.album:"本地音乐"
 
+                        })
+        if(history.length > 100)
+        {//限制一百条数据
+            history.pop()}
+        historySettings.setValue("history",history)
+
+    }
+
+    //保存我喜欢
+    function saveFavorite(value={}){
+           if(!value||!value.id)return
+           var favorite =  favoriteSettings.value("favorite",[])
+           var i =  favorite.findIndex(item=>value.id===item.id)
+           if(i>=0) favorite.splice(i,1)
+           favorite.unshift({
+                               id:value.id+"",
+                               name:value.name+"",
+                               artist:value.artist+"",
+                               url:value.url?value.url:"",
+                               type:value.type?value.type:"",
+                               album:value.album?value.album:"本地音乐"
+                           })
+           if(favorite.length>500){
+               //限制五百条数据
+               favorite.pop()
+           }
+           favoriteSettings.setValue("favorite",favorite)
+       }
+
+    //播放音乐，判断网络还是本地音乐
     function playMusic(){
            if(current<0)return
            if(playList.length<current+1) return
@@ -148,18 +203,18 @@ Rectangle{
                //播放网络音乐
                playWebMusic()
            }
-
+           saveHistory(current)
        }
 
-       function playLocalMusic(){
+    //播放本地音乐
+    function playLocalMusic(){
            var currentItem = playList[current]
            mediaplayer.source =currentItem.url
            mediaplayer.play()
            _nameText.text=playList[current].name+"/"+playList[current].artist
        }
 
-
-    //获取播放链接
+    //播放网络音乐
     function playWebMusic(){
         var id=playList[current].id
         if(!id)return
@@ -184,12 +239,90 @@ Rectangle{
             }
             mediaplayer.source=url
             mediaplayer.play()
-            console.log("playing")
-
+            isModelChange=true
         }
         se.onReplySignal.connect(onReply)
         se.concatenate("song/url?id="+id); // 触发网络请求
     }
+
+
+    Component.onCompleted: {
+        //从配置文件中拿到currentPlayMode
+         currentPlayMode=settings.value("currentPlayMode",0)
+    }
+
+    onCurrentChanged: {
+        //只要改变了数据项就禁止掉防止自己循环
+        isModelChange=false
+        playMusic(current)
+    }
+
+    //播放上一首
+    function playPrevious(){
+        if(playList.length<1){
+            return
+        }
+
+
+        switch(currentPlayMode)
+        {
+            //单曲播放
+        case 0:
+
+            //循环播放
+        case 1:
+            //&playList.length该操作是避免它为负数
+            current=(current+playList.length-1)%playList.length
+            break
+            //随机播放
+        case 2:{
+            var random=parseInt(Math.random()*playList.length)//parseInt是取整
+            current=current===random?random+1:random
+            break
+        }
+        }
+    }
+
+    //播放下一首
+    function playNext(type='natural'){
+        if(playList.length<1){
+            return
+        }
+
+        switch(currentPlayMode)
+        {
+            //单曲播放
+        case 0:
+            if(type==='natural'){
+                mediaplayer.play()
+                break
+            }
+
+            //循环播放
+        case 1:
+            //&playList.length该操作是避免它为负数
+            current=(current+1)%playList.length
+            break
+            //随机播放
+        case 2:{
+            var random=parseInt(Math.random()*playList.length)//parseInt是取整
+            current=current===random?random+1:random
+            break
+        }
+        }
+
+
+    }
+
+    //切换播放模式
+    function changePlayMode(){
+        // console.log("look",currentPlayMode)
+        currentPlayMode=(currentPlayMode+1)%playModeList.length
+        settings.setValue("currentPlatMode",currentPlayMode)
+    }
+
+
+
 
     function setSlider(from=0,to=100,value=0){
         sliderFrom=from
@@ -209,7 +342,7 @@ Rectangle{
         _timeText.text=from_mm+":"+from_ss+"/"+to_mm+":"+to_ss
     }
 
-    function getCover(id,index){
+    function getCover(id){
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
             var cover=JSON.parse(reply).songs[0].al.picUrl

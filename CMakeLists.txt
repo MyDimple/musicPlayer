@@ -20,7 +20,6 @@ qt_add_qml_module(
   1.0
   QML_FILES
   Main.qml
-  DetailFavoratePageView.qml
   DetailHistoryPageView.qml
   DetailLocalPageView.qml
   DetailRecommendPageView.qml
@@ -42,7 +41,11 @@ qt_add_qml_module(
   RESOURCES
   QML_FILES
   DetailPlayListPageView.qml
-  HotMusic.qml)
+  HotMusic.qml
+  QML_FILES
+  DetailFavoritePageView.qml
+  QML_FILES
+  Background.qml)
 
 target_compile_features(appfreems PRIVATE cxx_std_20)
 

@@ -4,7 +4,7 @@ import QtQuick.Layouts
 
 ToolBar{//顶部工具栏
     background: Rectangle{
-        color:"#00AAAA"
+        color:"#00000000"
         }
     width: parent.width
     Layout.fillWidth: true

@@ -18,7 +18,9 @@ ScrollView{
             verticalAlignment: Text.AlignBottom
             text:qsTr("推荐内容")
             font.family: "微软雅黑"
-            font.pointSize: 18
+            font.pointSize: 25
+            color: "white"
+
         }
         }
 
@@ -79,7 +81,7 @@ ScrollView{
         se.concatenate("banner"); // 触发网络请求
 }
 
-    //获取精品歌单
+    //获取精品歌单,即推荐内容下方网格
     function getHotMusic() {
         function onReply(reply) {
             // console.log("hello")

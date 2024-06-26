@@ -4,7 +4,7 @@ import Qt5Compat.GraphicalEffects
 
 
 Item {
-    property string imgSrc: "qrc:/images/player"
+    property string imgSrc: "qrc:/images/back"
     property int borderRadius: 5
 
     Image{

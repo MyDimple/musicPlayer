@@ -10,7 +10,6 @@ ColumnLayout{
     property string name: "-"
 
     onTargetIdChanged:{//获取专辑或者歌单数据
-        console.log(targetType)
         if(targetType=="10") loadAlbum() //专辑
         else if(targetType=="1000") loadPlayList() //歌单
     }
@@ -27,6 +26,7 @@ ColumnLayout{
             text: qsTr(targetType=="10"?"专辑":"歌单")+name //歌单或者专辑名字
             font.family: "微软雅黑"
             font.pointSize: 25
+            color: "white"
         }
     }
 
@@ -54,12 +54,14 @@ ColumnLayout{
                 maximumLineCount: 4
                 elide: Text.ElideRight
                 lineHeight: 1.5
+                color:"white"
             }
         }
     }
 
     MusicListView{
         id:playListListView
+        deletable: false //隐藏删除键
     }
 
 

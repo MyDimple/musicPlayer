@@ -3,7 +3,11 @@ import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Shapes
 Frame{
+    property bool deletable: true
+    property bool favoritable: true
+    signal deleteItem(int index)
     property var musiclist: []
+    property alias lsModel: listViewModel
     property int all: 0
     property int pageSize: 60
     property int current: 0
@@ -35,7 +39,7 @@ Frame{
         }
         header: listViewHeader
         highlight: Rectangle{
-            color:"#f0f0f0"
+            color:"#00000000"
         }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
@@ -43,12 +47,16 @@ Frame{
     Component{
         id:listViewDelegate
         Rectangle{
-             color: mouse.hovered ? "#f0f0f0" : "#00000000"
+             color: mouse.hovered ? "#5073a7ab" : "#00000000"
 
             height:45
             width: listView.width
 
             Shape{
+                Component.onCompleted: {
+                        // 在这里可以安全地访问parent.width，因为此时组件已经完成初始化
+                        pathline2.x = parent.width
+                    }
                 anchors.fill: parent
                 ShapePath{
                     strokeWidth: 0
@@ -61,12 +69,12 @@ Frame{
                         y:45
                     }
                     PathLine{
-                        x:parent.width
+                        id:pathline2
+                        x:0
                         y:45
                     }
                 }
             }
-
             RowLayout{
                 id:item
                 TapHandler{
@@ -89,7 +97,7 @@ Frame{
                     Layout.preferredWidth: parent.width*0.05
                     font.family: "微软雅黑"
                     font.pointSize: 13
-                    color:"black"
+                    color:"white"
                     elide:Qt.ElideRight//截断
                 }
                 Text{
@@ -97,7 +105,7 @@ Frame{
                     Layout.preferredWidth: parent.width*0.4
                     font.family: "微软雅黑"
                     font.pointSize: 13
-                    color:"black"
+                    color:"white"
                     elide:Qt.ElideRight//截断
                 }
                 Text{
@@ -106,7 +114,7 @@ Frame{
                     Layout.preferredWidth: parent.width*0.15
                     font.family: "微软雅黑"
                     font.pointSize: 13
-                    color:"black"
+                    color:"white"
                     elide:Qt.ElideMiddle//截断
                 }
                 Text{
@@ -115,7 +123,7 @@ Frame{
                     Layout.preferredWidth: parent.width*0.15
                     font.family: "微软雅黑"
                     font.pointSize: 13
-                    color:"black"
+                    color:"white"
                     elide:Qt.ElideMiddle//截断
                 }
                 Item{
@@ -128,39 +136,48 @@ Frame{
                             iconWidth: 16
                             toolTip: "播放"
                             onClicked: {
+                                _layoutBottomView.current=-1
                                 _layoutBottomView.playList=musiclist
-                                _layoutBottomView.playMusic(index)
+                                _layoutBottomView.current=index
                             }
                         }
                         MusicIconButton{
                             iconSource: "qrc:/images/favorite"
+                            visible: favoritable
                             iconHeight: 16
                             iconWidth: 16
                             toolTip: "喜欢"
                             onClicked: {
-
+                                _layoutBottomView.saveFavorite({
+                                                                  id:musiclist[index].id + "",
+                                                                  name:musiclist[index].name,
+                                                                  artist:musiclist[index].artist,
+                                                                  url:musiclist[index].url?musiclist[index].url:"",
+                                                                  type:musiclist[index].type?musiclist[index].type:"",
+                                                                  album:musiclist[index].album?musiclist[index].album:"本地音乐"
+                                                              })
                             }
                         }
                         MusicIconButton{
                             iconSource: "qrc:/images/clear"
+                            visible: deletable
                             iconHeight: 16
                             iconWidth: 16
                             toolTip: "删除"
                             onClicked: {
-
+                                deleteItem(index)
                             }
                         }
                     }
                 }
 
             }
-
         }
-    }
+}
     Component{
         id:listViewHeader
         Rectangle{
-            color:"#00AAAA"
+            color:"#5073a7ab"
             height:45
             width: listView.width
             RowLayout{
@@ -240,7 +257,7 @@ Frame{
                         text:modelData+1//索引
                         font.family:"微软雅黑"
                         font.pointSize: 14
-                        color: checked?"#497563":"black"
+                        color: checked?"#497563":"grey"
                     }
                     background: Rectangle{
                         implicitHeight: 30

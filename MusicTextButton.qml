@@ -21,7 +21,7 @@ Button{
     background: Rectangle{
         implicitHeight: self.height
         implicitWidth: self.width
-        color: self.down||(self.checkable&&self.checked)?"black":"#00AAAA"
+        color: self.down||(self.checkable&&self.checked)?"white":"#5073a7ab"
         radius: 3
     }
     width: 50

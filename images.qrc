@@ -1,7 +1,6 @@
 <RCC>
     <qresource prefix="/">
         <file>images/about.png</file>
-        <file>images/background.png</file>
         <file>images/clear.png</file>
         <file>images/cloud-white.png</file>
         <file>images/cloud.png</file>
@@ -24,7 +23,6 @@
         <file>images/pause.png</file>
         <file>images/play-list-white.png</file>
         <file>images/play-list.png</file>
-        <file>images/player.jpg</file>
         <file>images/power.png</file>
         <file>images/previous.png</file>
         <file>images/random.png</file>
@@ -41,5 +39,7 @@
         <file>images/video.png</file>
         <file>MusicListView.qml</file>
         <file>MusicTextButton.qml</file>
+        <file>images/background.jpg</file>
+        <file>images/back.jpg</file>
     </qresource>
 </RCC>
