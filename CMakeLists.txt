@@ -20,16 +20,26 @@ qt_add_qml_module(
   QML_FILES
   Main.qml
   SOURCES
-  QML_FILES LayoutHead.qml
-  QML_FILES LayoutBottom.qml
-  QML_FILES PageHome.qml
-  QML_FILES Logo.qml
-  QML_FILES SearchView.qml
-  QML_FILES Setting.qml
-  QML_FILES Actions.qml
-  QML_FILES Dialogs.qml
-  QML_FILES LeftNavigation.qml
-  QML_FILES Content.qml)
+  QML_FILES
+  LayoutHead.qml
+  QML_FILES
+  LayoutBottom.qml
+  QML_FILES
+  PageHome.qml
+  QML_FILES
+  Logo.qml
+  QML_FILES
+  SearchView.qml
+  QML_FILES
+  Setting.qml
+  QML_FILES
+  ContentFavoratePage.qml
+  QML_FILES
+  ContentHistoryPage.qml
+  QML_FILES ContentLocalPage.qml
+  QML_FILES ContentPlayListPage.qml
+  QML_FILES ContentRecommendPage.qml
+  QML_FILES ContentSearchPage.qml)
 
 target_compile_features(appfreemsp PRIVATE cxx_std_20)
 
