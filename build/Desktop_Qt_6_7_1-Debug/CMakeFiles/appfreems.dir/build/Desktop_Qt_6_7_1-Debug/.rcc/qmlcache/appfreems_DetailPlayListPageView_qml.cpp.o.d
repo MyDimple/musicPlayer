@@ -1,5 +1,5 @@
 CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp.o: \
-  /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp \
+  /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_DetailPlayListPageView_qml.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlprivate.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qjsprimitivevalue.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlglobal.h \

@@ -10,6 +10,10 @@ import QtQml
 ApplicationWindow {
     property string organizationName: "MyOrganization"
     property string organizationDomain: "myorganization.com"
+    property int mWINDOW_WIDTH: 1200
+    property int mWINDOW_HEIGHT: 800
+    //flags: Qt.Window|Qt.FramelessWindowHint //去掉默认边框
+
 
     id:window
     width: 1200

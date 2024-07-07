@@ -1,6 +1,6 @@
 CMakeFiles/appfreems.dir/search.cpp.o: \
-  /run/media/root/study/freems/search.cpp \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.cpp \
+  /run/media/root/study1/freems/search.h \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \

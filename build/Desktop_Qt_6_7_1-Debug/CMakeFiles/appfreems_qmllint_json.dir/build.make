@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/root/study/freems
+CMAKE_SOURCE_DIR = /run/media/root/study1/freems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+CMAKE_BINARY_DIR = /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug
 
 # Utility rule file for appfreems_qmllint_json.
 
@@ -70,29 +70,29 @@ include CMakeFiles/appfreems_qmllint_json.dir/compiler_depend.make
 include CMakeFiles/appfreems_qmllint_json.dir/progress.make
 
 CMakeFiles/appfreems_qmllint_json: /opt/Qt/6.7.1/gcc_64/bin/qmllint
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/Main.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/DetailHistoryPageView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/DetailLocalPageView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/DetailRecommendPageView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/DetailSearchPageView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/LayoutBottomView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/LayoutHeaderView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicIconButton.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicToolButton.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicBannerView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicRoundImage.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicTextButton.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicListView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/PageHomeView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicBorderImage.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/MusicLyricView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/Background.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/DetailFavoritePageView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/DetailPlayListPageView.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/HotMusic.qml
-CMakeFiles/appfreems_qmllint_json: /run/media/root/study/freems/PageDetailView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/Main.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/DetailHistoryPageView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/DetailLocalPageView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/DetailRecommendPageView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/DetailSearchPageView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/LayoutBottomView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/LayoutHeaderView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicIconButton.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicToolButton.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicBannerView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicRoundImage.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicTextButton.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicListView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/PageHomeView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicBorderImage.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/MusicLyricView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/Background.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/DetailFavoritePageView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/DetailPlayListPageView.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/HotMusic.qml
+CMakeFiles/appfreems_qmllint_json: /run/media/root/study1/freems/PageDetailView.qml
 CMakeFiles/appfreems_qmllint_json: .rcc/qmllint/appfreems_json.rsp
-	cd /run/media/root/study/freems && /opt/Qt/6.7.1/gcc_64/bin/qmllint @/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmllint/appfreems_json.rsp
+	cd /run/media/root/study1/freems && /opt/Qt/6.7.1/gcc_64/bin/qmllint @/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/.rcc/qmllint/appfreems_json.rsp
 
 appfreems_qmllint_json: CMakeFiles/appfreems_qmllint_json
 appfreems_qmllint_json: CMakeFiles/appfreems_qmllint_json.dir/build.make
@@ -107,6 +107,6 @@ CMakeFiles/appfreems_qmllint_json.dir/clean:
 .PHONY : CMakeFiles/appfreems_qmllint_json.dir/clean
 
 CMakeFiles/appfreems_qmllint_json.dir/depend:
-	cd /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study/freems /run/media/root/study/freems /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study1/freems /run/media/root/study1/freems /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appfreems_qmllint_json.dir/depend
 

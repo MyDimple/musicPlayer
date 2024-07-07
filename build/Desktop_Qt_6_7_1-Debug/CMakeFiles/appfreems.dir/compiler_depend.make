@@ -154,7 +154,7 @@ CMakeFiles/appfreems.dir/appfreems_autogen/mocs_compilation.cpp.o: appfreems_aut
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlregistration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.h \
   appfreems_autogen/EWIEGA46WW/moc_search.cpp \
   /usr/include/c++/14.1.1/algorithm \
   /usr/include/c++/14.1.1/array \
@@ -660,7 +660,7 @@ CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o: appfreems_qmltype
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlexports.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlglobal.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.h \
   /usr/include/c++/14.1.1/algorithm \
   /usr/include/c++/14.1.1/array \
   /usr/include/c++/14.1.1/atomic \
@@ -5413,6 +5413,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_La
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qlist.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qlocale.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qlogging.h \
+  /opt/Qt/6.7.1/gcc_64/include/QtCore/qloggingcategory.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qmalloc.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qmap.h \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/qmath.h \
@@ -11652,7 +11653,7 @@ CMakeFiles/appfreems.dir/build/Desktop_Qt_6_7_1-Debug/.rcc/qmlcache/appfreems_qm
   /usr/lib/clang/17/include/stddef.h \
   /usr/lib/clang/17/include/stdint.h
 
-CMakeFiles/appfreems.dir/main.cpp.o: /run/media/root/study/freems/main.cpp \
+CMakeFiles/appfreems.dir/main.cpp.o: /run/media/root/study1/freems/main.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QFlags \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QIODevice \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QList \
@@ -11843,7 +11844,7 @@ CMakeFiles/appfreems.dir/main.cpp.o: /run/media/root/study/freems/main.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlexports.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qtqmlglobal.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.h \
   /usr/include/c++/14.1.1/algorithm \
   /usr/include/c++/14.1.1/array \
   /usr/include/c++/14.1.1/atomic \
@@ -12183,7 +12184,7 @@ CMakeFiles/appfreems.dir/main.cpp.o: /run/media/root/study/freems/main.cpp \
   /usr/lib/clang/17/include/stddef.h \
   /usr/lib/clang/17/include/stdint.h
 
-CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp \
+CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study1/freems/search.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QFlags \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QIODevice \
   /opt/Qt/6.7.1/gcc_64/include/QtCore/QList \
@@ -12332,7 +12333,7 @@ CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qtnetworkglobal.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlregistration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.h \
   /usr/include/c++/14.1.1/algorithm \
   /usr/include/c++/14.1.1/array \
   /usr/include/c++/14.1.1/atomic \
@@ -12673,7 +12674,7 @@ CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp \
   /usr/lib/clang/17/include/stdint.h
 
 
-/run/media/root/study/freems/search.cpp:
+/run/media/root/study1/freems/search.cpp:
 
 /opt/Qt/6.7.1/gcc_64/include/QtQml/QQmlApplicationEngine:
 
@@ -12699,6 +12700,8 @@ CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp \
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qcoreapplication.h:
 
+/run/media/root/study1/freems/main.cpp:
+
 /usr/include/c++/14.1.1/bits/fs_path.h:
 
 /usr/include/c++/14.1.1/bits/fs_fwd.h:
@@ -12708,6 +12711,8 @@ CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp \
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qfile.h:
 
 .rcc/qmlcache/appfreems_qmlcache_loader.cpp:
+
+.rcc/qmlcache/appfreems_PageHomeView_qml.cpp:
 
 /usr/include/c++/14.1.1/bits/stl_tempbuf.h:
 
@@ -12796,6 +12801,8 @@ CMakeFiles/appfreems.dir/search.cpp.o: /run/media/root/study/freems/search.cpp \
 /usr/include/c++/14.1.1/bits/istream.tcc:
 
 /usr/include/c++/14.1.1/bits/ios_base.h:
+
+/run/media/root/study1/freems/search.h:
 
 /usr/include/c++/14.1.1/bits/exception_defines.h:
 
@@ -13075,8 +13082,6 @@ appfreems_autogen/EWIEGA46WW/moc_search.cpp:
 
 /usr/include/c++/14.1.1/bits/ranges_util.h:
 
-/run/media/root/study/freems/main.cpp:
-
 appfreems_autogen/EWIEGA46WW/qrc_images.cpp:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qshareddata_impl.h:
@@ -13106,8 +13111,6 @@ appfreems_autogen/EWIEGA46WW/qrc_images.cpp:
 /usr/include/c++/14.1.1/bits/char_traits.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qmap.h:
-
-.rcc/qmlcache/appfreems_PageHomeView_qml.cpp:
 
 /opt/Qt/6.7.1/gcc_64/include/QtNetwork/QSslPreSharedKeyAuthenticator:
 
@@ -13286,6 +13289,8 @@ appfreems_autogen/EWIEGA46WW/qrc_images.cpp:
 /usr/include/c++/14.1.1/bits/shared_ptr.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qtconfiginclude.h:
+
+/opt/Qt/6.7.1/gcc_64/include/QtCore/qloggingcategory.h:
 
 /opt/Qt/6.7.1/gcc_64/include/QtCore/qtcore-config.h:
 
@@ -13664,8 +13669,6 @@ appfreems_autogen/mocs_compilation.cpp:
 /usr/include/bits/types/error_t.h:
 
 .rcc/qmlcache/appfreems_MusicToolButton_qml.cpp:
-
-/run/media/root/study/freems/search.h:
 
 /usr/include/bits/types/locale_t.h:
 

@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/root/study/freems
+CMAKE_SOURCE_DIR = /run/media/root/study1/freems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+CMAKE_BINARY_DIR = /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug
 
 # Utility rule file for all_qmllint_json.
 
@@ -81,6 +81,6 @@ CMakeFiles/all_qmllint_json.dir/clean:
 .PHONY : CMakeFiles/all_qmllint_json.dir/clean
 
 CMakeFiles/all_qmllint_json.dir/depend:
-	cd /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study/freems /run/media/root/study/freems /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/all_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study1/freems /run/media/root/study1/freems /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/all_qmllint_json.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/all_qmllint_json.dir/depend
 

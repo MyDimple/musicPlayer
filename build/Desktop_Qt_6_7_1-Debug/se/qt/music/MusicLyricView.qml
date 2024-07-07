@@ -7,14 +7,14 @@ Rectangle {
     Layout.preferredHeight: parent.height*0.8
     Layout.alignment: Qt.AlignHCenter
     clip:true
-
+    color:"#00000000"
     ListView{
         id:list
         anchors.fill:parent
         model: ["没有歌词","歌词","歌词"]
         delegate: listDelegate
         highlight: Rectangle{
-            color:"#2073a7db"
+            color:"#1000AAAA"
         }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
@@ -33,11 +33,9 @@ Rectangle {
             Text{
                 text:modelData
                 anchors.centerIn: parent
-                color:index===list.currentIndex?"black":"grey"
-                font:{
-                    family: "微软雅黑"
-                    pointSize: 12
-                }
+                color:index===list.currentIndex?"#eeffffff":"#aaffffff"
+                font.family: "微软雅黑"
+                font.pointSize: 12
             }
             states:State{
                 when:delegateItem.ListView.isCurrentItem

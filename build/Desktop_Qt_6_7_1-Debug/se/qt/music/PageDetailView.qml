@@ -8,6 +8,7 @@ import QtQml 2.12
 //歌曲详情
 Item {
     property alias lyricsList:lyricView.lyrics
+        property alias current : lyricView.current
     Layout.fillHeight: true
     Layout.fillWidth: true
 
@@ -15,37 +16,56 @@ Item {
         anchors.fill: parent
         Frame{
             Layout.preferredWidth: parent.width*0.45
+            Layout.fillWidth: true
             Layout.fillHeight: true
-
-
-            Text {
-                id: name
-                text: layoutBottomView.musicName
-                anchors{
-                    bottom: artist.top
-                    bottomMargin: 20
-                    horizontalCenter: parent.horizontalCenter
-                }
-                font{
-                    family: "微软雅黑"
-                    pointSize: 16
-                }
+            background: Rectangle{
+                color: "#00000000"
             }
 
+
+            // Text {
+            //     id: name
+            //     text: layoutBottomView.musicName
+            //     anchors{
+            //         bottom: artist.top
+            //         bottomMargin: 20
+            //         horizontalCenter: parent.horizontalCenter
+            //     }
+            //     font{
+            //         family: "微软雅黑"
+            //         pointSize: 16
+            //     }
+            // }
+
+            // Text {
+            //     id: artist
+            //     text: layoutBottomView.artistName
+            //     anchors{
+            //         bottom: cover.top
+            //         bottomMargin: 50
+            //         topMargin: 20
+            //         horizontalCenter: parent.horizontalCenter
+            //     }
+            //     font{
+            //         family:"微软雅黑"
+            //         pointSize: 12
+            //     }
+            // }
             Text {
-                id: artist
-                text: layoutBottomView.artistName
-                anchors{
-                    bottom: cover.top
-                    bottomMargin: 50
-                    topMargin: 20
-                    horizontalCenter: parent.horizontalCenter
-                }
-                font{
-                    family:"微软雅黑"
-                    pointSize: 12
-                }
-            }
+                            id: lyric
+                            visible: _layoutHeaderView.isSmallWindow
+                            text: lyricView.lyrics[lyricView.current]?lyricView.lyrics[lyricView.current]:"暂无歌词"
+                            anchors{
+                                top: cover.bottom
+                                topMargin: 50
+                                horizontalCenter: parent.horizontalCenter
+                            }
+                            font{
+                                family: "微软雅黑"
+                                pointSize: 12
+                            }
+                            color: "#aaffffff"
+                        }
             MusicBorderImage{
                 id:cover
                 anchors.centerIn: parent
@@ -58,8 +78,12 @@ Item {
         }
 
         Frame{
+            visible: !_layoutHeaderView.isSmallWindow
             Layout.preferredWidth: parent.width*0.55
             Layout.fillHeight: true
+            background: Rectangle{
+                color: "#00000000"
+            }
 
             MusicLyricView{
                 id:lyricView

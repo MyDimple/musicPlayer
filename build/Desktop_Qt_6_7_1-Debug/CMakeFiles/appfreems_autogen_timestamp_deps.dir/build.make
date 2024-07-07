@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/root/study/freems
+CMAKE_SOURCE_DIR = /run/media/root/study1/freems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+CMAKE_BINARY_DIR = /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug
 
 # Utility rule file for appfreems_autogen_timestamp_deps.
 
@@ -81,6 +81,6 @@ CMakeFiles/appfreems_autogen_timestamp_deps.dir/clean:
 .PHONY : CMakeFiles/appfreems_autogen_timestamp_deps.dir/clean
 
 CMakeFiles/appfreems_autogen_timestamp_deps.dir/depend:
-	cd /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study/freems /run/media/root/study/freems /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study1/freems /run/media/root/study1/freems /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen_timestamp_deps.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appfreems_autogen_timestamp_deps.dir/depend
 

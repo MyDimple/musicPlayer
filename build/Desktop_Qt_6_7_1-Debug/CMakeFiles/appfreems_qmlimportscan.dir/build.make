@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/root/study/freems
+CMAKE_SOURCE_DIR = /run/media/root/study1/freems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+CMAKE_BINARY_DIR = /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug
 
 # Utility rule file for appfreems_qmlimportscan.
 
@@ -74,29 +74,29 @@ CMakeFiles/appfreems_qmlimportscan: .qt/qml_imports/appfreems_build.cmake
 .qt/qml_imports/appfreems_build.cmake: /opt/Qt/6.7.1/gcc_64/libexec/qmlimportscanner
 .qt/qml_imports/appfreems_build.cmake: .qt/rcc/qmake_se_qt_music.qrc
 .qt/qml_imports/appfreems_build.cmake: .qt/rcc/appfreems_raw_qml_0.qrc
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/Main.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailHistoryPageView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailLocalPageView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailRecommendPageView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailSearchPageView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/LayoutBottomView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/LayoutHeaderView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicIconButton.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicToolButton.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicBannerView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicRoundImage.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicTextButton.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicListView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/PageHomeView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicBorderImage.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/MusicLyricView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/Background.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailFavoritePageView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/DetailPlayListPageView.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/HotMusic.qml
-.qt/qml_imports/appfreems_build.cmake: /run/media/root/study/freems/PageDetailView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appfreems"
-	cd /run/media/root/study/freems && /opt/Qt/6.7.1/gcc_64/libexec/qmlimportscanner @/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qml_imports/appfreems_build.rsp
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/Main.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/DetailHistoryPageView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/DetailLocalPageView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/DetailRecommendPageView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/DetailSearchPageView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/LayoutBottomView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/LayoutHeaderView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicIconButton.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicToolButton.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicBannerView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicRoundImage.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicTextButton.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicListView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/PageHomeView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicBorderImage.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/MusicLyricView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/Background.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/DetailFavoritePageView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/DetailPlayListPageView.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/HotMusic.qml
+.qt/qml_imports/appfreems_build.cmake: /run/media/root/study1/freems/PageDetailView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Running qmlimportscanner for appfreems"
+	cd /run/media/root/study1/freems && /opt/Qt/6.7.1/gcc_64/libexec/qmlimportscanner @/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qml_imports/appfreems_build.rsp
 
 appfreems_qmlimportscan: .qt/qml_imports/appfreems_build.cmake
 appfreems_qmlimportscan: CMakeFiles/appfreems_qmlimportscan
@@ -112,6 +112,6 @@ CMakeFiles/appfreems_qmlimportscan.dir/clean:
 .PHONY : CMakeFiles/appfreems_qmlimportscan.dir/clean
 
 CMakeFiles/appfreems_qmlimportscan.dir/depend:
-	cd /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study/freems /run/media/root/study/freems /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study1/freems /run/media/root/study1/freems /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_qmlimportscan.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appfreems_qmlimportscan.dir/depend
 

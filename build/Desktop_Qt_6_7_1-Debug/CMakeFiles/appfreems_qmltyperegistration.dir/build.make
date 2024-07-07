@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/root/study/freems
+CMAKE_SOURCE_DIR = /run/media/root/study1/freems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+CMAKE_BINARY_DIR = /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug
 
 # Utility rule file for appfreems_qmltyperegistration.
 
@@ -83,34 +83,34 @@ appfreems_qmltyperegistrations.cpp: /opt/Qt/6.7.1/gcc_64/metatypes/qt6quick_relw
 appfreems_qmltyperegistrations.cpp: /opt/Qt/6.7.1/gcc_64/metatypes/qt6gui_relwithdebinfo_metatypes.json
 appfreems_qmltyperegistrations.cpp: /opt/Qt/6.7.1/gcc_64/metatypes/qt6qmlmodels_relwithdebinfo_metatypes.json
 appfreems_qmltyperegistrations.cpp: /opt/Qt/6.7.1/gcc_64/metatypes/qt6opengl_relwithdebinfo_metatypes.json
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target appfreems"
-	/opt/Qt/6.7.1/gcc_64/libexec/qmltyperegistrar --generate-qmltypes=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/appfreems.qmltypes --import-name=se.qt.music --major-version=1 --minor-version=0 @/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/qmltypes/appfreems_foreign_types.txt -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_qmltyperegistrations.cpp /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json
-	/usr/bin/cmake -E make_directory /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qmltypes
-	/usr/bin/cmake -E touch /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qmltypes/appfreems.qmltypes
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic QML type registration for target appfreems"
+	/opt/Qt/6.7.1/gcc_64/libexec/qmltyperegistrar --generate-qmltypes=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/appfreems.qmltypes --import-name=se.qt.music --major-version=1 --minor-version=0 @/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/qmltypes/appfreems_foreign_types.txt -o /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_qmltyperegistrations.cpp /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json
+	/usr/bin/cmake -E make_directory /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qmltypes
+	/usr/bin/cmake -E touch /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/.qt/qmltypes/appfreems.qmltypes
 
 se/qt/music/appfreems.qmltypes: appfreems_qmltyperegistrations.cpp
 	@$(CMAKE_COMMAND) -E touch_nocreate se/qt/music/appfreems.qmltypes
 
 meta_types/qt6appfreems_debug_metatypes.json: meta_types/qt6appfreems_debug_metatypes.json.gen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating meta_types/qt6appfreems_debug_metatypes.json"
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Generating meta_types/qt6appfreems_debug_metatypes.json"
 	/usr/bin/cmake -E true
 
 meta_types/qt6appfreems_debug_metatypes.json.gen: /opt/Qt/6.7.1/gcc_64/./libexec/moc
 meta_types/qt6appfreems_debug_metatypes.json.gen: meta_types/appfreems_json_file_list.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Running moc --collect-json for target appfreems"
-	/opt/Qt/6.7.1/gcc_64/libexec/moc -o /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json.gen --collect-json @/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt
-	/usr/bin/cmake -E copy_if_different /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json.gen /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Running moc --collect-json for target appfreems"
+	/opt/Qt/6.7.1/gcc_64/libexec/moc -o /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json.gen --collect-json @/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt
+	/usr/bin/cmake -E copy_if_different /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json.gen /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/qt6appfreems_debug_metatypes.json
 
 meta_types/appfreems_json_file_list.txt: /opt/Qt/6.7.1/gcc_64/./libexec/cmake_automoc_parser
 meta_types/appfreems_json_file_list.txt: appfreems_autogen/timestamp
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Running AUTOMOC file extraction for target appfreems"
-	/opt/Qt/6.7.1/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/ParseCache.txt --cmake-autogen-info-file /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/AutogenInfo.json --output-file-path /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt --timestamp-file-path /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/include
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Running AUTOMOC file extraction for target appfreems"
+	/opt/Qt/6.7.1/gcc_64/libexec/cmake_automoc_parser --cmake-autogen-cache-file /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/ParseCache.txt --cmake-autogen-info-file /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/AutogenInfo.json --output-file-path /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt --timestamp-file-path /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/meta_types/appfreems_json_file_list.txt.timestamp --cmake-autogen-include-dir-path /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/include
 
 appfreems_autogen/timestamp: /opt/Qt/6.7.1/gcc_64/./libexec/moc
 appfreems_autogen/timestamp: CMakeFiles/appfreems_qmltyperegistration.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Automatic MOC and UIC for target appfreems"
-	/usr/bin/cmake -E cmake_autogen /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/AutogenInfo.json Debug
-	/usr/bin/cmake -E touch /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/timestamp
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Automatic MOC and UIC for target appfreems"
+	/usr/bin/cmake -E cmake_autogen /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_autogen.dir/AutogenInfo.json Debug
+	/usr/bin/cmake -E touch /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/timestamp
 
 appfreems_qmltyperegistration: CMakeFiles/appfreems_qmltyperegistration
 appfreems_qmltyperegistration: appfreems_autogen/timestamp
@@ -131,6 +131,6 @@ CMakeFiles/appfreems_qmltyperegistration.dir/clean:
 .PHONY : CMakeFiles/appfreems_qmltyperegistration.dir/clean
 
 CMakeFiles/appfreems_qmltyperegistration.dir/depend:
-	cd /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study/freems /run/media/root/study/freems /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study1/freems /run/media/root/study1/freems /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_qmltyperegistration.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appfreems_qmltyperegistration.dir/depend
 

@@ -1,5 +1,5 @@
 CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o: \
-  /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_qmltyperegistrations.cpp \
+  /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_qmltyperegistrations.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqml.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlprivate.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qjsprimitivevalue.h \
@@ -423,7 +423,7 @@ CMakeFiles/appfreems.dir/appfreems_qmltyperegistrations.cpp.o: \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlregistration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlmoduleregistration.h \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.h \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qnetworkrequest.h \

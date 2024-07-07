@@ -92,7 +92,7 @@
 				{
 					"directoryIndex" : 0,
 					"id" : "appfreems::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-appfreems-Debug-fb5a944e8621efbf51c4.json",
+					"jsonFile" : "target-appfreems-Debug-e4d95f8856afddd6e7fb.json",
 					"name" : "appfreems",
 					"projectIndex" : 0
 				},
@@ -158,8 +158,8 @@
 	"kind" : "codemodel",
 	"paths" : 
 	{
-		"build" : "/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug",
-		"source" : "/run/media/root/study/freems"
+		"build" : "/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug",
+		"source" : "/run/media/root/study1/freems"
 	},
 	"version" : 
 	{

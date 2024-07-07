@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug"
+			"value" : "/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -479,7 +479,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/pkgRedirects"
+			"value" : "/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/run/media/root/study/freems"
+			"value" : "/run/media/root/study1/freems"
 		},
 		{
 			"name" : "CMAKE_INSTALL_BINDIR",
@@ -1063,7 +1063,7 @@
 				}
 			],
 			"type" : "FILEPATH",
-			"value" : "/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/.qtc/package-manager/auto-setup.cmake"
+			"value" : "/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/.qtc/package-manager/auto-setup.cmake"
 		},
 		{
 			"name" : "CMAKE_PROJECT_NAME",
@@ -6595,7 +6595,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug"
+			"value" : "/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug"
 		},
 		{
 			"name" : "freems_IS_TOP_LEVEL",
@@ -6619,7 +6619,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/run/media/root/study/freems"
+			"value" : "/run/media/root/study1/freems"
 		}
 	],
 	"kind" : "cache",

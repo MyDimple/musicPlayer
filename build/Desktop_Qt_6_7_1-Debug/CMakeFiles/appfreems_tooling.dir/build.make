@@ -56,10 +56,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /run/media/root/study/freems
+CMAKE_SOURCE_DIR = /run/media/root/study1/freems
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug
+CMAKE_BINARY_DIR = /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug
 
 # Utility rule file for appfreems_tooling.
 
@@ -69,93 +69,93 @@ include CMakeFiles/appfreems_tooling.dir/compiler_depend.make
 # Include the progress variables for this target.
 include CMakeFiles/appfreems_tooling.dir/progress.make
 
-se/qt/music/Main.qml: /run/media/root/study/freems/Main.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying Main.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Main.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/Main.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Main.qml
+se/qt/music/Main.qml: /run/media/root/study1/freems/Main.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Copying Main.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Main.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/Main.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Main.qml
 
-se/qt/music/DetailHistoryPageView.qml: /run/media/root/study/freems/DetailHistoryPageView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Copying DetailHistoryPageView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailHistoryPageView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/DetailHistoryPageView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailHistoryPageView.qml
+se/qt/music/DetailHistoryPageView.qml: /run/media/root/study1/freems/DetailHistoryPageView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Copying DetailHistoryPageView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailHistoryPageView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/DetailHistoryPageView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailHistoryPageView.qml
 
-se/qt/music/DetailLocalPageView.qml: /run/media/root/study/freems/DetailLocalPageView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Copying DetailLocalPageView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailLocalPageView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/DetailLocalPageView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailLocalPageView.qml
+se/qt/music/DetailLocalPageView.qml: /run/media/root/study1/freems/DetailLocalPageView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Copying DetailLocalPageView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailLocalPageView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/DetailLocalPageView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailLocalPageView.qml
 
-se/qt/music/DetailRecommendPageView.qml: /run/media/root/study/freems/DetailRecommendPageView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Copying DetailRecommendPageView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailRecommendPageView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/DetailRecommendPageView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailRecommendPageView.qml
+se/qt/music/DetailRecommendPageView.qml: /run/media/root/study1/freems/DetailRecommendPageView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Copying DetailRecommendPageView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailRecommendPageView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/DetailRecommendPageView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailRecommendPageView.qml
 
-se/qt/music/DetailSearchPageView.qml: /run/media/root/study/freems/DetailSearchPageView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Copying DetailSearchPageView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailSearchPageView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/DetailSearchPageView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailSearchPageView.qml
+se/qt/music/DetailSearchPageView.qml: /run/media/root/study1/freems/DetailSearchPageView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Copying DetailSearchPageView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailSearchPageView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/DetailSearchPageView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailSearchPageView.qml
 
-se/qt/music/LayoutBottomView.qml: /run/media/root/study/freems/LayoutBottomView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Copying LayoutBottomView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutBottomView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/LayoutBottomView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutBottomView.qml
+se/qt/music/LayoutBottomView.qml: /run/media/root/study1/freems/LayoutBottomView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Copying LayoutBottomView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutBottomView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/LayoutBottomView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutBottomView.qml
 
-se/qt/music/LayoutHeaderView.qml: /run/media/root/study/freems/LayoutHeaderView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Copying LayoutHeaderView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutHeaderView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/LayoutHeaderView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutHeaderView.qml
+se/qt/music/LayoutHeaderView.qml: /run/media/root/study1/freems/LayoutHeaderView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Copying LayoutHeaderView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutHeaderView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/LayoutHeaderView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/LayoutHeaderView.qml
 
-se/qt/music/MusicIconButton.qml: /run/media/root/study/freems/MusicIconButton.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Copying MusicIconButton.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicIconButton.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicIconButton.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicIconButton.qml
+se/qt/music/MusicIconButton.qml: /run/media/root/study1/freems/MusicIconButton.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Copying MusicIconButton.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicIconButton.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicIconButton.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicIconButton.qml
 
-se/qt/music/MusicToolButton.qml: /run/media/root/study/freems/MusicToolButton.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Copying MusicToolButton.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicToolButton.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicToolButton.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicToolButton.qml
+se/qt/music/MusicToolButton.qml: /run/media/root/study1/freems/MusicToolButton.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Copying MusicToolButton.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicToolButton.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicToolButton.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicToolButton.qml
 
-se/qt/music/MusicBannerView.qml: /run/media/root/study/freems/MusicBannerView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Copying MusicBannerView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBannerView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicBannerView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBannerView.qml
+se/qt/music/MusicBannerView.qml: /run/media/root/study1/freems/MusicBannerView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Copying MusicBannerView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBannerView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicBannerView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBannerView.qml
 
-se/qt/music/MusicRoundImage.qml: /run/media/root/study/freems/MusicRoundImage.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Copying MusicRoundImage.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicRoundImage.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicRoundImage.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicRoundImage.qml
+se/qt/music/MusicRoundImage.qml: /run/media/root/study1/freems/MusicRoundImage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Copying MusicRoundImage.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicRoundImage.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicRoundImage.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicRoundImage.qml
 
-se/qt/music/MusicTextButton.qml: /run/media/root/study/freems/MusicTextButton.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Copying MusicTextButton.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicTextButton.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicTextButton.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicTextButton.qml
+se/qt/music/MusicTextButton.qml: /run/media/root/study1/freems/MusicTextButton.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Copying MusicTextButton.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicTextButton.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicTextButton.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicTextButton.qml
 
-se/qt/music/MusicListView.qml: /run/media/root/study/freems/MusicListView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Copying MusicListView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicListView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicListView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicListView.qml
+se/qt/music/MusicListView.qml: /run/media/root/study1/freems/MusicListView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_13) "Copying MusicListView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicListView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicListView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicListView.qml
 
-se/qt/music/PageHomeView.qml: /run/media/root/study/freems/PageHomeView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Copying PageHomeView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageHomeView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/PageHomeView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageHomeView.qml
+se/qt/music/PageHomeView.qml: /run/media/root/study1/freems/PageHomeView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_14) "Copying PageHomeView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageHomeView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/PageHomeView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageHomeView.qml
 
-se/qt/music/MusicBorderImage.qml: /run/media/root/study/freems/MusicBorderImage.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Copying MusicBorderImage.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBorderImage.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicBorderImage.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBorderImage.qml
+se/qt/music/MusicBorderImage.qml: /run/media/root/study1/freems/MusicBorderImage.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_15) "Copying MusicBorderImage.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBorderImage.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicBorderImage.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicBorderImage.qml
 
-se/qt/music/MusicLyricView.qml: /run/media/root/study/freems/MusicLyricView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Copying MusicLyricView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicLyricView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/MusicLyricView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicLyricView.qml
+se/qt/music/MusicLyricView.qml: /run/media/root/study1/freems/MusicLyricView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_16) "Copying MusicLyricView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicLyricView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/MusicLyricView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/MusicLyricView.qml
 
-se/qt/music/Background.qml: /run/media/root/study/freems/Background.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Copying Background.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Background.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/Background.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Background.qml
+se/qt/music/Background.qml: /run/media/root/study1/freems/Background.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_17) "Copying Background.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Background.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/Background.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/Background.qml
 
-se/qt/music/DetailFavoritePageView.qml: /run/media/root/study/freems/DetailFavoritePageView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Copying DetailFavoritePageView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailFavoritePageView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/DetailFavoritePageView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailFavoritePageView.qml
+se/qt/music/DetailFavoritePageView.qml: /run/media/root/study1/freems/DetailFavoritePageView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_18) "Copying DetailFavoritePageView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailFavoritePageView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/DetailFavoritePageView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailFavoritePageView.qml
 
-se/qt/music/DetailPlayListPageView.qml: /run/media/root/study/freems/DetailPlayListPageView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Copying DetailPlayListPageView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailPlayListPageView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/DetailPlayListPageView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailPlayListPageView.qml
+se/qt/music/DetailPlayListPageView.qml: /run/media/root/study1/freems/DetailPlayListPageView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_19) "Copying DetailPlayListPageView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailPlayListPageView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/DetailPlayListPageView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/DetailPlayListPageView.qml
 
-se/qt/music/HotMusic.qml: /run/media/root/study/freems/HotMusic.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Copying HotMusic.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/HotMusic.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/HotMusic.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/HotMusic.qml
+se/qt/music/HotMusic.qml: /run/media/root/study1/freems/HotMusic.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_20) "Copying HotMusic.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/HotMusic.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/HotMusic.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/HotMusic.qml
 
-se/qt/music/PageDetailView.qml: /run/media/root/study/freems/PageDetailView.qml
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Copying PageDetailView.qml to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageDetailView.qml"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/PageDetailView.qml /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageDetailView.qml
+se/qt/music/PageDetailView.qml: /run/media/root/study1/freems/PageDetailView.qml
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_21) "Copying PageDetailView.qml to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageDetailView.qml"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/PageDetailView.qml /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/PageDetailView.qml
 
-se/qt/music/images.qrc: /run/media/root/study/freems/images.qrc
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Copying images.qrc to /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/images.qrc"
-	cd /run/media/root/study/freems && /usr/bin/cmake -E copy /run/media/root/study/freems/images.qrc /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/images.qrc
+se/qt/music/images.qrc: /run/media/root/study1/freems/images.qrc
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --blue --bold --progress-dir=/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles --progress-num=$(CMAKE_PROGRESS_22) "Copying images.qrc to /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/images.qrc"
+	cd /run/media/root/study1/freems && /usr/bin/cmake -E copy /run/media/root/study1/freems/images.qrc /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/se/qt/music/images.qrc
 
 appfreems_tooling: se/qt/music/Background.qml
 appfreems_tooling: se/qt/music/DetailFavoritePageView.qml
@@ -191,6 +191,6 @@ CMakeFiles/appfreems_tooling.dir/clean:
 .PHONY : CMakeFiles/appfreems_tooling.dir/clean
 
 CMakeFiles/appfreems_tooling.dir/depend:
-	cd /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study/freems /run/media/root/study/freems /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
+	cd /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /run/media/root/study1/freems /run/media/root/study1/freems /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug /run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/CMakeFiles/appfreems_tooling.dir/DependInfo.cmake "--color=$(COLOR)"
 .PHONY : CMakeFiles/appfreems_tooling.dir/depend
 

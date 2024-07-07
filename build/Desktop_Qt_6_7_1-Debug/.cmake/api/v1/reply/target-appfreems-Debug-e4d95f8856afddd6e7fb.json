@@ -866,7 +866,7 @@
 			[
 				{
 					"backtrace" : 68,
-					"path" : "/run/media/root/study/freems"
+					"path" : "/run/media/root/study1/freems"
 				},
 				{
 					"backtrace" : 69,
@@ -936,7 +936,7 @@
 				{
 					"backtrace" : 0,
 					"isSystem" : true,
-					"path" : "/run/media/root/study/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/include"
+					"path" : "/run/media/root/study1/freems/build/Desktop_Qt_6_7_1-Debug/appfreems_autogen/include"
 				},
 				{
 					"backtrace" : 6,

@@ -15,7 +15,7 @@ Rectangle{
     property bool isPressed: false
     property string musicName: "music"
     property string artistName: "music"
-    property string musicCover: "qrc:/images/player"
+    property string musicCover: "qrc:/images/back"
     property int playingState: 0
     Layout.fillWidth: true
     height: 60
@@ -27,6 +27,20 @@ Rectangle{
             Item{
                 Layout.preferredWidth: parent.width/10
                 Layout.fillWidth: true
+                Layout.fillHeight:  true
+                            MouseArea{
+                                anchors.fill: parent
+                                acceptedButtons: Qt.LeftButton
+                                onPressed: layoutHeaderView.setPoint(mouseX,mouseY)
+                                onMouseXChanged: layoutHeaderView.moveX(mouseX)
+                                onMouseYChanged: layoutHeaderView.moveY(mouseY)
+                            }
+            }
+            MouseArea{
+                acceptedButtons: Qt.LeftButton
+                onPressed: layoutHeaderView.setPoint(mouseX,mouseY)
+                onMouseXChanged: layoutHeaderView.moveX(mouseX)
+                onMouseYChanged: layoutHeaderView.moveY(mouseY)
                 }
 
             MusicIconButton{
@@ -62,11 +76,18 @@ Rectangle{
             }
 
             Item{
+                visible:! _layoutHeaderView.isSmallWindow
                 Layout.preferredWidth: parent.width/2
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.topMargin: 30
-
+                MouseArea{
+                                anchors.fill: parent
+                                acceptedButtons: Qt.LeftButton
+                                onPressed: layoutHeaderView.setPoint(mouseX,mouseY)
+                                onMouseXChanged: layoutHeaderView.moveX(mouseX)
+                                onMouseYChanged: layoutHeaderView.moveY(mouseY)
+                            }
                 Text{
                     id:_nameText
                     anchors.left: _slider.left
@@ -129,33 +150,48 @@ Rectangle{
                 }
             }
 
-            MusicRoundImage{
+            MusicBorderImage{
+                visible: !_layoutHeaderView.isSmallWindow
                 // id:musicCover
                 width: 50
                 height: 45
                 imgSrc: musicCover
                 //点击事件进入歌曲详情页面
-                TapHandler{
-                    // anchors.fill: parent
+                // TapHandler{
+                //     // anchors.fill: parent
 
-                    onTapped: {
-                        pageHomeView.visible=!pageHomeView.visible
-                        pageDetailView.visible=!pageDetailView.visible
+                //     onTapped: {
+                //         pageHomeView.visible=!pageHomeView.visible
+                //         pageDetailView.visible=!pageDetailView.visible
 
-                        if (isPressed) {
-                            musicCover.scale = 0.9
-                            isPressed = false
-                        } else {
-                            musicCover.scale = 1.0
-                            isPressed = true
-                        }
-                        // musicCover.scale=1.0
-                    }
+                //         if (isPressed) {
+                //             musicCover.scale = 0.9
+                //             isPressed = false
+                //         } else {
+                //             musicCover.scale = 1.0
+                //             isPressed = true
+                //         }
+                //         // musicCover.scale=1.0
+                //     }
 
-                }
-                HoverHandler{
-                    cursorShape: Qt.PointingHandCursor
-                }
+                // }
+                MouseArea{
+                                anchors.fill: parent
+                                cursorShape: Qt.PointingHandCursor
+
+                                onPressed: {
+                                    musicCover.scale=0.9
+                                    pageDetailView.visible = ! pageDetailView.visible
+                                    pageHomeView.visible = ! pageHomeView.visible
+                                    appBackground.showDefaultBackground = !appBackground.showDefaultBackground
+                                }
+                                onReleased:{
+                                    musicCover.scale=1.0
+                                }
+                            }
+                // HoverHandler{
+                //     cursorShape: Qt.PointingHandCursor
+                // }
 
             }
 
@@ -188,8 +224,8 @@ Rectangle{
         var item = playList[index]
         if(!item||!item.id)return
         var history = historySettings.value("history",[])
-        if(i>=0) history.splice(i,1)
         var i = history.findIndex(value=>value.id===item.id)
+        if(i>=0) history.splice(i,1)
         if(i >= 0){
             history.slice(i,1)
         }

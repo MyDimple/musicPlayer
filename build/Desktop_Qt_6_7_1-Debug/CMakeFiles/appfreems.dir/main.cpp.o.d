@@ -1,5 +1,5 @@
 CMakeFiles/appfreems.dir/main.cpp.o: \
-  /run/media/root/study/freems/main.cpp \
+  /run/media/root/study1/freems/main.cpp \
   /opt/Qt/6.7.1/gcc_64/include/QtGui/QGuiApplication \
   /opt/Qt/6.7.1/gcc_64/include/QtGui/qguiapplication.h \
   /opt/Qt/6.7.1/gcc_64/include/QtGui/qtguiglobal.h \
@@ -449,7 +449,7 @@ CMakeFiles/appfreems.dir/main.cpp.o: \
   /opt/Qt/6.7.1/gcc_64/include/QtQmlIntegration/qqmlintegration.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlerror.h \
   /opt/Qt/6.7.1/gcc_64/include/QtQml/qqmlabstracturlinterceptor.h \
-  /run/media/root/study/freems/search.h \
+  /run/media/root/study1/freems/search.h \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/QNetworkAccessManager \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qnetworkaccessmanager.h \
   /opt/Qt/6.7.1/gcc_64/include/QtNetwork/qnetworkrequest.h \
