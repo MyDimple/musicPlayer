@@ -4,7 +4,7 @@ import QtQuick.Layouts
 
 Rectangle{
     Layout.fillWidth: true
-    height: 60
+    height: 80
 
     RowLayout{
         anchors.fill: parent

@@ -22,12 +22,12 @@ Rectangle{
         }
         Setting{
             id:_setting
-            height:_head.height/2
+            height:_head.height*3/5
             Layout.alignment: Qt.AlignVCenter
-            width:220
+            width:200
             Layout.margins: 5
             radius: 10
-            border.color: "black"
+            border.color: "grey"
         }
     }
 }

@@ -39,7 +39,9 @@ qt_add_qml_module(
   QML_FILES ContentLocalPage.qml
   QML_FILES ContentPlayListPage.qml
   QML_FILES ContentRecommendPage.qml
-  QML_FILES ContentSearchPage.qml)
+  QML_FILES ContentSearchPage.qml
+  RESOURCES
+  RESOURCES images.qrc )
 
 target_compile_features(appfreemsp PRIVATE cxx_std_20)
 

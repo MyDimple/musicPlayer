@@ -15,11 +15,11 @@ RowLayout{
         Layout.fillHeight: true;
         width:200;
         property var qmlList: [
-            {value:"推荐内容", qml: "ContentRecommendPage.qml", menu: true},
-            {value:"本地音乐", qml: "ContentLocalPage.qml", menu: true},
-            {value:"播放历史", qml: "ContentHistoryPage.qml", menu: true},
-            {value:"我喜欢的", qml: "ContentFavoratePage.qml", menu: true},
-            {value:"搜索音乐", qml: "ContentSearchPage.qml", menu: false},
+            {value:"推荐内容", qml: "ContentRecommendPage.qml", menu: true, icon_grey: "qrc:/icon_grey/tuijianbaobiao.png", icon_black: "qrc:/icon_black/tuijianbaobiao.png"},
+            {value:"本地音乐", qml: "ContentLocalPage.qml", menu: true, icon_grey: "qrc:/icon_grey/bendi.png", icon_black: "qrc:/icon_black/bendi.png"},
+            {value:"播放历史", qml: "ContentHistoryPage.qml", menu: true, icon_grey: "qrc:/icon_grey/lishijilu.png", icon_black: "qrc:/icon_black/lishijilu.png"},
+            {value:"我喜欢的", qml: "ContentFavoratePage.qml", menu: true, icon_grey: "qrc:/icon_grey/xihuan.png", icon_black: "qrc:/icon_black/xihuan.png"},
+            {value:"搜索音乐", qml: "ContentSearchPage.qml", menu: false, icon: "qrc:/icon_black/sousuo.png"},
             {value:"歌词", qml: "ContentPlayListPage.qml", menu: false}
         ]
         ColumnLayout{
@@ -41,7 +41,7 @@ RowLayout{
                     id: _models
                 }
                 delegate: _delegateItem
-                spacing: 5
+                spacing: parent.height/50
                 currentIndex: -1
                 // 禁止滑动
                 interactive: false
@@ -64,9 +64,15 @@ RowLayout{
                         }
 
                         Image{
-                            // source: "qrc:/images/"+icon
-                            Layout.preferredHeight: 20
-                            Layout.preferredWidth: 20
+                            id: _icon
+                            source: {
+                                if(_list.currentIndex === index)
+                                    return icon_black
+                                _mouse.hovered ? icon_black : icon_grey
+                            }
+
+                            Layout.preferredHeight: 22
+                            Layout.preferredWidth: 22
                         }
 
                         Text{

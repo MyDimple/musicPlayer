@@ -3,6 +3,7 @@ import QtQuick.Controls
 import QtQuick.Layouts
 
 ApplicationWindow {
+    id:_window
     width: 1100
     height: 700
     visible: true
