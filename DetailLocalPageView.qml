@@ -71,7 +71,7 @@ ColumnLayout{
     }
 
     Component.onCompleted: {
-        getLocal() //构建完成先获取本地歌曲 有点问题获取不了
+        saveLocal() //构建完成先获取本地歌曲 有点问题获取不了
     }
 
     //获取本地音乐
@@ -99,7 +99,7 @@ ColumnLayout{
             id:fileDialog
             fileMode: FileDialog.OpenFiles
             nameFilters: ["MP3 Music Files(*.mp3)","FLAC MUsic Files(*.flac)"]
-            //folder: StandardPaths.standardLocations(StandardPaths.MusicLocation)[0] //不设置这个便会打开系统默认存放音频文件的文件夹
+            folder: StandardPaths.standardLocations(StandardPaths.MusicLocation)[0] //不设置这个便会打开系统默认存放音频文件的文件夹
             acceptLabel: "确定"
             rejectLabel: "取消"
 
@@ -139,6 +139,7 @@ ColumnLayout{
                 }
             }
         }
+    //获取本地音乐歌词
     function locallyc(lyric)
     {
         if(lyric.length<1) return

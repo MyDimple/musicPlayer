@@ -44,7 +44,13 @@ qt_add_qml_module(
   images.qrc
   SOURCES
   search.h
-  search.cpp)
+  search.cpp
+  QML_FILES
+  MusicLoading.qml
+  QML_FILES
+  MusicNotification.qml
+  QML_FILES
+  AppSystemTrayIcon.qml)
 
 target_compile_features(appfreems PRIVATE cxx_std_20)
 

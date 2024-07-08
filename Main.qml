@@ -11,7 +11,8 @@ import QtQml
 ApplicationWindow {
     property string organizationName: "MyOrganization"
     property string organizationDomain: "myorganization.com"
-
+    property int mWINDOW_WIDTH: 1200
+    property int mWINDOW_HEIGHT: 800
     id:window
     width: 1200
     height: 800
@@ -28,7 +29,19 @@ ApplicationWindow {
 
         // }
     }
+    //注册搜索出错弹窗
+    MusicNotification{
+            id:notification
+        }
 
+    //注册系统托盘
+    AppSystemTrayIcon{
+
+        }
+    //注册搜索加载动画
+    MusicLoading{
+    id:loading
+    }
     //设置我喜欢的音乐保存路径
     Settings{
             id:favoriteSettings

@@ -10,12 +10,12 @@ Rectangle{
     property int sliderFrom: 0
     property int sliderTo: 100
     property int currentPlayMode: 0
-    property var playModeList: [{icon:"single-repeat",name:"单曲循环"},{icon:"repeat",name:"循环播放"},{icon:"random",name:"随机播放"}]
+    property var playModeList: [{icon:"single-repeat",name:"单曲循环"},{icon:"repeat",name:"列表循环"},{icon:"random",name:"随机播放"}]
     property bool isModelChange: false
     property bool isPressed: false
     property string musicName: "music"
     property string artistName: "music"
-    property string musicCover: "qrc:/images/player"
+    property string musicCover: "qrc:/images/back"
     property int playingState: 0
     Layout.fillWidth: true
     height: 60
@@ -40,18 +40,7 @@ Rectangle{
                 Layout.preferredWidth: 50
                 iconSource:playingState?"qrc:/images/pause":"qrc:/images/media-playback-start"
                 toolTip: playingState?"暂停":"播放"
-                onClicked: {
-                    if(!mediaplayer.source)return
-                    if(mediaplayer.playbackState===MediaPlayer.PlayingState){
-                        mediaplayer.pause()
-                        playingState=0
-                        // iconSource="qrc:/images/pause"
-                    }else if(mediaplayer.playbackState===MediaPlayer.PausedState){
-                        mediaplayer.play()
-                        playingState=1
-                        // iconSource="qrc:/image/stop"
-                    }
-                }
+                onClicked: playOrPause()
             }
 
             MusicIconButton{
@@ -62,6 +51,8 @@ Rectangle{
             }
 
             Item{
+                visible: !_layoutHeaderView.isSmallWindow
+
                 Layout.preferredWidth: parent.width/2
                 Layout.fillHeight: true
                 Layout.fillWidth: true
@@ -131,6 +122,7 @@ Rectangle{
 
             MusicRoundImage{
                 // id:musicCover
+                visible: !_layoutHeaderView.isSmallWindow
                 width: 50
                 height: 45
                 imgSrc: musicCover
@@ -181,6 +173,19 @@ Rectangle{
 
     }
 
+    function playOrPause()
+    {
+        if(!mediaplayer.source)return
+        if(mediaplayer.playbackState===MediaPlayer.PlayingState){
+            mediaplayer.pause()
+            playingState=0
+            // iconSource="qrc:/images/pause"
+        }else if(mediaplayer.playbackState===MediaPlayer.PausedState){
+            mediaplayer.play()
+            playingState=1
+            // iconSource="qrc:/image/stop"
+        }
+    }
 
     // 保存历史记录
     function saveHistory(index = 0){
@@ -387,10 +392,21 @@ Rectangle{
 
     function getCover(id){
         function onReply(reply) {
-            // se.onReplySignal.disconnect(onReply)
+            se.onReplySignal.disconnect(onReply)
             // getLyric(id)
             var song=JSON.parse(reply).songs[0]
             var cover=song.al.picUrl
+            // if (reply && JSON.parse(reply).songs && JSON.parse(reply).songs.length > 0) {
+            //     var song = JSON.parse(reply).songs[0];
+            //     if (song && song.al && song.al.picUrl) {
+            //         var cover = song.al.picUrl;
+            //         // 使用 cover 变量的代码
+            //     } else {
+            //         console.error("song 对象中没有 al 属性或 picUrl 属性");
+            //     }
+            // } else {
+            //     console.error("JSON 响应中不包含 songs 数组，或者数组为空");
+            // }
             musicCover=cover
 
             if(musicName.length<1)

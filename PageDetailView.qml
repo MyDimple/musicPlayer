@@ -17,7 +17,10 @@ Item {
         Frame{
             Layout.preferredWidth: parent.width*0.45
             Layout.fillHeight: true
-
+            Layout.fillWidth: true
+            background: Rectangle{
+                            color: "#00000000"
+                        }
 
             Text {
                 id: name
@@ -31,6 +34,7 @@ Item {
                     family: "微软雅黑"
                     pointSize: 16
                 }
+                color: "#aaffffff"
             }
 
             Text {
@@ -46,6 +50,7 @@ Item {
                     family:"微软雅黑"
                     pointSize: 12
                 }
+                color: "#aaffffff"
             }
             MusicBorderImage{
                 id:cover
@@ -56,12 +61,32 @@ Item {
                 imgSrc: layoutBottomView.musicCover
                 isRotating:  layoutBottomView.playingState===1
             }
+            Text {
+                id: lyric
+                /////
+                visible: _layoutHeaderView.isSmallWindow
+                /////
+                text: lyricView.lyrics[lyricView.current]?lyricView.lyrics[lyricView.current]:"暂无歌词"
+                anchors{
+                    top: cover.bottom
+                    topMargin: 50
+                    horizontalCenter: parent.horizontalCenter
+                }
+                font{
+                    family: "微软雅黑"
+                    pointSize: 12
+                }
+                color: "#aaffffff"
+            }
         }
 
         Frame{
+            visible: !_layoutHeaderView.isSmallWindow
             Layout.preferredWidth: parent.width*0.55
             Layout.fillHeight: true
-
+            background: Rectangle{
+                            color: "#00000000"
+                        }
             MusicLyricView{
                 id:lyricView
                 anchors.fill: parent

@@ -8,7 +8,7 @@ Rectangle {
     Layout.preferredHeight: parent.height*0.8
     Layout.alignment: Qt.AlignHCenter
     clip:true
-
+    color:"#00000000"
     ListView{
         id:list
         // width: 2
@@ -16,7 +16,7 @@ Rectangle {
         model: ["没有歌词","歌词","歌词"]
         delegate: listDelegate
         highlight: Rectangle{
-            color:"#2073a7db"
+           color:"#1000AAAA"
         }
         highlightMoveDuration: 0
         highlightResizeDuration: 0
@@ -57,12 +57,12 @@ Rectangle {
         Item{
             id:delegateItem
             width:parent.width
-
+            // Component.onCompleted: width=parent.width
             height:50
             Text{
                 text:modelData
                 anchors.centerIn: parent
-                color:index===list.currentIndex?"black":"grey"
+                color:index===list.currentIndex?"#eeffffff":"#aaffffff"
                 font.family: "微软雅黑"
                 font.pointSize: 12
 
