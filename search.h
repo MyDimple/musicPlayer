@@ -13,7 +13,7 @@ class Search : public QObject
 
 public:
     explicit Search(QObject *parent = nullptr);
-
+    Q_INVOKABLE QString readFileContent(const QString &filename);
     Q_INVOKABLE void replyFinished(QNetworkReply *reply);
     Q_INVOKABLE void concatenate(QString url);
 signals:

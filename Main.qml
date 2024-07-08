@@ -3,17 +3,14 @@ import QtQuick.Window 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtMultimedia
-import Qt.labs.settings 1.1
+
+import QtCore
 import se.qt.music
 import QtQml
 
 ApplicationWindow {
     property string organizationName: "MyOrganization"
     property string organizationDomain: "myorganization.com"
-    property int mWINDOW_WIDTH: 1200
-    property int mWINDOW_HEIGHT: 800
-    //flags: Qt.Window|Qt.FramelessWindowHint //去掉默认边框
-
 
     id:window
     width: 1200
@@ -35,38 +32,22 @@ ApplicationWindow {
     //设置我喜欢的音乐保存路径
     Settings{
             id:favoriteSettings
-            fileName: "conf/favorite.ini"
+            location: "conf/favorite.ini"
         }
 
 
     Settings{
         id:settings
-        fileName: "conf/settings.ini"
+        location: "conf/settings.ini"
     }
 
     //设置播放历史保存路径
     Settings{
         id:historySettings
-        fileName: "conf/history.ini"
+        location: "conf/history.ini"
     }
 
 
-
-//     function searchonline() {
-//         function onReply(reply) {
-//             // console.log("hello")
-//             console.log(reply);
-//             // 处理接收到的回复
-//         }
-//         se.onReplySignal.connect(onReply)
-//         se.concatenate("banner"); // 触发网络请求
-
-//         // if (se.onReplySignal.connections > 0) {
-//         //        console.log("Signal is connected.");
-//         //    } else {
-//         //        console.log("Signal is not connected.");
-//         //    }
-// }
 
 
     //布局
@@ -83,7 +64,9 @@ ApplicationWindow {
     //中部模块
     PageHomeView{
         id:pageHomeView
-        //visible: false
+
+        // visible: false
+
         }
     //歌曲详情
     PageDetailView{
@@ -100,13 +83,25 @@ ApplicationWindow {
 
     //音乐播放,后面再改
     MediaPlayer {
+        property var times: []
         id: mediaplayer
         // source: ""
         audioOutput: AudioOutput {}
         videoOutput: videoOutput
+
+
         onPositionChanged: {
-            layoutBottomView.setSlider(0,duration,position)
+            //更新进度条
+            layoutBottomView.setSlider(0,duration,mediaplayer.position)
+            // var adjustedPosition = mediaplayer.position ;
+            if(times.length>0){
+                var count=times.filter(time=>time<mediaplayer.position ).length
+                pageDetailView.current=(count===0)?0:count-1
+            }
+
         }
+
+
         onPlaybackStateChanged: {
             layoutBottomView.playingState=playbackState===MediaPlayer.PlayingState?1:0
             //添加isModelChange控制播放

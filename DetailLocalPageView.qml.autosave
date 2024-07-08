@@ -2,9 +2,9 @@ import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 import Qt.labs.platform
-import Qt.labs.settings 1.1
+import QtCore
 import QtQml 2.12
-
+import se.qt.music
 
 
 //本地音乐布局
@@ -13,7 +13,7 @@ ColumnLayout{
     //设置本地音乐保存路径
     Settings{
         id:localSettings
-        fileName: "conf/local.ini"
+        location : "conf/local.ini"
     }
 
     Rectangle{
@@ -108,7 +108,10 @@ ColumnLayout{
                 var list =getLocal()
                 for(var index in files){
                     var path = files[index].toString()
-
+                    console.log(path)
+                    var lyricsFilePath = path.replace(/\.[^\.]+$/, ".lrc");//本地歌曲文件
+                    var lyric=se.readFileContent(lyricsFilePath)
+                    locallyc(lyric)
                     var arr = path.split("/")
                     var fileNameArr = arr[arr.length-1].split(".")
                     //去掉后缀
@@ -136,4 +139,27 @@ ColumnLayout{
                 }
             }
         }
+    //获取本地音乐歌词
+    function locallyc(lyric)
+    {
+        if(lyric.length<1) return
+        var lyrics = (lyric.replace(/\[.*\]/gi,"")).split("\n")
+        // console.log(lyrics)
+        if(lyrics.length>0) pageDetailView.lyrics = lyrics
+
+        var times = []
+        lyric.replace(/\[.*\]/gi,function(match,index){
+            //match : [00:00.00]
+            if(match.length>2){
+                var time  = match.substr(1,match.length-2)
+                var arr = time.split(":")
+                var timeValue = arr.length>0? parseInt(arr[0])*60*1000:0
+                arr = arr.length>1?arr[1].split("."):[0,0]
+                timeValue += arr.length>0?parseInt(arr[0])*1000:0
+                timeValue += arr.length>1?parseInt(arr[1]):0
+                times.push(timeValue)
+            }
+        })
+          mediaplayer.times=times
+    }
 }

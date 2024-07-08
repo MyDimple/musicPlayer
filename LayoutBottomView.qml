@@ -15,7 +15,7 @@ Rectangle{
     property bool isPressed: false
     property string musicName: "music"
     property string artistName: "music"
-    property string musicCover: "qrc:/images/back"
+    property string musicCover: "qrc:/images/player"
     property int playingState: 0
     Layout.fillWidth: true
     height: 60
@@ -27,20 +27,6 @@ Rectangle{
             Item{
                 Layout.preferredWidth: parent.width/10
                 Layout.fillWidth: true
-                Layout.fillHeight:  true
-                            MouseArea{
-                                anchors.fill: parent
-                                acceptedButtons: Qt.LeftButton
-                                onPressed: layoutHeaderView.setPoint(mouseX,mouseY)
-                                onMouseXChanged: layoutHeaderView.moveX(mouseX)
-                                onMouseYChanged: layoutHeaderView.moveY(mouseY)
-                            }
-            }
-            MouseArea{
-                acceptedButtons: Qt.LeftButton
-                onPressed: layoutHeaderView.setPoint(mouseX,mouseY)
-                onMouseXChanged: layoutHeaderView.moveX(mouseX)
-                onMouseYChanged: layoutHeaderView.moveY(mouseY)
                 }
 
             MusicIconButton{
@@ -52,8 +38,8 @@ Rectangle{
 
             MusicIconButton{
                 Layout.preferredWidth: 50
-                iconSource:playingState?"qrc:/images/stop":"qrc:/images/pause"
-                toolTip: "暂停"
+                iconSource:playingState?"qrc:/images/pause":"qrc:/images/media-playback-start"
+                toolTip: playingState?"暂停":"播放"
                 onClicked: {
                     if(!mediaplayer.source)return
                     if(mediaplayer.playbackState===MediaPlayer.PlayingState){
@@ -76,18 +62,11 @@ Rectangle{
             }
 
             Item{
-                visible:! _layoutHeaderView.isSmallWindow
                 Layout.preferredWidth: parent.width/2
                 Layout.fillHeight: true
                 Layout.fillWidth: true
                 Layout.topMargin: 30
-                MouseArea{
-                                anchors.fill: parent
-                                acceptedButtons: Qt.LeftButton
-                                onPressed: layoutHeaderView.setPoint(mouseX,mouseY)
-                                onMouseXChanged: layoutHeaderView.moveX(mouseX)
-                                onMouseYChanged: layoutHeaderView.moveY(mouseY)
-                            }
+
                 Text{
                     id:_nameText
                     anchors.left: _slider.left
@@ -150,48 +129,33 @@ Rectangle{
                 }
             }
 
-            MusicBorderImage{
-                visible: !_layoutHeaderView.isSmallWindow
+            MusicRoundImage{
                 // id:musicCover
                 width: 50
                 height: 45
                 imgSrc: musicCover
                 //点击事件进入歌曲详情页面
-                // TapHandler{
-                //     // anchors.fill: parent
+                TapHandler{
+                    // anchors.fill: parent
 
-                //     onTapped: {
-                //         pageHomeView.visible=!pageHomeView.visible
-                //         pageDetailView.visible=!pageDetailView.visible
+                    onTapped: {
+                        pageHomeView.visible=!pageHomeView.visible
+                        pageDetailView.visible=!pageDetailView.visible
 
-                //         if (isPressed) {
-                //             musicCover.scale = 0.9
-                //             isPressed = false
-                //         } else {
-                //             musicCover.scale = 1.0
-                //             isPressed = true
-                //         }
-                //         // musicCover.scale=1.0
-                //     }
+                        if (isPressed) {
+                            musicCover.scale = 0.9
+                            isPressed = false
+                        } else {
+                            musicCover.scale = 1.0
+                            isPressed = true
+                        }
+                        // musicCover.scale=1.0
+                    }
 
-                // }
-                MouseArea{
-                                anchors.fill: parent
-                                cursorShape: Qt.PointingHandCursor
-
-                                onPressed: {
-                                    musicCover.scale=0.9
-                                    pageDetailView.visible = ! pageDetailView.visible
-                                    pageHomeView.visible = ! pageHomeView.visible
-                                    appBackground.showDefaultBackground = !appBackground.showDefaultBackground
-                                }
-                                onReleased:{
-                                    musicCover.scale=1.0
-                                }
-                            }
-                // HoverHandler{
-                //     cursorShape: Qt.PointingHandCursor
-                // }
+                }
+                HoverHandler{
+                    cursorShape: Qt.PointingHandCursor
+                }
 
             }
 
@@ -225,9 +189,8 @@ Rectangle{
         if(!item||!item.id)return
         var history = historySettings.value("history",[])
         var i = history.findIndex(value=>value.id===item.id)
-        if(i>=0) history.splice(i,1)
         if(i >= 0){
-            history.slice(i,1)
+            history.splice(i,1)
         }
         history.unshift({
                             id:item.id + "",
@@ -266,6 +229,7 @@ Rectangle{
            favoriteSettings.setValue("favorite",favorite)
        }
 
+
     //播放音乐，判断网络还是本地音乐
     function playMusic(){
            if(current<0)return
@@ -291,10 +255,13 @@ Rectangle{
 
     //播放网络音乐
     function playWebMusic(){
+        if(playList.length<current+1)return
         var id=playList[current].id
         if(!id)return
         //设置详情
-        _nameText.text=playList[current].name+"/"+playList[current].artist
+        musicName=playList[current].name
+        artistName=playList[current].artist
+        // _nameText.text=playList[current].name+"/"+playList[current].artist
         function onReply(reply) {
             se.onReplySignal.disconnect(onReply)
             var data=JSON.parse(reply).data[0]
@@ -311,6 +278,7 @@ Rectangle{
             }else{
                 musicCover=cover
             }
+            getLyric(id)
             mediaplayer.source=url
             mediaplayer.play()
             isModelChange=true
@@ -398,6 +366,7 @@ Rectangle{
 
 
 
+
     function setSlider(from=0,to=100,value=0){
         sliderFrom=from
         sliderTo=to
@@ -418,8 +387,8 @@ Rectangle{
 
     function getCover(id){
         function onReply(reply) {
-            se.onReplySignal.disconnect(onReply)
-            getLyric(id)
+            // se.onReplySignal.disconnect(onReply)
+            // getLyric(id)
             var song=JSON.parse(reply).songs[0]
             var cover=song.al.picUrl
             musicCover=cover
@@ -443,13 +412,13 @@ Rectangle{
     }
     function getLyric(id){
             function onReply(reply){
-                http.onReplySignal.disconnect(onReply)
+                se.onReplySignal.disconnect(onReply)
                 var lyric = JSON.parse(reply).lrc.lyric
-                console.log(lyric)
+                // console.log(lyric)
                 if(lyric.length<1) return
                 var lyrics = (lyric.replace(/\[.*\]/gi,"")).split("\n")
-
-                if(lyrics.length>0) pageDetailView.lyricsList = lyrics
+                // console.log(lyrics)
+                if(lyrics.length>0) pageDetailView.lyrics = lyrics
 
                 var times = []
                 lyric.replace(/\[.*\]/gi,function(match,index){
@@ -460,13 +429,13 @@ Rectangle{
                         var timeValue = arr.length>0? parseInt(arr[0])*60*1000:0
                         arr = arr.length>1?arr[1].split("."):[0,0]
                         timeValue += arr.length>0?parseInt(arr[0])*1000:0
-                        timeValue += arr.length>1?parseInt(arr[1])*10:0
-
+                        timeValue += arr.length>1?parseInt(arr[1]):0
                         times.push(timeValue)
                     }
                 })
+                  mediaplayer.times=times
             }
-            http.onReplySignal.connect(onReply)
-            http.connet("lyric?id="+id)
+            se.onReplySignal.connect(onReply)
+            se.concatenate("lyric?id="+id)
         }
 }
