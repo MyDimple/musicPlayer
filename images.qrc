@@ -1,0 +1,28 @@
+<RCC>
+    <qresource prefix="/">
+        <file>icons/bendi.png</file>
+        <file>icons/bofang.png</file>
+        <file>icons/fangda.png</file>
+        <file>icons/guanbi.png</file>
+        <file>icons/guanyu.png</file>
+        <file>icons/jiazai.png</file>
+        <file>icons/lishi.png</file>
+        <file>icons/shangyiqu.png</file>
+        <file>icons/shunxubofang.png</file>
+        <file>icons/singlecycle.png</file>
+        <file>icons/sousuo.png</file>
+        <file>icons/sousuo_1.png</file>
+        <file>icons/suijibofang.png</file>
+        <file>icons/suoxiao.png</file>
+        <file>icons/tingquanmao.png</file>
+        <file>icons/tuichuxiaochuang.png</file>
+        <file>icons/tuijianbaobiao.png</file>
+        <file>icons/xiaochuangbofang.png</file>
+        <file>icons/xiayiqu.png</file>
+        <file>icons/xihuan.png</file>
+        <file>icons/xihuan_1.png</file>
+        <file>icons/yinle.png</file>
+        <file>icons/zanting.png</file>
+        <file>icons/zuixiaohua.png</file>
+    </qresource>
+</RCC>
