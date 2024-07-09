@@ -2,15 +2,13 @@ import QtQuick 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Window
-
+import "freems.js" as Control
 
 ToolBar{//顶部工具栏
     property point point: Qt.point(x,y)
      property bool isSmallWindow: false
     background: Rectangle{
-        // color:"#00000000"
-        // color:"#00ffffff"
-        color: "#bdbdbd"
+        color: "grey"
         }
     width: parent.width
     Layout.fillWidth: true
@@ -27,30 +25,30 @@ ToolBar{//顶部工具栏
             toolTip: "官网"
         }
         MusicToolButton{
-                    id:smallWindow
-                    iconSource: "qrc:/icons/xiaochuangbofang.png"
-                    toolTip: "小窗播放"
-                    visible: !isSmallWindow
-                    onClicked: {
-                        isSmallWindow = true
-                        setWindowSize(330,440)
-                        pageHomeView.visible = false
-                        pageDetailView.visible = true
-                        appBackground.showDefaultBackground =  pageHomeView.visible
-                    }
-                }
+            id:smallWindow
+            iconSource: "qrc:/icons/xiaochuangbofang.png"
+            toolTip: "小窗播放"
+            visible: !isSmallWindow
+            onClicked: {
+                isSmallWindow = true
+                Control.setWindowSize(400,600)
+                pageHomeView.visible = false
+                pageDetailView.visible = true
+                // appBackground.showDefaultBackground =  pageHomeView.visible
+            }
+        }
 
         MusicToolButton{
-                    id:normalWindow
-                    iconSource: "qrc:/icons/tuichuxiaochuang.png"
-                    toolTip: "退出小窗播放"
-                    visible: isSmallWindow
-                    onClicked: {
-                        setWindowSize()
-                        isSmallWindow = false
-                        appBackground.showDefaultBackground =  pageHomeView.visible
-                    }
-                }
+            id:normalWindow
+            iconSource: "qrc:/icons/tuichuxiaochuang.png"
+            toolTip: "退出小窗播放"
+            visible: isSmallWindow
+            onClicked: {
+                Control.setWindowSize()
+                isSmallWindow = false
+                // appBackground.showDefaultBackground =  pageHomeView.visiblez
+            }
+        }
         Item{
             visible:! _layoutHeaderView.isSmallWindow
             Layout.fillWidth: true
@@ -67,9 +65,9 @@ ToolBar{//顶部工具栏
             MouseArea{
                 anchors.fill: parent
                 acceptedButtons: Qt.LeftButton
-                onPressed:  setPoint(mouseX,mouseY)
-                onMouseXChanged: moveX(mouseX)
-                onMouseYChanged: moveY(mouseY)
+                onPressed:  Control.setPoint(mouseX,mouseY)
+                onMouseXChanged: Control.moveX(mouseX)
+                onMouseYChanged: Control.moveY(mouseY)
                 onClicked: {
                 console.log("clic....")}
             }
@@ -89,7 +87,7 @@ ToolBar{//顶部工具栏
                     toolTip: "退出全屏"
                     visible: false
                     onClicked: {
-                        setWindowSize()
+                        Control.setWindowSize()
                         window.visibility = Window.AutomaticVisibility
                         maxWindow.visible = true
                         resize.visible = false
@@ -116,29 +114,5 @@ ToolBar{//顶部工具栏
                }
     }
 
-    function setWindowSize(width = window.mWINDOW_WIDTH,height = window.mWINDOW_HEIGHT){
-            window.width = width
-            window.height = height
-            window.x=(Screen.desktopAvailableWidth-window.width)/2
-            window.y=(Screen.desktopAvailableHeight-window.height)/2
-        }
 
-    function setPoint(mouseX =0 ,mouseY = 0){
-            point =Qt.point(mouseX,mouseY)
-            //console.log(mouseX,mouseY)
-        }
-
-        function moveX(mouseX = 0 ){
-            var x = window.x + mouseX-point.x
-            if(x<-(window.width-70)) x = - (window.width-70)
-            if(x>Screen.desktopAvailableWidth-70) x = Screen.desktopAvailableWidth-70
-            window.x = x
-        }
-
-        function moveY(mouseY = 0 ){
-            var y = window.y + mouseY-point.y
-            if(y<=0) y = 0
-            if(y>Screen.desktopAvailableHeight-70) y = Screen.desktopAvailableHeight-70
-            window.y = y
-        }
 }

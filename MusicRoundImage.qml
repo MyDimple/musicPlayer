@@ -6,7 +6,7 @@ import Qt5Compat.GraphicalEffects
 Rectangle {
     property string imgSrc: "qrc:/icons/tingquanmao.png"
     property int borderRadius: 5
-    // color: "white"
+    // color: "#e6e6e6"
     Image{
         id:image
         anchors.centerIn: parent

@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import se.qt.music
-
+import "freems.js" as Control
 //搜索页面
 ColumnLayout{
     Layout.fillWidth: true
@@ -57,7 +57,7 @@ ColumnLayout{
                 focus:true
                 Keys.onPressed: {
                             if (event.key === Qt.Key_Enter || event.key === Qt.Key_Return) {
-                                doSearch();
+                                Control.doSearch();
                             }
                         }
 
@@ -65,14 +65,14 @@ ColumnLayout{
             MusicIconButton{
                 iconSource: "qrc:/icons/sousuo.png"
                 toolTip:"搜索"
-                onClicked:doSearch()
+                onClicked:Control.doSearch()
             }
         }
     }
 
     MusicListView{
         id:musiclistView
-        onLoadMore:doSearch(offset,current)
+        onLoadMore:Control.doSearch(offset,current)
         // Layout.topMargin: 10
 
     }
@@ -81,34 +81,6 @@ ColumnLayout{
         id:se
     }
 
-    function doSearch(offset=0,current=0)
-    {
-        // console.log(offset)
-        var keywords=searchInput.text
-        if(keywords.length<1){
-            return
-        }
 
-        function onReply(reply) {
-
-            se.onReplySignal.disconnect(onReply)
-            // console.log(reply);
-            var result = JSON.parse(reply).result//获取并解析数据
-            var songs = result.songs
-            musiclistView.current=current
-            musiclistView.all=result.songCount
-            musiclistView.musiclist=songs.map(item=>{
-                                                  return{
-                                                      id:item.id,
-                                                      name:item.name,
-                                                      artist:item.artists[0].name,
-                                                      album:item.album.name,
-                                                      cover:""
-                                                  }
-                                              })
-        }
-        se.onReplySignal.connect(onReply)
-        se.concatenate("search?keywords="+keywords+"&offset="+offset+"&limit=60"); // 触发网络请求
-    }
 }
 

@@ -1,5 +1,6 @@
 import QtQuick 2.15
 import QtQuick.Layouts
+import "freems.js" as Control
 Rectangle {
     property alias lyrics: list.model
     property alias current: list.currentIndex
@@ -63,7 +64,7 @@ Rectangle {
                         var time = mediaplayer.times[index];
                         mediaplayer.position = time;
                         // 更新进度条
-                        layoutBottomView.setSlider(0, mediaplayer.duration, time);
+                        Control.setSlider(0, mediaplayer.duration, time);
 
                     }
                 }

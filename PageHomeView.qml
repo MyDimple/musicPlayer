@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQml
-
+import "freems.js" as Control
 RowLayout{
     spacing: 0
 
@@ -57,7 +57,7 @@ Frame{
             delegate:menuViewDelegate
             highlight: Rectangle{//点击后的高亮效果
                 // color: "#5073a7ab"
-                color: "grey"
+                color: "#bdbdbd"
                 radius: 10
             }
             highlightMoveDuration: 100
@@ -70,7 +70,7 @@ Frame{
             id:menuViewDelegateItem
             height: 56
             width: 200
-            // color: "#1500AAAA" //左边菜单默认颜色
+            color: mouse.hovered?"#eaeaea":"#15ffffff" //左边菜单默认颜色
             radius: 10
             border.width: 1
             border.color: "black"
@@ -99,42 +99,25 @@ Frame{
                 }
             }
 
-            MouseArea{
-                anchors.fill: parent
-                hoverEnabled: true
-                onEntered: {//鼠标进入的颜色
-                    color="#bdbdbd"
-                }
-                onExited: {//鼠标离开后的颜色
-                    // color="#1500AAAA"
-                    color = "#15ffffff"
-                }
-                onClicked:{//切换功能
-                    hidePlayList()
-                    repeater.itemAt(menuView.currentIndex).visible = false //将原本索引的内容不可视
-                    menuView.currentIndex = index //设置当前索引
+            HoverHandler{
+                id:mouse
+                acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
+                cursorShape: Qt.PointingHandCursor
+                // cursorShape: Qt.PointingHandCursor
+            }
+
+            TapHandler{
+                onTapped: {
+                    Control.hidePlayList()
+                    repeater.itemAt(menuViewDelegateItem.ListView.view.currentIndex).visible = false //将原本索引的内容不可视
+                    menuViewDelegateItem.ListView.view.currentIndex = index //设置当前索引
                     var loader = repeater.itemAt(index) //获取当前索引的loader
                     loader.visible = true //让其可视
                     loader.source = qmlList[index].qml + ".qml"
                 }
             }
 
-            // TapHandler{
-            //     onTapped: {
-            //         hidePlayList()
-            //         repeater.itemAt(menuViewDelegateItem.ListView.view.currentIndex).visible = false //将原本索引的内容不可视
-            //         menuViewDelegateItem.ListView.view.currentIndex = index //设置当前索引
-            //         var loader = repeater.itemAt(index) //获取当前索引的loader
-            //         loader.visible = true //让其可视
-            //         loader.source = qmlList[index].qml + ".qml"
-            //     }
-            // }
 
-            // HoverHandler {
-            //     id: _mouse
-            //     acceptedDevices: PointerDevice.Mouse | PointerDevice.TouchPad
-            //     cursorShape: Qt.PointingHandCursor
-            // }
 
         }
     }
@@ -162,21 +145,6 @@ Frame{
         }
     }
 
-    //显示歌单
-    function showPlayList(targetId="",targetType="10"){
-        repeater.itemAt(menuView.currentIndex).visible = false
-        var loader = repeater.itemAt(5)
-        loader.visible = true
-        loader.source = qmlList[5].qml+".qml"
-        loader.item.targetType=targetType
-        loader.item.targetId=targetId
-    }
 
-    //隐藏歌单
-    function hidePlayList(){
-        repeater.itemAt(menuView.currentIndex).visible = true
-        var loader = repeater.itemAt(5)
-        loader.visible = false
-    }
 
 }

@@ -39,6 +39,7 @@ Rectangle {
                     pointSize: 16
                 }
                 color: "grey"
+                // color: "#aaffffff"
             }
 
             Text {
@@ -55,6 +56,7 @@ Rectangle {
                     pointSize: 12
                 }
                 color: "grey"
+                // color: "#aaffffff"
             }
 
             Text {
@@ -72,7 +74,8 @@ Rectangle {
                     family: "微软雅黑"
                     pointSize: 12
                 }
-                color: "#aaffffff"
+                // color: "#aaffffff"
+                color: "grey"
             }
 
             MusicBorderImage{

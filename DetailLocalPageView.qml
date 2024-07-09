@@ -5,7 +5,7 @@ import Qt.labs.platform
 import QtCore
 import QtQml 2.12
 import se.qt.music
-
+import "freems.js" as Control
 
 //本地音乐布局
 ColumnLayout{
@@ -62,7 +62,7 @@ ColumnLayout{
                 btnHeight: 50
                 btnWidth: 120
                 onClicked: {
-                    saveLocal()
+                    Control.saveLocal()
                 }
             }
         }
@@ -72,51 +72,51 @@ ColumnLayout{
 
     MusicListView{
         id:localListView
-        onDeleteItem: deleteLocal(index) //对删除信号的处理
+        onDeleteItem: Control.deleteLocal(index) //对删除信号的处理
     }
 
     Component.onCompleted: {
-        saveLocal() //构建完成先获取本地歌曲 有点问题获取不了
+        Control.saveLocal() //构建完成先获取本地歌曲 有点问题获取不了
     }
 
-    //获取本地音乐
-    function getLocal(){
-        var list = localSettings.value("local",[])
-        localListView.musiclist = list
-        return list
-    }
+    // //获取本地音乐
+    // function getLocal(){
+    //     var list = localSettings.value("local",[])
+    //     localListView.musiclist = list
+    //     return list
+    // }
 
-    function saveLocal(list=[]){
-        localSettings.setValue("local",list)
-        getLocal()
-    }
+    // function saveLocal(list=[]){
+    //     localSettings.setValue("local",list)
+    //     getLocal()
+    // }
 
-    //删除键功能
-    function deleteLocal(index){
-           var list =localSettings.value("local",[])
-            if(list.length<index+1)return
-            list.splice(index,1)
-            saveLocal(list)
-        }
+    // //删除键功能
+    // function deleteLocal(index){
+    //        var list =localSettings.value("local",[])
+    //         if(list.length<index+1)return
+    //         list.splice(index,1)
+    //         saveLocal(list)
+    //     }
 
     //文件对话框
     FileDialog{
             id:fileDialog
             fileMode: FileDialog.OpenFiles
             nameFilters: ["MP3 Music Files(*.mp3)","FLAC MUsic Files(*.flac)"]
-            folder: StandardPaths.standardLocations(StandardPaths.MusicLocation)[0] //不设置这个便会打开系统默认存放音频文件的文件夹
+            // folder: StandardPaths.standardLocations(StandardPaths.MusicLocation)[0] //不设置这个便会打开系统默认存放音频文件的文件夹
             acceptLabel: "确定"
             rejectLabel: "取消"
 
             onAccepted: {
                 //获取音乐文件逻辑
-                var list =getLocal()
+                var list =Control.getLocal()
                 for(var index in files){
                     var path = files[index].toString()
-                    console.log(path)
+                    // console.log(path)
                     var lyricsFilePath = path.replace(/\.[^\.]+$/, ".lrc");//本地歌曲文件
                     var lyric=se.readFileContent(lyricsFilePath)
-                    locallyc(lyric)
+                    Control.locallyc(lyric)
                     var arr = path.split("/")
                     var fileNameArr = arr[arr.length-1].split(".")
                     //去掉后缀
@@ -139,32 +139,10 @@ ColumnLayout{
                                   album:"本地音乐",
                                   type:"1"//1表示本地音乐，0表示网络
                               })
-                    saveLocal(list)
+                    Control.saveLocal(list)
                      // localListView.musiclist  = list
                 }
             }
         }
-    //获取本地音乐歌词
-    function locallyc(lyric)
-    {
-        if(lyric.length<1) return
-        var lyrics = (lyric.replace(/\[.*\]/gi,"")).split("\n")
-        // console.log(lyrics)
-        if(lyrics.length>0) pageDetailView.lyrics = lyrics
 
-        var times = []
-        lyric.replace(/\[.*\]/gi,function(match,index){
-            //match : [00:00.00]
-            if(match.length>2){
-                var time  = match.substr(1,match.length-2)
-                var arr = time.split(":")
-                var timeValue = arr.length>0? parseInt(arr[0])*60*1000:0
-                arr = arr.length>1?arr[1].split("."):[0,0]
-                timeValue += arr.length>0?parseInt(arr[0])*1000:0
-                timeValue += arr.length>1?parseInt(arr[1]):0
-                times.push(timeValue)
-            }
-        })
-          mediaplayer.times=times
-    }
 }

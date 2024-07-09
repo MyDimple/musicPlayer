@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Layouts 1.12
 import se.qt.music
-
+import "freems.js" as Control
 //专辑歌单页面布局,隐藏的，点击歌单，歌单的内容就是这个
 ColumnLayout{
     property string targetId: ""
@@ -12,8 +12,8 @@ ColumnLayout{
     spacing: 0
 
     onTargetIdChanged:{//获取专辑或者歌单数据
-        if(targetType=="10") loadAlbum() //专辑
-        else if(targetType=="1000") loadPlayList() //歌单
+        if(targetType=="10") Control.loadAlbum() //专辑
+        else if(targetType=="1000") Control.loadPlayList() //歌单
     }
 
     Rectangle{
@@ -33,8 +33,12 @@ ColumnLayout{
 
     Rectangle{
         height: 200
-        width: parent.width
+        // width: parent.width
+        Layout.fillWidth: true
         color:"#ffffff"
+        border.width: 1
+        border.color: "black"
+        // radius: 15
         RowLayout{
             height: parent.height
             width: parent.width
@@ -77,69 +81,6 @@ ColumnLayout{
         id:se
     }
 
-    //获取专辑数据
-    function loadAlbum(){
 
-        var url = "album?id="+(targetId.length<1?"32311":targetId)
-
-        function onReply(reply){
-            se.onReplySignal.disconnect(onReply)
-            var album = JSON.parse(reply).album
-            var songs = JSON.parse(reply).songs
-            playListCover.imgSrc = album.blurPicUrl
-            playListDesc.text = album.description
-            name = "-"+album.name
-            playListListView.musiclist= songs.map(item=>{
-                                                      return {
-                                                          id:item.id,
-                                                          name:item.name,
-                                                          artist:item.ar[0].name,
-                                                          album:item.al.name,
-                                                          cover:item.al.picUrl
-                                                      }
-                                                  })
-        }
-
-        se.onReplySignal.connect(onReply)
-        se.concatenate(url); // 触发网络请求
-    }
-
-    //获取歌单数据
-    function loadPlayList(){
-
-        var url = "playlist/detail?id="+(targetId.length<1?"32311":targetId)
-
-
-        function onSongDetailReply(reply){
-            se.onReplySignal.disconnect(onSongDetailReply)
-            var songs = JSON.parse(reply).songs
-            playListListView.musiclist= songs.map(item=>{
-                                                      return {
-                                                          id:item.id,
-                                                          name:item.name,
-                                                          artist:item.ar[0].name,
-                                                          album:item.al.name,
-                                                          cover:item.al.picUrl
-                                                      }
-                                                  })
-        }
-
-        function onReply(reply){
-            se.onReplySignal.disconnect(onReply)
-            var playlist = JSON.parse(reply).playlist
-            playListCover.imgSrc = playlist.coverImgUrl
-            playListDesc.text = playlist.description
-            name = "-"+playlist.name
-            var ids = playlist.trackIds.map(item=>item.id).join(",")
-            se.onReplySignal.connect(onSongDetailReply)
-            // se.connet("song/detail?ids="+ids)
-            se.concatenate("song/detail?ids="+ids); // 触发网络请求
-
-        }
-        se.onReplySignal.connect(onReply)
-        // se.connet(url)
-        se.concatenate(url); // 触发网络请求
-
-    }
 }
 

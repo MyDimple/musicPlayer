@@ -2,8 +2,10 @@ import QtQuick 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtMultimedia
+import "freems.js" as Control
 //底部工具栏
 Rectangle{
+      property alias timeText: _timeText
     property var playList: []
     property int current:-1
     property int sliderValue: 0
@@ -19,7 +21,7 @@ Rectangle{
     property int playingState: 0
     Layout.fillWidth: true
     height: 60
-    color: "#cecccc"
+    color: "#f3f3f3"
 
     RowLayout{
             anchors.fill: parent
@@ -33,21 +35,21 @@ Rectangle{
                 Layout.preferredWidth: 50
                 iconSource:"qrc:/icons/shangyiqu.png"
                 toolTip: "上一曲"
-                onClicked: playPrevious()
+                onClicked: Control.playPrevious()
             }
 
             MusicIconButton{
                 Layout.preferredWidth: 50
                 iconSource:playingState?"qrc:/icons/zanting.png":"qrc:/icons/bofang.png"
                 toolTip: playingState?"暂停":"播放"
-                onClicked: playOrPause()
+                onClicked: Control.playOrPause()
             }
 
             MusicIconButton{
                 Layout.preferredWidth: 50
                 iconSource:"qrc:/icons/xiayiqu.png"
                 toolTip: "下一曲"
-                onClicked: playNext("")
+                onClicked: Control.playNext("")
             }
 
             Item{
@@ -156,13 +158,13 @@ Rectangle{
                         iconWidth: 32
                         iconHeight: 32
                         toolTip: "我喜欢"
-                        onClicked: saveFavorite( playList[current])
+                        onClicked: Control.saveFavorite( playList[current])
                     }
             MusicIconButton{
                 Layout.preferredWidth: 50
                 iconSource:playModeList[currentPlayMode].icon
                 toolTip: playModeList[currentPlayMode].name
-                onClicked: changePlayMode()
+                onClicked: Control.changePlayMode()
             }
 
             Item{
@@ -172,126 +174,7 @@ Rectangle{
 
     }
 
-    function playOrPause()
-    {
-        if(!mediaplayer.source)return
-        if(mediaplayer.playbackState===MediaPlayer.PlayingState){
-            mediaplayer.pause()
-            playingState=0
-        }else if(mediaplayer.playbackState===MediaPlayer.PausedState){
-            mediaplayer.play()
-            playingState=1
-        }
-    }
 
-    // 保存历史记录
-    function saveHistory(index = 0){
-        if(playList.length < index + 1) return
-        var item = playList[index]
-        if(!item||!item.id)return
-        var history = historySettings.value("history",[])
-        var i = history.findIndex(value=>value.id===item.id)
-        if(i >= 0){
-            history.splice(i,1)
-        }
-        history.unshift({
-                            id:item.id + "",
-                            name:item.name,
-                            artist:item.artist,
-                            url:item.url?item.url:"",
-                            type:item.type?item.type:"",
-                            album:item.album?item.album:"本地音乐"
-
-                        })
-        if(history.length > 100)
-        {//限制一百条数据
-            history.pop()}
-        historySettings.setValue("history",history)
-
-    }
-
-    //保存我喜欢
-    function saveFavorite(value={}){
-           if(!value||!value.id)return
-           var favorite =  favoriteSettings.value("favorite",[])
-           var i =  favorite.findIndex(item=>value.id===item.id)
-           if(i>=0) favorite.splice(i,1)
-           favorite.unshift({
-                               id:value.id+"",
-                               name:value.name+"",
-                               artist:value.artist+"",
-                               url:value.url?value.url:"",
-                               type:value.type?value.type:"",
-                               album:value.album?value.album:"本地音乐"
-                           })
-           if(favorite.length>500){
-               //限制五百条数据
-               favorite.pop()
-           }
-           favoriteSettings.setValue("favorite",favorite)
-       }
-
-
-    //播放音乐，判断网络还是本地音乐
-    function playMusic(){
-           if(current<0)return
-           if(playList.length<current+1) return
-           //获取播放链接
-           if(playList[current].type==="1"){
-               //播放本地音乐
-               playLocalMusic()
-           } else {
-               //播放网络音乐
-               playWebMusic()
-           }
-           saveHistory(current)
-       }
-
-    //播放本地音乐
-    function playLocalMusic(){
-           var currentItem = playList[current]
-           mediaplayer.source =currentItem.url
-           mediaplayer.play()
-           _nameText.text=playList[current].name+"/"+playList[current].artist
-       }
-
-    //播放网络音乐
-    function playWebMusic(){
-        if(playList.length<current+1)return
-        var id=playList[current].id
-        if(!id)return
-        //设置详情
-        musicName=playList[current].name
-        artistName=playList[current].artist
-        function onReply(reply) {
-            se.onReplySignal.disconnect(onReply)
-            var data=JSON.parse(reply).data[0]
-            var url = data.url
-            var time=data.time
-            //设置Slider
-            setSlider(0,time,0)
-
-            if(!url)return
-            //获取封面
-            if (playList === undefined || playList.length <= current || playList[current] === undefined) {
-                // Handle the error appropriately, e.g., log an error or show a message to the user
-                console.error("Invalid index or undefined playlist.")
-            } else {
-                var cover = playList[current].cover
-                if (cover === undefined || cover.length < 1) {
-                    getCover(id)
-                } else {
-                    musicCover = cover
-                }
-            }
-            getLyric(id)
-            mediaplayer.source=url
-            mediaplayer.play()
-            isModelChange=true
-        }
-        se.onReplySignal.connect(onReply)
-        se.concatenate("song/url?id="+id); // 触发网络请求
-    }
 
 
     Component.onCompleted: {
@@ -302,153 +185,8 @@ Rectangle{
     onCurrentChanged: {
         //只要改变了数据项就禁止掉防止自己循环
         isModelChange=false
-        playMusic(current)
-    }
-
-    //播放上一首
-    function playPrevious(){
-        if(playList.length<1){
-            return
-        }
-
-
-        switch(currentPlayMode)
-        {
-            //单曲播放
-        case 0:
-
-            //循环播放
-        case 1:
-            //&playList.length该操作是避免它为负数
-            current=(current+playList.length-1)%playList.length
-            break
-            //随机播放
-        case 2:{
-            var random=parseInt(Math.random()*playList.length)//parseInt是取整
-            current=current===random?random+1:random
-            break
-        }
-        }
-    }
-
-    //播放下一首
-    function playNext(type='natural'){
-        if(playList.length<1){
-            return
-        }
-
-        switch(currentPlayMode)
-        {
-            //单曲播放
-        case 0:
-            if(type==='natural'){
-                mediaplayer.play()
-                break
-            }
-
-            //循环播放
-        case 1:
-            //&playList.length该操作是避免它为负数
-            current=(current+1)%playList.length
-            break
-            //随机播放
-        case 2:{
-            var random=parseInt(Math.random()*playList.length)//parseInt是取整
-            current=current===random?random+1:random
-            break
-        }
-        }
-
-
-    }
-
-    //切换播放模式
-    function changePlayMode(){
-        // console.log("look",currentPlayMode)
-        currentPlayMode=(currentPlayMode+1)%playModeList.length
-        settings.setValue("currentPlatMode",currentPlayMode)
+        Control.playMusic(current)
     }
 
 
-
-
-
-    function setSlider(from=0,to=100,value=0){
-        sliderFrom=from
-        sliderTo=to
-        sliderValue=value
-
-        var from_mm=parseInt(value/1000/60)+""
-        from_mm=from_mm.length<2?"0"+from_mm:from_mm
-        var from_ss=parseInt(value/1000%60)+""
-        from_ss=from_ss.length<2?"0"+from_ss:from_ss
-
-        var to_mm=parseInt(to/1000/60)+""
-        to_mm=to_mm.length<2?"0"+to_mm:to_mm
-        var to_ss=parseInt(to/1000%60)+""
-        to_ss=to_ss.length<2?"0"+to_ss:to_ss
-
-        _timeText.text=from_mm+":"+from_ss+"/"+to_mm+":"+to_ss
-    }
-
-    function getCover(id){
-        function onReply(reply) {
-            se.onReplySignal.disconnect(onReply)
-            var replyObject = JSON.parse(reply)
-            if (replyObject && Array.isArray(replyObject.songs) && replyObject.songs.length > 0) {
-                var song = replyObject.songs[0]
-                if (song && song.al && song.al.picUrl) {
-                    var cover = song.al.picUrl
-                    musicCover = cover
-
-                    if (musicName.length < 1) {
-                        musicName = song.name
-                    }
-                    if (artistName.length < 1) {
-                        artistName = song.ar[0].name
-                    }
-
-                    pageHomeView.visible = !pageHomeView.visible
-                    pageDetailView.visible = !pageDetailView.visible
-                } else {
-                    // Handle the case where song or song.al or song.al.picUrl is missing
-                    console.error("Invalid or incomplete song data in the reply.")
-                }
-            } else {
-                // Handle the case where no songs are returned
-                console.error("Invalid or missing song data in the reply.")
-            }
-        }
-        se.onReplySignal.connect(onReply)
-        se.concatenate("song/datail?ids="+id); // 触发网络请求
-    }
-
-    function getLyric(id){
-            function onReply(reply){
-                se.onReplySignal.disconnect(onReply)
-                var lyric = JSON.parse(reply).lrc.lyric
-                // console.log(lyric)
-                if(lyric.length<1) return
-                var lyrics = (lyric.replace(/\[.*\]/gi,"")).split("\n")
-                // console.log(lyrics)
-                if(lyrics.length>0) pageDetailView.lyrics = lyrics
-
-                var times = []
-                lyric.replace(/\[.*\]/gi,function(match,index){
-                    //match : [00:00.00]
-                    if(match.length>2){
-                        var time  = match.substr(1,match.length-2)
-                        var arr = time.split(":")
-                        var timeValue = arr.length>0? parseInt(arr[0])*60*1000:0
-                        arr = arr.length>1?arr[1].split("."):[0,0]
-                        timeValue += arr.length>0?parseInt(arr[0])*1000:0
-                        timeValue += arr.length>1?parseInt(arr[1]):0
-                        times.push(timeValue)
-                    }
-                })
-                  mediaplayer.times=times
-            }
-            se.onReplySignal.connect(onReply)
-            se.concatenate("lyric?id="+id)
-        }
 }

@@ -4,7 +4,7 @@ import QtQuick.Layouts 1.12
 import Qt.labs.platform
 import QtCore
 import QtQml
-
+import "freems.js" as Control
 //历史播放布局
 ColumnLayout{
     spacing: 0
@@ -44,43 +44,25 @@ ColumnLayout{
                 btnText: "刷新记录"
                 btnHeight: 50
                 btnWidth: 120
-                onClicked: getHistory()
+                onClicked: Control.getHistory()
             }
 
             MusicTextButton{
                 btnText: "清空记录"
                 btnHeight: 50
                 btnWidth: 120
-                onClicked: clearHistory()
+                onClicked: Control.clearHistory()
             }
         }
     }
 
     MusicListView{
         id:historyListView
-        onDeleteItem: deleteHistory(index)
+        onDeleteItem: Control.deleteHistory(index)
     }
 
     Component.onCompleted: {
-        clearHistory()
-    }
-    //删除键功能
-    function deleteHistory(index){
-            var list =historySettings.value("history",[])
-            if(list.length<index+1)return
-            list.splice(index,1)
-            historySettings.setValue("history",list)
-            getHistory()
-        }
-
-    //刷新记录
-    function getHistory(){
-        historyListView.musiclist = historySettings.value("history",[])
+        Control.clearHistory()
     }
 
-    //清空记录
-    function clearHistory(){
-         historySettings.setValue("history",[])
-        getHistory()
-    }
 }

@@ -2,7 +2,7 @@ import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtQuick.Layouts
 import se.qt.music
-
+import "freems.js" as Control
 ScrollView{
     clip:true //裁剪超出部分
 
@@ -75,38 +75,11 @@ ScrollView{
         id:se
         Component.onCompleted: {
 
-           getBannerList()
+           Control.getBannerList()
 
         }
     }
 
-    //获取轮播图
-    function getBannerList() {
-        function onReply(reply) {
-            // console.log("hello")
-            // console.log(reply);
-            // 处理接收到的回复
-            se.onReplySignal.disconnect(onReply)
-            var banners = JSON.parse(reply).banners
-            bannerView.bannerList = banners
-            getHotMusic() //在轮播图中调用getHotMusic()，因为方法异步有可能出现只获取了一个
-        }
-        se.onReplySignal.connect(onReply)
-        se.concatenate("banner"); // 触发网络请求
-}
 
-    //获取精品歌单,即推荐内容下方网格
-    function getHotMusic() {
-        function onReply(reply) {
-            // console.log("hello")
-            // console.log(reply);
-            // 处理接收到的回复
-            se.onReplySignal.disconnect(onReply)
-            var playlists = JSON.parse(reply).playlists
-            hotMusic.list = playlists
-        }
-        se.onReplySignal.connect(onReply)
-        se.concatenate("top/playlist/highquality?limit=20"); // 触发网络请求
-    }
 
 }

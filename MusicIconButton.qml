@@ -23,7 +23,7 @@ Button{
     ToolTip.text: toolTip
 
     background: Rectangle{//点击效果
-        color: self.down||(isCheckable&&self.checked)?"#ffffff":"#d6d4d4"
+        color: self.down||(isCheckable&&self.checked)?"#d6d4d4":"#ffffff"
         radius: 3
     }
     icon.color: self.down||(isCheckable&&self.checked)?"black":"grey"

@@ -2,7 +2,7 @@
 import QtQuick 2.12
 import QtQuick.Controls 2.5
 import QtQml 2.12
-
+import "freems.js" as Control
 //推荐内容轮播图效果
 Frame{
     property int current: 0
@@ -66,7 +66,7 @@ Frame{
                             //打开专辑
                         case "1000":
                             //打开播放列表
-                            pageHomeView.showPlayList(targetId,targetType)
+                            Control.showPlayList(targetId,targetType)
                             break
                         }
 

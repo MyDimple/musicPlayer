@@ -35,21 +35,24 @@ qt_add_qml_module(
   PageHomeView.qml
   MusicBorderImage.qml
   MusicLyricView.qml
-
   DetailFavoritePageView.qml
   DetailPlayListPageView.qml
   HotMusic.qml
   PageDetailView.qml
   RESOURCES
-
   SOURCES
   search.h
   search.cpp
-  QML_FILES MusicLoading.qml
-  QML_FILES MusicNotification.qml
-  QML_FILES AppSystemTrayIcon.qml
+  QML_FILES
+  MusicLoading.qml
+  QML_FILES
+  MusicNotification.qml
+  QML_FILES
+  AppSystemTrayIcon.qml
   RESOURCES
-  RESOURCES images.qrc )
+  images.qrc
+  QML_FILES
+  freems.js)
 
 target_compile_features(appfreems PRIVATE cxx_std_20)
 

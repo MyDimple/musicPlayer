@@ -2,7 +2,7 @@ import QtQuick 2.15
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQuick.Shapes
-
+import "freems.js" as Control
 Frame{
     property bool deletable: true
     property bool favoritable: true
@@ -149,7 +149,7 @@ Frame{
                             iconWidth: 16
                             toolTip: "喜欢"
                             onClicked: {
-                                layoutBottomView.saveFavorite({
+                                Control.saveFavorite({
                                                                   id:musiclist[index].id + "",
                                                                   name:musiclist[index].name,
                                                                   artist:musiclist[index].artist,

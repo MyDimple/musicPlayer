@@ -1,6 +1,7 @@
 import QtQuick
 import QtQuick.Controls
 import QtQml
+import "freems.js" as Control
 
 //轮播图下方精品歌单网格布局
 Item{
@@ -56,7 +57,7 @@ Item{
                     }
                     onClicked: {
                         var item  =gridRepeater.model[index]
-                        pageHomeView.showPlayList(item.id,"1000")
+                        Control.showPlayList(item.id,"1000")
                     }
                 }
             }

@@ -2,7 +2,7 @@ import QtQuick
 import QtQuick.Controls
 import QtQuick.Layouts
 import QtQml
-
+import "freems.js" as Control
 ColumnLayout{
     spacing: 0
     Rectangle{
@@ -17,7 +17,6 @@ ColumnLayout{
             font.family: "宋体"
             font.pointSize: 25
             color: "black"
-
         }
     }
 
@@ -34,13 +33,13 @@ ColumnLayout{
                 btnText: "刷新记录"
                 btnHeight: 50
                 btnWidth: 120
-                onClicked: getFavorite()
+                onClicked: Control.getFavorite()
             }
             MusicTextButton{
                 btnText: "清空记录"
                 btnHeight: 50
                 btnWidth: 120
-                onClicked: clearFavorite()
+                onClicked: Control.clearFavorite()
             }
 
         }
@@ -51,31 +50,13 @@ ColumnLayout{
     MusicListView{
         id:favoriteListView
         favoritable: false
-        onDeleteItem: deleteFavorite(index)
+        onDeleteItem: Control.deleteFavorite(index)
     }
 
     Component.onCompleted: {
-        clearFavorite()
+        Control.clearFavorite()
     }
 
-    //删除喜欢
-    function deleteFavorite(index){
-            var list =favoriteSettings.value("favorite",[])
-            if(list.length<index+1)return
-            list.splice(index,1)
-            favoriteSettings.setValue("favorite",list)
-            getFavorite()
-        }
 
-    //刷新，获取喜欢
-    function getFavorite(){
-        favoriteListView.musiclist = favoriteSettings.value("favorite",[])
-    }
-
-    //删除键功能
-    function clearFavorite(){
-            favoriteSettings.setValue("favorite",[])
-            getFavorite()
-        }
 
 }

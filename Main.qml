@@ -7,7 +7,7 @@ import QtMultimedia
 import QtCore
 import se.qt.music
 import QtQml
-
+import "freems.js" as Control
 ApplicationWindow {
     property string organizationName: "MyOrganization"
     property string organizationDomain: "myorganization.com"
@@ -17,17 +17,10 @@ ApplicationWindow {
     width: 1200
     height: 800
     visible: true
-    // color:"white"
-    // background: Background{
-    //         id:appBackground
-    //     }
+
     Search{
         id:se
-        // Component.onCompleted: {
 
-        //    searchonline()
-
-        // }
     }
     //注册搜索出错弹窗
     MusicNotification{
@@ -105,7 +98,7 @@ ApplicationWindow {
 
         onPositionChanged: {
             //更新进度条
-            layoutBottomView.setSlider(0,duration,mediaplayer.position)
+            Control.setSlider(0,duration,mediaplayer.position)
             // var adjustedPosition = mediaplayer.position ;
             if(times.length>0){
                 var count=times.filter(time=>time<mediaplayer.position ).length
@@ -120,7 +113,7 @@ ApplicationWindow {
             //添加isModelChange控制播放
             if(playbackState===MediaPlayer.StoppedState&&layoutBottomView.isModelChange)
             {
-                layoutBottomView.playNext()
+                Control.playNext()
             }
         }
     }
