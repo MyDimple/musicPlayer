@@ -238,8 +238,8 @@ function playOrPause()
 
 // 保存历史记录
 function saveHistory(index = 0){
-    if(playList.length < index + 1) return
-    var item = playList[index]
+    if(layoutBottomView.playList.length < index + 1) return
+    var item = layoutBottomView.playList[index]
     if(!item||!item.id)return
     var history = historySettings.value("history",[])
     var i = history.findIndex(value=>value.id===item.id)
@@ -287,9 +287,9 @@ function saveFavorite(value={}){
 //播放音乐，判断网络还是本地音乐
 function playMusic(){
        if(current<0)return
-       if(playList.length<current+1) return
+       if(layoutBottomView.playList.length<current+1) return
        //获取播放链接
-       if(playList[current].type==="1"){
+       if(layoutBottomView.playList[current].type==="1"){
            //播放本地音乐
            playLocalMusic()
        } else {
@@ -301,20 +301,20 @@ function playMusic(){
 
 //播放本地音乐
 function playLocalMusic(){
-       var currentItem = playList[current]
+       var currentItem = layoutBottomView.playList[current]
        mediaplayer.source =currentItem.url
        mediaplayer.play()
-       _nameText.text=playList[current].name+"/"+playList[current].artist
+       _nameText.text=layoutBottomView.playList[current].name+"/"+layoutBottomView.playList[current].artist
    }
 
 //播放网络音乐
 function playWebMusic(){
-    if(playList.length<current+1)return
-    var id=playList[current].id
+    if(layoutBottomView.playList.length<current+1)return
+    var id=layoutBottomView.playList[current].id
     if(!id)return
     //设置详情
-    musicName=playList[current].name
-    artistName=playList[current].artist
+    musicName=layoutBottomView.playList[current].name
+    artistName=layoutBottomView.playList[current].artist
     function onReply(reply) {
         se.onReplySignal.disconnect(onReply)
         var data=JSON.parse(reply).data[0]
@@ -325,11 +325,11 @@ function playWebMusic(){
 
         if(!url)return
         //获取封面
-        if (playList === undefined || playList.length <= current || playList[current] === undefined) {
+        if (layoutBottomView.playList === undefined || layoutBottomView.playList.length <= current || layoutBottomView.playList[current] === undefined) {
             // Handle the error appropriately, e.g., log an error or show a message to the user
             console.error("Invalid index or undefined playlist.")
         } else {
-            var cover = playList[current].cover
+            var cover = layoutBottomView.playList[current].cover
             if (cover === undefined || cover.length < 1) {
                 getCover(id)
             } else {
@@ -347,7 +347,7 @@ function playWebMusic(){
 
 //播放上一首
 function playPrevious(){
-    if(playList.length<1){
+    if(layoutBottomView.playList.length<1){
         return
     }
 
@@ -360,11 +360,11 @@ function playPrevious(){
         //循环播放
     case 1:
         //&playList.length该操作是避免它为负数
-        current=(current+playList.length-1)%playList.length
+        current=(current+layoutBottomView.playList.length-1)%layoutBottomView.playList.length
         break
         //随机播放
     case 2:{
-        var random=parseInt(Math.random()*playList.length)//parseInt是取整
+        var random=parseInt(Math.random()*layoutBottomView.playList.length)//parseInt是取整
         current=current===random?random+1:random
         break
     }
@@ -373,11 +373,11 @@ function playPrevious(){
 
 //播放下一首
 function playNext(type='natural'){
-    if(playList.length<1){
+    if(layoutBottomView.playList.length<1){
         return
     }
 
-    switch(currentPlayMode)
+    switch(layoutBottomView.currentPlayMode)
     {
         //单曲播放
     case 0:
@@ -389,12 +389,12 @@ function playNext(type='natural'){
         //循环播放
     case 1:
         //&playList.length该操作是避免它为负数
-        current=(current+1)%playList.length
+        layoutBottomView.current=(layoutBottomView.current+1)%layoutBottomView.playList.length
         break
         //随机播放
     case 2:{
-        var random=parseInt(Math.random()*playList.length)//parseInt是取整
-        current=current===random?random+1:random
+        var random=parseInt(Math.random()*layoutBottomView.playList.length)//parseInt是取整
+        layoutBottomView.current=layoutBottomView.current===random?random+1:random
         break
     }
     }
